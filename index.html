@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8" />
+  <title>Salesbury - Responsive Sales Page.</title>
+  <meta name="author" content="" />
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Bootstrap -->
+	<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+	<link href="/css/bootstrap-override.css" rel="stylesheet" />
+	<link href="/css/bootstrap-custom-utils.css" rel="stylesheet" />
+
+	<!--
+		Color swatches - Choose one in production
+	-->
+	<!--
+	<link href="/css/salesbury-red.css" rel="stylesheet" />
+	<link href="/css/salesbury-green.css" rel="stylesheet" />
+	<link href="/css/salesbury-blue.css" rel="stylesheet" />
+	<link href="/css/salesbury-lilac.css" rel="stylesheet" />
+	-->
+	<link href="/css/salesbury-lilac.css" id="color-scheme" rel="stylesheet" />
+
+	<!--
+		Background patterns - Choose one in production
+	-->
+	<!--
+	<link href="/css/salesbury-bg-grid_noise.css" rel="stylesheet" />
+	<link href="/css/salesbury-bg-square_bg.css" rel="stylesheet" />
+	<link href="/css/salesbury-bg-light_wool.css" rel="stylesheet" />
+	<link href="/css/salesbury-bg-connect.css" rel="stylesheet" />
+	-->
+	<link href="/css/salesbury-bg-grid_noise.css" id="background-pattern" rel="stylesheet" />
+
+	<!-- Demo only - Remove in production -->
+	<link href="/css/salesbury-demo.css" rel="stylesheet" />
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	  <script src="/html5shiv/html5shiv.js"></script>
+	  <script src="/respond.js/respond.min.js"></script>
+	<![endif]-->
+
+	<script>
+	// Windows Phone 8 and MSIE 10
+	// http://timkadlec.com/2013/01/windows-phone-8-and-device-width/
+	if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+	  var msViewportStyle = document.createElement("style")
+	  msViewportStyle.appendChild(
+	    document.createTextNode(
+	      "@-ms-viewport{width:auto!important}"
+	    )
+	  )
+	  document.getElementsByTagName("head")[0].appendChild(msViewportStyle)
+	}
+	</script>
+
+</head>
+
+<body>
+
+<!-- Demo only - Remove in production -->
+<nav class="navbar navbar-default navbar-fixed-top">
+
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+	</div>
+
+	<!-- Collect the nav links, forms, and other content for toggling -->
+	<div class="collapse navbar-collapse navbar-collapse">
+
+		<p class="h6 hidden-xs text-uppercase navbar-text navbar-left"><span class="icon-tint"></span>&#32;Theme colors</p>
+		<div class="color-switcher navbar-left">
+			<a href="#lilac" class="navbar-btn btn btn-sm btn-lilac lilac">Lilac</a>
+			<a href="#green" class="navbar-btn btn btn-sm btn-green green">Green</a>
+			<a href="#red" class="navbar-btn btn btn-sm btn-red red">Red</a>
+			<a href="#blue" class="navbar-btn btn btn-sm btn-blue blue">Blue</a>
+		</div>
+
+		<p class="h6 hidden-xs text-uppercase navbar-text navbar-left"><span class="icon-reorder"></span>&#32;Patterns</p>
+		<div class="background-switcher navbar-left">
+			<a href="#grid_noise" class="navbar-btn btn btn-sm btn-default grid_noise">Grid Noise</a>
+			<a href="#connect" class="navbar-btn btn btn-sm btn-default connect">Connect</a>
+			<a href="#light_wool" class="navbar-btn btn btn-sm btn-default light_wool">Light Wool</a>
+			<a href="#square_bg" class="navbar-btn btn btn-sm btn-default square_bg">Square Bg</a>
+		</div>
+
+	</div>
+
+</nav>
+<!-- // Demo only - Remove in production -->
+
+<div class="bg-white-dark padding-small-top"></div>
+
+  <header class="text-left container">
+  	<div class="row">
+  		<div class="col-md-10 col-md-offset-1">
+		    <h1>Have you ever seen the rain?</h1>
+		    <p class="lead">You should always open a sales page with a catchy question.</p>
+		  </div>
+		</div>
+  </header>
+
+  <div class="container container-pattern padding-big-bottom">
+	<div class="row margin-big-top">
+
+		<div class="col-xs-12 col-md-4 col-md-offset-1">
+			<p>
+				Proceed then with the classic triplet: the pain, the dream, the solution.
+			</p>
+
+			<p>
+				<strong>The pain</strong> ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua.<br />
+				<strong>The dream</strong> enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur.
+			</p>
+
+			<p>
+				<strong>The solution</strong> selfies semiotics keffiyeh master cleanse Vice before they sold out. Vegan 90's tofu pork belly skateboard, Truffaut tote bag.
+			</p>
+
+			<p>
+				<em><strong>Interested?<br />
+				<a href="#packages">Go straight to the packages.</a></strong></em>
+			</p>
+		</div>
+		<div class="col-xs-12 col-md-6">
+			<figure class="text-center">
+				<img src="/img/ap-big.png" alt="The Amazing Product" class="img-thumbnail" />
+			</figure>
+		</div>
+	</div>
+
+	<hr />
+
+	<div class="row margin-medium-top">
+		<figure class="col-md-2 col-md-offset-1 margin-small-top">
+			<img src="/img/johndoe-100.png" alt="Jonathan F. Doe" class="img-responsive img-circle pull-right" />
+		</figure>
+		<blockquote class="col-md-7">
+			<p>
+				Testimonials are important. Be sure to include some in your sales page.
+			</p>
+			<p>
+				With Salesbury, my sales page was <strong>online in minutes</strong>. And it rocks!.
+			</p>
+			<small>Jonathan F. Doe, CIO at Lorem Ipsum</small>
+		</blockquote>
+	</div>
+
+</div>
+
+<div class="bg-white-dark padding-big-bottom">
+	<div class="container">
+		<div class="row">
+
+			<h2 class="col-md-10 col-md-offset-1">The Pain</h2>
+
+			<div class="col-md-6 col-md-offset-1">
+				<p>
+					Digress more about the pain, to better asses the problem your are going to solve.
+				</p>
+
+				<p>
+					Irony fixie Tonx, cred paleo American Apparel literally church-key semiotics. Leggings small batch art party squid meggings, Schlitz selfies kale chips food truck mustache letterpress church-key fap.
+				</p>
+
+				<p>
+					Cornhole street art swag quinoa, photo booth gentrify fap banh mi American Apparel paleo hella hoodie blog ugh.  Cornhole you probably haven't heard of them Etsy bitters, mustache aesthetic four loko flannel cray.  Blog occupy Banksy art party, bicycle rights YOLO artisan.  Bushwick gluten-free trust fund craft beer, disrupt messenger bag small batch Pitchfork plaid whatever viral mustache.
+				</p>
+
+				<p>
+					Ennui Pinterest biodiesel, umami iPhone 8-bit fixie mlkshk asymmetrical.  Locavore literally dreamcatcher, YOLO selfies semiotics <strong>keffiyeh master cleanse</strong> Vice before they sold out.  Vegan 90's tofu pork belly skateboard, Truffaut tote bag.
+				</p>
+			</div>
+			<div class="col-md-4 text-center">
+				<span class="icon icon-frown icon-white icon-6x"></span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container padding-big-bottom">
+	<div class="row">
+
+		<h2 class="col-md-10 col-md-offset-1">The Solution</h2>
+
+		<div class="col-md-10 col-md-offset-1">
+			<p>
+				Explain why yours is <strong>the</strong> solution to the pain, and how it actually solves it.
+			</p>
+
+			<p>
+				But don't provide too many details already. Details go in the coming sections.<br />
+				Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+			</p>
+
+			<p>
+				Excepteur sint occaecat cupidatat non	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4 col-md-offset-1">
+			<h3>A change</h3>
+
+			<p>
+				Provide some details, sint occaecat cupidatat non	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+
+			<p>
+				Aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+			</p>
+		</div>
+		<div class="col-md-5 col-md-offset-1">
+
+			<h3>In the layout</h3>
+
+			<ul class="icons-ul">
+				<li><span class="icon-li icon-fire"></span>
+					<strong>Sit amet.</strong><br />
+					Adipiscit elit 5 ipsum.
+				</li>
+				<li><span class="icon-li icon-bolt"></span>
+					<strong>Hipster velit fugiat.</strong><br />
+					Nulla pariatur aute occaecat.
+				</li>
+				<li><span class="icon-li icon-tint"></span>
+					<strong>Laborum log est.</strong><br />
+					Sint cupidadat non proident, sunt officia eu pariatur.
+				</li>
+			</ul>
+
+		</div>
+
+	</div>
+</div>
+
+<div class="bg-white-dark padding-big-bottom" id="free-sample">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-10 col-md-offset-1">
+				<h2 class="margin-bottom-none">Get a free sample</h2>
+				<p class="lead">A taste of what is included with the product.</p>
+			</div>
+
+		</div>
+		<div class="row">
+
+			<div class="col-md-10 col-md-offset-1">
+				<div class="panel panel-default padding-medium-top padding-medium-bottom">
+					<div class="panel-body text-center">
+						<img alt="sample" src="/img/sample.png" class="img-responsive img-rounded" />
+						<p>Describe the sample dolor sit amet and why should I want to get it adipiscint elit.</p>
+						<p class="margin-bottom-none">
+							<a href="#" class="btn btn-lg btn-success text-uppercase">
+								<span class="icon icon-download-alt"></span>&#32;
+								Download the sample
+							</a>
+						</p>
+						<p class="margin-none">
+							<small class="small-smaller">ZIP &middot; 25 MB</small>
+						</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<div class="container padding-medium-bottom">
+
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1">
+			<h2 class="margin-bottom-none">Special Content</h2>
+			<p class="lead">And a proper subtitle to better describe it.</p>
+		</div>
+	</div>
+
+	<div class="row padding-medium-top">
+		<div class="col-md-4 col-md-offset-1">
+			<p>
+				Just don't go all-in with the details.<br />
+				Save them for the <a href="#packages">packages</a> section.
+			</p>
+
+			<p>
+				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.
+			</p>
+
+			<p>
+				Excepteur sint occaecat cupidatat non	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</div>
+		<div class="col-md-6 col-md-offset-1">
+			<div class="text-center">
+				<img src="/img/special-500.png" alt=" " class="img-thumbnail" />
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<div class="bg-white-dark padding-big-bottom">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-3 col-md-offset-1 padding-big-top margin-medium-top">
+				<figure class="text-center">
+					<img src="/img/gravatar-william-ghelfi-260.jpeg" alt="William Ghelfi" class="img-circle img-responsive margin-big-top" />
+				</figure>
+			</div>
+			<div class="col-md-7">
+				<h2>Who's behind this?</h2>
+				<p>
+					Hey, hello. I&#8217;m Lorem J. Ipsum.
+				</p>
+				<p>
+					Williamsburg tousled Marfa Helvetica banh mi kale chips Schlitz, chambray cliche meggings fanny pack photo booth High Life YOLO. Cosby sweater cray skateboard, cornhole VHS narwhal deep v try-hard YOLO Austin kale chips selfies wolf Vice.
+				</p>
+				<p>
+					Chillwave Austin Godard gluten-free sustainable. Selfies art party plaid gastropub, occupy literally post-ironic mumblecore.
+				</p>
+				<p>
+					Cliche sartorial roof party, shabby chic sustainable VHS food truck 90's four loko. Etsy hoodie 	distillery, organic beard DIY cliche.
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container padding-medium-bottom" id="packages">
+
+	<div class="row">
+		<div class="col-md-12">
+			<h2 class="margin-bottom-none">
+				The Complete Package
+				<span class="pull-right margin-medium-bottom">
+					<a class="btn btn-success btn-lg btn-xl" href="#">
+						<span class="text-uppercase"><span class="text-white-dark">Buy now for</span> $249</span>
+					</a>
+				</span>
+			</h2>
+			<p class="lead">
+				Cosby sweater cray skateboard.
+			</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-6 margin-small-top">
+			<div class="media row">
+				<figure class="pull-left col-xs-12 col-md-4 margin-small-bottom">
+					<img src="/img/ap-medium.png" alt="The Amazing Product" class="media-object img-thumbnail" />
+				</figure>
+				<div class="media-body col-xs-12 col-md-7">
+					<h3 class="media-heading">The amazing product</h3>
+					<p>
+						Mustache farm-to-table deep v cardigan, Banksy Godard roof party PBR&amp;B. Vinyl Brooklyn photo booth cardigan XOXO seitan, PBR&amp;B Pinterest pour-over Terry Richardson Blue Bottle pug mixtape four loko.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="clearfix visible-xs"></div>
+
+		<div class="col-md-6 margin-small-top">
+			<div class="media row">
+				<figure class="pull-left col-xs-12 col-md-4 margin-small-bottom">
+					<img class="media-object img-circle" src="/img/special-200.png" alt=" " />
+				</figure>
+				<div class="media-body col-xs-12 col-md-7">
+					<h3 class="media-heading">Additional resource</h3>
+					<p>
+						High Life tofu Helvetica, Neutra hashtag flannel PBR keffiyeh pickled art party food truck McSweeney's.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="clearfix visible-xs"></div>
+
+	<div class="row margin-big-vertical">
+		<div class="col-md-6 margin-small-top">
+			<div class="media row">
+				<figure class="pull-left col-xs-12 col-md-4 margin-small-bottom">
+					<img class="media-object img-circle" src="/img/special-200.png" alt=" " />
+				</figure>
+				<div class="media-body col-xs-12 col-md-7">
+					<h3 class="media-heading">Additional resource</h3>
+					<p>
+						Salvia lo-fi ugh paleo, squid pickled hashtag you probably haven't heard of them Truffaut Echo Park 8-bit Shoreditch twee. Banjo twee bitters, umami authentic try-hard sartorial butcher.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="clearfix visible-xs"></div>
+
+		<div class="col-md-6 margin-small-top">
+			<div class="media row">
+				<figure class="pull-left col-xs-12 col-md-4 margin-small-bottom">
+					<img class="media-object img-circle" src="/img/special-200.png" alt=" " />
+				</figure>
+				<div class="media-body col-xs-12 col-md-7">
+					<h3 class="media-heading">Additional resource</h3>
+					<p>
+						Gastropub Blue Bottle dreamcatcher selfies, master cleanse try-hard wolf meggings Banksy vegan pour-over. Cliche selvage 8-bit Truffaut, polaroid letterpress Neutra Williamsburg.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="clearfix visible-xs"></div>
+
+	<div class="row margin-big-vertical">
+		<div class="col-md-6 margin-small-top">
+			<div class="media row">
+				<figure class="pull-left col-xs-12 col-md-4 margin-small-bottom">
+					<img class="media-object img-circle" src="/img/special-200.png" alt=" " />
+				</figure>
+				<div class="media-body col-xs-12 col-md-7">
+					<h3 class="media-heading">Additional resource</h3>
+					<p>
+						Salvia lo-fi ugh paleo, squid pickled hashtag you probably haven't heard of them Truffaut Echo Park 8-bit Shoreditch twee. Banjo twee bitters, umami authentic try-hard sartorial butcher.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="clearfix visible-xs"></div>
+
+		<div class="col-md-6 margin-small-top">
+			<div class="media row">
+				<figure class="pull-left col-xs-12 col-md-4 margin-small-bottom">
+					<img class="media-object img-circle" src="/img/special-200.png" alt=" " />
+				</figure>
+				<div class="media-body col-xs-12 col-md-7">
+					<h3 class="media-heading">Additional resource</h3>
+					<p>
+						Gastropub Blue Bottle dreamcatcher selfies, master cleanse try-hard wolf meggings Banksy vegan pour-over. Cliche selvage 8-bit Truffaut, polaroid letterpress Neutra Williamsburg.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="clearfix visible-xs"></div>
+
+	<div class="row margin-big-vertical">
+		<div class="col-md-6 margin-small-top">
+			<div class="media row">
+				<figure class="pull-left col-xs-12 col-md-4 margin-small-bottom">
+					<img class="media-object img-circle" src="/img/special-200.png" alt=" " />
+				</figure>
+				<div class="media-body col-xs-12 col-md-7">
+					<h3 class="media-heading">Additional resource</h3>
+					<p>
+						Salvia lo-fi ugh paleo, squid pickled hashtag you probably haven't heard of them Truffaut Echo Park 8-bit Shoreditch twee. Banjo twee bitters, umami authentic try-hard sartorial butcher.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="clearfix visible-xs"></div>
+
+		<div class="col-md-6 margin-small-top">
+			<div class="media row">
+				<figure class="pull-left col-xs-12 col-md-4 margin-small-bottom">
+					<img class="media-object img-circle" src="/img/special-200.png" alt=" " />
+				</figure>
+				<div class="media-body col-xs-12 col-md-7">
+					<h3 class="media-heading">Additional resource</h3>
+					<p>
+						Gastropub Blue Bottle dreamcatcher selfies, master cleanse try-hard wolf meggings Banksy vegan pour-over. Cliche selvage 8-bit Truffaut, polaroid letterpress Neutra Williamsburg.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<figure class="col-md-2 col-md-offset-2 margin-small-top">
+			<img src="/img/janicedoe-100.png" alt="Janice Doe" class="img-responsive img-circle pull-right" />
+		</figure>
+		<div class="col-md-5">
+			<blockquote>
+				<p>
+					Here's another testimonial stating the amazingness of the product.
+				</p>
+				<small>Janice Ipsum, Letterpress at Dreamcatcher</small>
+			</blockquote>
+		</div>
+	</div>
+
+	<hr />
+
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1">
+			<p class="text-center">This is a good place to put a variant of the package available <a href="#"><strong>at a special price</strong></a>. Ipsum sit amet.</p>
+		</div>
+	</div>
+</div>
+
+<div class="bg-white-dark padding-medium-bottom">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-12">
+				<h2 class="margin-bottom-none">
+					The Amazing Product + Resources
+					<span class="pull-right margin-medium-bottom">
+						<a class="btn btn-success btn-lg btn-xl" href="#">
+							<span class="text-uppercase"><span class="text-white-dark">Buy now for</span> $99</span>
+						</a>
+					</span>
+				</h2>
+				<p class="lead">
+					Cosby sweater cray skateboard.
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 margin-small-top">
+				<div class="media row">
+					<figure class="pull-left col-xs-12 col-md-4 margin-small-bottom">
+						<img src="/img/ap-medium.png" alt="The Amazing Product" class="media-object img-thumbnail" />
+					</figure>
+					<div class="media-body col-xs-12 col-md-7">
+						<h3 class="media-heading">The amazing product</h3>
+						<p>
+							Mustache farm-to-table deep v cardigan, Banksy Godard roof party PBR&amp;B. Vinyl Brooklyn photo booth cardigan XOXO seitan, PBR&amp;B Pinterest pour-over Terry Richardson Blue Bottle pug mixtape four loko.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="clearfix visible-xs"></div>
+
+			<div class="col-md-6 margin-small-top">
+				<div class="media row">
+					<figure class="pull-left col-xs-12 col-md-4 margin-small-bottom">
+						<img class="media-object img-circle" src="/img/special-200.png" alt=" " />
+					</figure>
+					<div class="media-body col-xs-12 col-md-7">
+						<h3 class="media-heading">Additional resource</h3>
+						<p>
+							High Life tofu Helvetica, Neutra hashtag flannel PBR keffiyeh pickled art party food truck McSweeney's.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="clearfix visible-xs"></div>
+
+		<div class="row margin-big-vertical">
+			<div class="col-md-6 margin-small-top">
+				<div class="media row">
+					<figure class="pull-left col-xs-12 col-md-4 margin-small-bottom">
+						<img class="media-object img-circle" src="/img/special-200.png" alt=" " />
+					</figure>
+					<div class="media-body col-xs-12 col-md-7">
+						<h3 class="media-heading">Additional resource</h3>
+						<p>
+							Salvia lo-fi ugh paleo, squid pickled hashtag you probably haven't heard of them Truffaut Echo Park 8-bit Shoreditch twee. Banjo twee bitters, umami authentic try-hard sartorial butcher.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="clearfix visible-xs"></div>
+
+			<div class="col-md-6 margin-small-top">
+				<div class="media row">
+					<figure class="pull-left col-xs-12 col-md-4 margin-small-bottom">
+						<img class="media-object img-circle" src="/img/special-200.png" alt=" " />
+					</figure>
+					<div class="media-body col-xs-12 col-md-7">
+						<h3 class="media-heading">Additional resource</h3>
+						<p>
+							Gastropub Blue Bottle dreamcatcher selfies, master cleanse try-hard wolf meggings Banksy vegan pour-over. Cliche selvage 8-bit Truffaut, polaroid letterpress Neutra Williamsburg.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div class="container padding-medium-bottom">
+	<div class="row">
+		<div class="col-md-4">
+			<img src="/img/ap-medium.png" alt="The Amazing Product" class="img-thumbnail margin-big-top" />
+		</div>
+		<div class="col-md-8">
+			<h2 class="margin-bottom-none">
+				The Amazing Product
+				<span class="pull-right margin-medium-bottom">
+					<a class="btn btn-success btn-lg btn-xl" href="#">
+						<span class="text-uppercase"><span class="text-white-dark">Buy now for</span> $39</span>
+					</a>
+				</span>
+			</h2>
+			<p class="lead">
+				The budget option.
+			</p>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br />
+				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			</p>
+			<p>
+				Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+			<p>
+				So, if the budget is an issue I highly recommend getting the amazing product by itself.
+			</p>
+		</div>
+	</div>
+</div>
+
+<div class="bg-white-dark padding-big-top padding-big-bottom">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<p class="text-center"><strong>Questions?</strong> Please <a href="mailto:me@example.com"><span class="icon icon-envelope-alt"></span>&#32;drop me a line</a> and I&#8217;ll do my best to answer them.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container padding-medium-bottom">
+	<div class="row">
+		<div class="col-md-5 col-md-offset-1">
+			<h2>
+				Is the amazing product right for me?
+			</h2>
+			<p>
+				Ugh mumblecore PBR bitters. Gluten-free lomo yr narwhal locavore, banjo 90's small batch polaroid Truffaut put a bird on it sriracha kale chips. Vegan polaroid freegan asymmetrical mixtape Truffaut. Roof party sriracha biodiesel.
+ 			</p>
+		</div>
+		<div class="col-md-5">
+			<h2>
+				Which package should I choose?
+			</h2>
+			<p>
+				Keffiyeh selfies swag freegan Carles. Hoodie freegan plaid mustache, raw denim master cleanse you probably haven't heard of them blog. Trust fund twee disrupt, cray Williamsburg master cleanse craft beer freegan. Small batch High Life ethnic, craft beer drinking vinegar Tonx aesthetic messenger bag.
+			</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-5 col-md-offset-1">
+			<h2>
+				What if I hate the amazing product?
+			</h2>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua.<br />
+				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			</p>
+		</div>
+		<div class="col-md-5">
+			<h2>
+				I have another question!
+			</h2>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua.<br />
+				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			</p>
+		</div>
+	</div>
+</div>
+
+<div class="bg-white-dark padding-medium-bottom">
+	<div class="container">
+		<div class="row">
+
+			<h2 class="text-center">Choose a package</h2>
+
+			<div class="col-md-10 col-md-offset-1">
+
+				<ul class="pricing-table list-unstyled panel row">
+					<li class="col-md-4 first">
+						<h2 class="h3">The Amazing Product</h2>
+						<ul>
+							<li>Details</li>
+							<li>Lorem ipsum</li>
+							<li>Nostrud exercitation</li>
+						</ul>
+						<p>
+							<a class="btn btn-default btn-lg btn-block" href="#">
+								<span class="text-uppercase"><span class="text-muted">Buy now for</span> $39</span>
+							</a>
+						</p>
+					</li>
+					<li class="col-md-4">
+						<h2 class="h3">The Amazing Product + Resources</h2>
+						<ul>
+							<li>Details</li>
+							<li>Lorem ipsum</li>
+							<li>Nostrud exercitation</li>
+							<li>Resources ipsum</li>
+							<li>Adipiscit resource</li>
+							<li>Resource numquam</li>
+						</ul>
+						<p>
+							<a class="btn btn-default btn-lg btn-block" href="#">
+								<span class="text-uppercase"><span class="text-muted">Buy now for</span> $99</span>
+							</a>
+						</p>
+					</li>
+					<li class="col-md-4 active">
+						<h2 class="h3">The Complete Package</h2>
+						<ul>
+							<li>Details</li>
+							<li>Lorem ipsum</li>
+							<li>Nostrud exercitation</li>
+							<li>Resources ipsum</li>
+							<li>Adipiscit resource</li>
+							<li>Resource numquam</li>
+							<li>Resources ipsum</li>
+							<li>Adipiscit resource</li>
+							<li>Resource numquam</li>
+						</ul>
+						<p>
+							<a class="btn btn-success btn-lg btn-block" href="#">
+								<span class="text-uppercase"><span class="text-white-dark">Buy now for</span> $249</span>
+							</a>
+						</p>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer class="margin-big-top text-center small-smaller">
+	<p><small><span property="dct:title">Subtle Patterns</span> (<a rel="cc:attributionURL" property="cc:attributionName" href="http://subtlepatterns.com">Subtle Patterns</a>) / <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></small></p>
+</footer>
+
+<script src="//codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Demo only - Remove in production -->
+<script src="/js/salesbury-demo.js"></script>
+
+</body>
+</html>

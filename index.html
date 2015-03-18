@@ -1,719 +1,719 @@
 <!DOCTYPE html>
 <head>
-  <meta charset="utf-8" />
-  <title>React+d3.js by Swizec Teller</title>
-  <meta name="author" content="" />
-  <meta name="description" content="" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <title>React+d3.js by Swizec Teller</title>
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <!-- Bootstrap -->
-	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" />
 
-	<link href="css/bootstrap-override.css" rel="stylesheet" />
-	<link href="css/bootstrap-custom-utils.css" rel="stylesheet" />
+    <link href="css/bootstrap-override.css" rel="stylesheet" />
+    <link href="css/bootstrap-custom-utils.css" rel="stylesheet" />
 
-	<!--
-		Color swatches - Choose one in production
-	-->
-	<!--
-	<link href="css/salesbury-red.css" rel="stylesheet" />
-	<link href="css/salesbury-green.css" rel="stylesheet" />
-	<link href="css/salesbury-blue.css" rel="stylesheet" />
-	<link href="css/salesbury-lilac.css" rel="stylesheet" />
-	-->
-	<link href="css/salesbury-lilac.css" id="color-scheme" rel="stylesheet" />
-        <link href="example_viz/build/style.css" rel="stylesheet" />
+    <!--
+	      Color swatches - Choose one in production
+	      -->
+    <!--
+	      <link href="css/salesbury-red.css" rel="stylesheet" />
+	      <link href="css/salesbury-green.css" rel="stylesheet" />
+	      <link href="css/salesbury-blue.css" rel="stylesheet" />
+	      <link href="css/salesbury-lilac.css" rel="stylesheet" />
+	      -->
+    <link href="css/salesbury-lilac.css" id="color-scheme" rel="stylesheet" />
+    <link href="example_viz/build/style.css" rel="stylesheet" />
 
-	<!--
-		Background patterns - Choose one in production
-	-->
-	<!--
-	<link href="css/salesbury-bg-grid_noise.css" rel="stylesheet" />
-	<link href="css/salesbury-bg-square_bg.css" rel="stylesheet" />
-	<link href="css/salesbury-bg-light_wool.css" rel="stylesheet" />
-	<link href="css/salesbury-bg-connect.css" rel="stylesheet" />
-	-->
-	<link href="css/salesbury-bg-grid_light_wool.css" id="background-pattern" rel="stylesheet" />
+    <!--
+	      Background patterns - Choose one in production
+	      -->
+    <!--
+	      <link href="css/salesbury-bg-grid_noise.css" rel="stylesheet" />
+	      <link href="css/salesbury-bg-square_bg.css" rel="stylesheet" />
+	      <link href="css/salesbury-bg-light_wool.css" rel="stylesheet" />
+	      <link href="css/salesbury-bg-connect.css" rel="stylesheet" />
+	      -->
+    <link href="css/salesbury-bg-grid_light_wool.css" id="background-pattern" rel="stylesheet" />
 
-	<!-- Demo only - Remove in production -->
-	<!-- <link href="css/salesbury-demo.css" rel="stylesheet" /> -->
+    <!-- Demo only - Remove in production -->
+    <!-- <link href="css/salesbury-demo.css" rel="stylesheet" /> -->
 
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
-	  <script src="html5shiv/html5shiv.js"></script>
-	  <script src="respond.js/respond.min.js"></script>
-	<![endif]-->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+     <script src="html5shiv/html5shiv.js"></script>
+     <script src="respond.js/respond.min.js"></script>
+     <![endif]-->
 
-	<script>
-	// Windows Phone 8 and MSIE 10
-	// http://timkadlec.com/2013/01/windows-phone-8-and-device-width/
-	if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
-	  var msViewportStyle = document.createElement("style")
-	  msViewportStyle.appendChild(
-	    document.createTextNode(
-	      "@-ms-viewport{width:auto!important}"
-	    )
-	  )
-	  document.getElementsByTagName("head")[0].appendChild(msViewportStyle)
-	}
-	</script>
+    <script>
+     // Windows Phone 8 and MSIE 10
+     // http://timkadlec.com/2013/01/windows-phone-8-and-device-width/
+     if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+	 var msViewportStyle = document.createElement("style")
+	     msViewportStyle.appendChild(
+	         document.createTextNode(
+	             "@-ms-viewport{width:auto!important}"
+	         )
+	     )
+	     document.getElementsByTagName("head")[0].appendChild(msViewportStyle)
+     }
+    </script>
 
 </head>
 
 <body>
 
-<div class="bg-white-dark padding-small-top"></div>
+    <div class="bg-white-dark padding-small-top"></div>
 
-  <header class="text-left container">
+    <header class="text-left container">
   	<div class="row">
-  		<div class="col-md-10 col-md-offset-1">
-		    <h1>Have you tried React?</h1>
-		    <p class="lead">React with d3.js was the most fun I've had in years.</p>
-		  </div>
-		</div>
-  </header>
+  	    <div class="col-md-10 col-md-offset-1">
+		<h1>Have you tried React?</h1>
+		<p class="lead">React with d3.js was the most fun I've had in years.</p>
+	    </div>
+	</div>
+    </header>
 
-  <div class="container container-pattern padding-big-bottom">
+    <div class="container container-pattern padding-big-bottom">
 	<div class="row margin-big-top">
 
-		<div class="col-xs-12 col-md-4 col-md-offset-1">
-			<p>
-				Creating dynamic data visualizations on the web is a pain in the ass.
-			</p>
+	    <div class="col-xs-12 col-md-4 col-md-offset-1">
+		<p>
+		    Creating dynamic data visualizations on the web is a pain in the ass.
+		</p>
 
-			<p>
-                            You either have to use dumbed down libraries that won't let you do what you want, or make everything from scratch. Every time.<br />
-                        </p>
-                        <p>
-                            You want a <strong>quick way to build complex visualizations</strong>. Build once, use everywhere. In every project. Don't believe me? Scroll down.<br>
-			</p>
+		<p>
+                    You either have to use dumbed down libraries that won't let you do what you want, or make everything from scratch. Every time.<br />
+                </p>
+                <p>
+                    You want a <strong>quick way to build complex visualizations</strong>. Build once, use everywhere. In every project. Don't believe me? Scroll down.<br>
+		</p>
 
-			<p>
-				With <strong>React+d3.js</strong> you'll learn how to build re-usable visualization components in about an hour.
-			</p>
+		<p>
+		    With <strong>React+d3.js</strong> you'll learn how to build re-usable visualization components in about an hour.
+		</p>
 
-			<p>
-				<em><strong>Interested?<br />
-				<a href="#packages">Go straight to the packages.</a></strong></em>
-			</p>
-		</div>
-		<div class="col-xs-12 col-md-6">
-			<figure class="text-center">
-				<img src="img/ap-big.png" alt="The Amazing Product" class="img-thumbnail" />
-			</figure>
-		</div>
+		<p>
+		    <em><strong>Interested?<br />
+			<a href="#packages">Go straight to the packages.</a></strong></em>
+		</p>
+	    </div>
+	    <div class="col-xs-12 col-md-6">
+		<figure class="text-center">
+		    <img src="img/ap-big.png" alt="The Amazing Product" class="img-thumbnail" />
+		</figure>
+	    </div>
 	</div>
 
 	<hr />
 
 	<div class="row margin-medium-top">
-		<figure class="col-md-2 col-md-offset-1 margin-small-top">
-			<img src="img/d3noob.png" alt="Malcolm Maclean, d3noob" class="img-responsive img-circle pull-right" />
-		</figure>
-		<blockquote class="col-md-7">
-			<p>
-				A sharply written work that delivers technical information in a conversational and easy to digest manner.
-			</p>
-			<small>Malcolm Maclean, Author of D3 Tips & Tricks</small>
-		</blockquote>
+	    <figure class="col-md-2 col-md-offset-1 margin-small-top">
+		<img src="img/d3noob.png" alt="Malcolm Maclean, d3noob" class="img-responsive img-circle pull-right" />
+	    </figure>
+	    <blockquote class="col-md-7">
+		<p>
+		    A sharply written work that delivers technical information in a conversational and easy to digest manner.
+		</p>
+		<small>Malcolm Maclean, Author of D3 Tips & Tricks</small>
+	    </blockquote>
 	</div>
 
-</div>
+    </div>
 
-<div class="bg-white-dark-example padding-big-bottom">
-    <div class="container">
-        <div class="row">
-            <div class="h1bgraph col-md-10">
+    <div class="bg-white-dark-example padding-big-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="h1bgraph col-md-10">
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<div class="bg-white-dark padding-big-bottom">
+    <div class="bg-white-dark padding-big-bottom">
 	<div class="container">
-		<div class="row">
+	    <div class="row">
 
-			<h2 class="col-md-10 col-md-offset-1">Learning a new paradigm is hard</h2>
+		<h2 class="col-md-10 col-md-offset-1">Learning a new paradigm is hard</h2>
 
-			<div class="col-md-6 col-md-offset-1">
-				<p>
-					React offers a completely new way of thinking about web applications.
-				</p>
+		<div class="col-md-6 col-md-offset-1">
+		    <p>
+			React offers a completely new way of thinking about web applications.
+		    </p>
 
-                                <p>
-                                    No more strange spaghetti JavaScript. No more business logic tied to HTML. When was the last time you felt safe changing the nesting structure of your HTML? The last time you knew the app won't break just because a designer changed something?.
-                                </p>
+                    <p>
+                        No more strange spaghetti JavaScript. No more business logic tied to HTML. When was the last time you felt safe changing the nesting structure of your HTML? The last time you knew the app won't break just because a designer changed something?.
+                    </p>
 
-                                <p>
-                                    It's even worse with visualizations. Libraries that work juuuust a little differently than you'd want, d3.js code you wrote last time, but can't reuse anywhere else. And updating the visualization together with the rest of the interface is a beast.
-                                </p>
+                    <p>
+                        It's even worse with visualizations. Libraries that work juuuust a little differently than you'd want, d3.js code you wrote last time, but can't reuse anywhere else. And updating the visualization together with the rest of the interface is a beast.
+                    </p>
 
-				<p>
-				    React with d3.js fixes all of that.
-                                </p>
-                                <p>
-                                    But learning a whole new approach to coding is hard. It takes time and effort. Time you'd rather spend solving your real problems. Making code cleaner, easier to maintain, and delivering value to your users.
-				</p>
+		    <p>
+			React with d3.js fixes all of that.
+                    </p>
+                    <p>
+                        But learning a whole new approach to coding is hard. It takes time and effort. Time you'd rather spend solving your real problems. Making code cleaner, easier to maintain, and delivering value to your users.
+		    </p>
 
-			</div>
-			<div class="col-md-4 text-center">
-				<span class="icon icon-frown icon-white icon-6x"></span>
-			</div>
 		</div>
+		<div class="col-md-4 text-center">
+		    <span class="icon icon-frown icon-white icon-6x"></span>
+		</div>
+	    </div>
 	</div>
-</div>
+    </div>
 
-<div class="container padding-big-bottom">
+    <div class="container padding-big-bottom">
 	<div class="row">
 
-		<h2 class="col-md-10 col-md-offset-1">React+d3.js the book</h2>
+	    <h2 class="col-md-10 col-md-offset-1">React+d3.js the book</h2>
+
+	    <div class="col-md-10 col-md-offset-1">
+		<p>
+		    React+d3.js is designed to be short, but comprehensive.
+		</p>
+
+		<p>
+		    In about an hour, it will guide you through a whole React and d3.js project from start to finish.<br />
+		    Everything from setting up code compilation, to creating reusable visualization components.
+		</p>
+
+	    </div>
+	</div>
+	<div class="row">
+	    <div class="col-md-4 col-md-offset-1">
+		<h3>React+d3.js</h3>
+
+		<p>
+		    Learn how to build reusable visualization components that work anywhere, with any data.
+		</p>
+
+		<p>
+		    Fly through the code with to-the-point instructions and a healthy dose of interesting banter.
+		</p>
+	    </div>
+	    <div class="col-md-5 col-md-offset-1">
+
+		<h3>Using React with d3.js</h3>
+
+		<ul class="icons-ul">
+		    <li><span class="icon-li icon-sitemap"></span>
+			<strong>Declarative.</strong><br />
+			Say what you want, not how.
+		    </li>
+		    <li><span class="icon-li icon-random"></span>
+			<strong>Reusable.</strong><br />
+			Code once, use everywhere.
+		    </li>
+		    <li><span class="icon-li icon-bolt"></span>
+			<strong>Fast.</strong><br />
+			Render only the stuff that changes.
+		    </li>
+		</ul>
+
+	    </div>
+
+	</div>
+
+
+	<div class="row">
+	    <figure class="col-md-2 col-md-offset-2 margin-small-top">
+		<img src="img/philip-patterson.jpg" alt="Janice Doe" class="img-responsive img-circle pull-right" />
+	    </figure>
+	    <div class="col-md-5">
+		<blockquote>
+		    <p>
+			An awesome, lightweight intro.
+		    </p>
+		    <small>Philip Patterson</small>
+		</blockquote>
+	    </div>
+	</div>
+    </div>
+
+    <div class="bg-white-dark padding-big-bottom" id="free-sample">
+	<div class="container">
+	    <div class="row">
 
 		<div class="col-md-10 col-md-offset-1">
-			<p>
-				React+d3.js is designed to be short, but comprehensive.
-			</p>
-
-			<p>
-				In about an hour, it will guide you through a whole React and d3.js project from start to finish.<br />
-				Everything from setting up code compilation, to creating reusable visualization components.
-			</p>
-
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-4 col-md-offset-1">
-			<h3>React+d3.js</h3>
-
-			<p>
-				Learn how to build reusable visualization components that work anywhere, with any data.
-			</p>
-
-			<p>
-				Fly through the code with to-the-point instructions and a healthy dose of interesting banter.
-			</p>
-		</div>
-		<div class="col-md-5 col-md-offset-1">
-
-			<h3>Using React with d3.js</h3>
-
-			<ul class="icons-ul">
-				<li><span class="icon-li icon-sitemap"></span>
-					<strong>Declarative.</strong><br />
-					Say what you want, not how.
-				</li>
-				<li><span class="icon-li icon-random"></span>
-					<strong>Reusable.</strong><br />
-					Code once, use everywhere.
-				</li>
-				<li><span class="icon-li icon-bolt"></span>
-					<strong>Fast.</strong><br />
-					Render only the stuff that changes.
-				</li>
-			</ul>
-
+		    <h2 class="margin-bottom-none">Get a free sample</h2>
+		    <p class="lead">A taste of what's included with the book.</p>
 		</div>
 
-	</div>
+	    </div>
+	    <div class="row">
 
-
-	<div class="row">
-		<figure class="col-md-2 col-md-offset-2 margin-small-top">
-			<img src="img/philip-patterson.jpg" alt="Janice Doe" class="img-responsive img-circle pull-right" />
-		</figure>
-		<div class="col-md-5">
-			<blockquote>
-				<p>
-					An awesome, lightweight intro.
-				</p>
-				<small>Philip Patterson</small>
-			</blockquote>
-		</div>
-	</div>
-</div>
-
-<div class="bg-white-dark padding-big-bottom" id="free-sample">
-	<div class="container">
-		<div class="row">
-
-			<div class="col-md-10 col-md-offset-1">
-				<h2 class="margin-bottom-none">Get a free sample</h2>
-				<p class="lead">A taste of what's included with the book.</p>
-			</div>
-
-		</div>
-		<div class="row">
-
-			<div class="col-md-10 col-md-offset-1">
-				<div class="panel panel-default padding-medium-top padding-medium-bottom">
-					<div class="panel-body text-center">
-						<img alt="sample" src="img/sample.png" class="img-responsive img-rounded" />
-						<p>Learn about the basic architecture of React apps and see how JSX makes your code better.</p>
-						<p class="margin-bottom-none">
-							<a href="http://samples.leanpub.com/reactd3js-sample.pdf" class="btn btn-lg btn-success text-uppercase">
-								<span class="icon icon-download-alt"></span>&#32;
-								Download the sample
-							</a>
-						</p>
-						<p class="margin-none">
-							<small class="small-smaller">PDF; 2.1 MB</small>
-						</p>
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</div>
-</div>
-
-<div class="container padding-medium-bottom">
-
-	<div class="row">
 		<div class="col-md-10 col-md-offset-1">
-			<h2 class="margin-bottom-none">A screencast</h2>
-			<p class="lead">Watching code appear before your eyes makes it easier to understand.</p>
+		    <div class="panel panel-default padding-medium-top padding-medium-bottom">
+			<div class="panel-body text-center">
+			    <img alt="sample" src="img/sample.png" class="img-responsive img-rounded" />
+			    <p>Learn about the basic architecture of React apps and see how JSX makes your code better.</p>
+			    <p class="margin-bottom-none">
+				<a href="http://samples.leanpub.com/reactd3js-sample.pdf" class="btn btn-lg btn-success text-uppercase">
+				    <span class="icon icon-download-alt"></span>&#32;
+				    Download the sample
+				</a>
+			    </p>
+			    <p class="margin-none">
+				<small class="small-smaller">PDF; 2.1 MB</small>
+			    </p>
+			</div>
+		    </div>
 		</div>
+
+	    </div>
+	</div>
+    </div>
+
+    <div class="container padding-medium-bottom">
+
+	<div class="row">
+	    <div class="col-md-10 col-md-offset-1">
+		<h2 class="margin-bottom-none">A screencast</h2>
+		<p class="lead">Watching code appear before your eyes makes it easier to understand.</p>
+	    </div>
 	</div>
 
 	<div class="row padding-medium-top">
-		<div class="col-md-4 col-md-offset-1">
+	    <div class="col-md-4 col-md-offset-1">
 
-			<p>
-				An hour long screencast will guide you through everything you'll read in the book and show you just how it all fits together.
-			</p>
+		<p>
+		    An hour long screencast will guide you through everything you'll read in the book and show you just how it all fits together.
+		</p>
 
-			<p>
-				Don't miss something just because you made a typo.
-			</p>
+		<p>
+		    Don't miss something just because you made a typo.
+		</p>
+	    </div>
+	    <div class="col-md-6 col-md-offset-1">
+		<div class="text-center">
+		    <img src="img/special-500.png" alt=" " class="img-thumbnail" />
 		</div>
-		<div class="col-md-6 col-md-offset-1">
-			<div class="text-center">
-				<img src="img/special-500.png" alt=" " class="img-thumbnail" />
-			</div>
-		</div>
+	    </div>
 	</div>
 
-</div>
+    </div>
 
-<div class="bg-white-dark padding-big-bottom">
+    <div class="bg-white-dark padding-big-bottom">
 	<div class="container">
-		<div class="row">
+	    <div class="row">
 
-			<div class="col-md-3 col-md-offset-1 padding-big-top margin-medium-top">
-				<figure class="text-center">
-					<img src="img/me.png" alt="Swizec Teller" class="img-circle img-responsive margin-big-top" />
-				</figure>
-			</div>
-			<div class="col-md-7">
-				<h2>About the Author</h2>
-		                <p>Hi, I’m Swizec Teller. A digital nomad and full stack web engineer.</p>
-        <p>I travel the world and help startups win. From setting up new teams and training juniors, to fixing spaghetti code and implementing new features.</p>
-        <p>My code has been used by MasterCard, Commerzbank, Google, Mashable, Lyft, and many others.</p>
-        <p>When I’m not coding, I’m writing.</p>
-        <p>At least 5000 people bought my books ... I don’t know if that’s a lot, but it’s more than zero. I like that.</p>
-        <p>My work has been featured in Business Insider, LifeHacker, Huffington Post, and several dead-tree magazines. I’ve spoken on BBC Radio, appeared on Slovenian national television, and given talks all over the world.</p>
-			</div>
+		<div class="col-md-3 col-md-offset-1 padding-big-top margin-medium-top">
+		    <figure class="text-center">
+			<img src="img/me.png" alt="Swizec Teller" class="img-circle img-responsive margin-big-top" />
+		    </figure>
 		</div>
+		<div class="col-md-7">
+		    <h2>About the Author</h2>
+		    <p>Hi, I’m Swizec Teller. A digital nomad and full stack web engineer.</p>
+                    <p>I travel the world and help startups win. From setting up new teams and training juniors, to fixing spaghetti code and implementing new features.</p>
+                    <p>My code has been used by MasterCard, Commerzbank, Google, Mashable, Lyft, and many others.</p>
+                    <p>When I’m not coding, I’m writing.</p>
+                    <p>At least 5000 people bought my books ... I don’t know if that’s a lot, but it’s more than zero. I like that.</p>
+                    <p>My work has been featured in Business Insider, LifeHacker, Huffington Post, and several dead-tree magazines. I’ve spoken on BBC Radio, appeared on Slovenian national television, and given talks all over the world.</p>
+		</div>
+	    </div>
 	</div>
-</div>
+    </div>
 
-<div class="container padding-medium-bottom" id="packages">
+    <div class="container padding-medium-bottom" id="packages">
 
 	<div class="row">
-		<div class="col-md-12">
-			<h2 class="margin-bottom-none">
-				The Complete Package
-				<span class="pull-right margin-medium-bottom">
-					<a class="btn btn-success btn-lg btn-xl" href="https://leanpub.com/reactd3js/packages/platinum/purchases/new">
-						<span class="text-uppercase"><span class="text-white-dark">Buy now for</span> $499</span>
-					</a>
-				</span>
-			</h2>
-			<p class="lead">
-				The book, the resources, and an hour of my time.
+	    <div class="col-md-12">
+		<h2 class="margin-bottom-none">
+		    The Complete Package
+		    <span class="pull-right margin-medium-bottom">
+			<a class="btn btn-success btn-lg btn-xl" href="https://leanpub.com/reactd3js/packages/platinum/purchases/new">
+			    <span class="text-uppercase"><span class="text-white-dark">Buy now for</span> $499</span>
+			</a>
+		    </span>
+		</h2>
+		<p class="lead">
+		    The book, the resources, and an hour of my time.
+		</p>
+	    </div>
+	</div>
+
+	<div class="row">
+	    <div class="col-md-6 margin-small-top">
+		<div class="media row">
+		    <figure class="pull-left col-xs-12 col-md-4 margin-small-bottom">
+			<img src="img/ap-medium.png" alt="React+d3.js" class="media-object img-thumbnail" />
+		    </figure>
+		    <div class="media-body col-xs-12 col-md-7">
+			<h3 class="media-heading">React+d3.js</h3>
+			<p>
+			    63 pages of code samples and explanation in PDF, ePUB, or MOBI. A solid guide to building your first data visualization with React and d3.js.
 			</p>
+		    </div>
 		</div>
-	</div>
+	    </div>
 
-	<div class="row">
-		<div class="col-md-6 margin-small-top">
-			<div class="media row">
-				<figure class="pull-left col-xs-12 col-md-4 margin-small-bottom">
-					<img src="img/ap-medium.png" alt="React+d3.js" class="media-object img-thumbnail" />
-				</figure>
-				<div class="media-body col-xs-12 col-md-7">
-					<h3 class="media-heading">React+d3.js</h3>
-					<p>
-						63 pages of code samples and explanation in PDF, ePUB, or MOBI. A solid guide to building your first data visualization with React and d3.js.
-					</p>
-				</div>
-			</div>
+	    <div class="clearfix visible-xs"></div>
+
+	    <div class="col-md-6 margin-small-top">
+		<div class="media row">
+		    <figure class="pull-left col-xs-12 col-md-4 margin-small-bottom">
+			<img class="media-object img-circle" src="img/me-special.png" alt=" " />
+		    </figure>
+		    <div class="media-body col-xs-12 col-md-7">
+			<h3 class="media-heading">An hour of my time</h3>
+			<p>
+			    Arrange a call or in-person meet and ask me anything you want. I'll teach you how to apply React and d3.js to your specific problem.
+			</p>
+		    </div>
 		</div>
-
-		<div class="clearfix visible-xs"></div>
-
-		<div class="col-md-6 margin-small-top">
-			<div class="media row">
-				<figure class="pull-left col-xs-12 col-md-4 margin-small-bottom">
-					<img class="media-object img-circle" src="img/me-special.png" alt=" " />
-				</figure>
-				<div class="media-body col-xs-12 col-md-7">
-					<h3 class="media-heading">An hour of my time</h3>
-					<p>
-						Arrange a call or in-person meet and ask me anything you want. I'll teach you how to apply React and d3.js to your specific problem.
-					</p>
-				</div>
-			</div>
-		</div>
+	    </div>
 	</div>
 
 	<div class="clearfix visible-xs"></div>
 
 	<div class="row margin-big-vertical">
-		<div class="col-md-6 margin-small-top">
-			<div class="media row">
-				<figure class="pull-left col-xs-12 col-md-4 margin-small-bottom">
-					<img class="media-object img-circle" src="img/environment.png" alt=" " />
-				</figure>
-				<div class="media-body col-xs-12 col-md-7">
-					<h3 class="media-heading">A configured work environment</h3>
-					<p>
-						A tested work environment with Grunt, Bower, and Browserify ready to go. Get started immediately.
-					</p>
-				</div>
-			</div>
+	    <div class="col-md-6 margin-small-top">
+		<div class="media row">
+		    <figure class="pull-left col-xs-12 col-md-4 margin-small-bottom">
+			<img class="media-object img-circle" src="img/environment.png" alt=" " />
+		    </figure>
+		    <div class="media-body col-xs-12 col-md-7">
+			<h3 class="media-heading">A configured work environment</h3>
+			<p>
+			    A tested work environment with Grunt, Bower, and Browserify ready to go. Get started immediately.
+			</p>
+		    </div>
 		</div>
+	    </div>
 
-		<div class="clearfix visible-xs"></div>
+	    <div class="clearfix visible-xs"></div>
 
-		<div class="col-md-6 margin-small-top">
-			<div class="media row">
-				<figure class="pull-left col-xs-12 col-md-4 margin-small-bottom">
-					<img class="media-object img-circle" src="img/working-project.png" alt=" " />
-				</figure>
-				<div class="media-body col-xs-12 col-md-7">
-					<h3 class="media-heading">Working projects</h3>
-					<p>
-						Two git repositories with working visualizations built from samples in the book.
-					</p>
-				</div>
-			</div>
+	    <div class="col-md-6 margin-small-top">
+		<div class="media row">
+		    <figure class="pull-left col-xs-12 col-md-4 margin-small-bottom">
+			<img class="media-object img-circle" src="img/working-project.png" alt=" " />
+		    </figure>
+		    <div class="media-body col-xs-12 col-md-7">
+			<h3 class="media-heading">Working projects</h3>
+			<p>
+			    Two git repositories with working visualizations built from samples in the book.
+			</p>
+		    </div>
 		</div>
+	    </div>
 	</div>
 
 	<div class="clearfix visible-xs"></div>
 
 	<div class="row margin-big-vertical">
             <div class="col-md-6 margin-small-top">
-			<div class="media row">
-				<figure class="pull-left col-xs-12 col-md-4 margin-small-bottom">
-					<img class="media-object img-circle" src="img/special-200.png" alt=" " />
-				</figure>
-				<div class="media-body col-xs-12 col-md-7">
-					<h3 class="media-heading">A screencast</h3>
-					<p>
-						Watch a step-by-step screencast of everything you'll read in the book. See code change and evolve before your eyes to create a visualization.
-					</p>
-				</div>
-			</div>
+		<div class="media row">
+		    <figure class="pull-left col-xs-12 col-md-4 margin-small-bottom">
+			<img class="media-object img-circle" src="img/special-200.png" alt=" " />
+		    </figure>
+		    <div class="media-body col-xs-12 col-md-7">
+			<h3 class="media-heading">A screencast</h3>
+			<p>
+			    Watch a step-by-step screencast of everything you'll read in the book. See code change and evolve before your eyes to create a visualization.
+			</p>
+		    </div>
+		</div>
 	    </div>
 
-		<div class="col-md-6 margin-small-top">
-			<div class="media row">
-				<figure class="pull-left col-xs-12 col-md-4 margin-small-bottom">
-					<img class="media-object img-circle" src="img/team.png" alt=" " />
-				</figure>
-				<div class="media-body col-xs-12 col-md-7">
-					<h3 class="media-heading">Team license</h3>
-					<p>
-						Share everything in the package with as many people on your team as you want. Any way you want.
-					</p>
-				</div>
-			</div>
+	    <div class="col-md-6 margin-small-top">
+		<div class="media row">
+		    <figure class="pull-left col-xs-12 col-md-4 margin-small-bottom">
+			<img class="media-object img-circle" src="img/team.png" alt=" " />
+		    </figure>
+		    <div class="media-body col-xs-12 col-md-7">
+			<h3 class="media-heading">Team license</h3>
+			<p>
+			    Share everything in the package with as many people on your team as you want. Any way you want.
+			</p>
+		    </div>
 		</div>
+	    </div>
         </div>
 
 	<div class="clearfix visible-xs"></div>
 
 	<div class="row">
-		<figure class="col-md-2 col-md-offset-2 margin-small-top">
-			<img src="img/thomas-buhr.jpg" alt="Janice Doe" class="img-responsive img-circle pull-right" />
-		</figure>
-		<div class="col-md-5">
-			<blockquote>
-				<p>
-					An excellent study in how state vs props work and are use
-				</p>
-				<small>Thomas J. Buhr, founder of Virtuoso</small>
-			</blockquote>
-		</div>
-	</div>
-
-</div>
-
-<div class="bg-white-dark padding-medium-bottom">
-	<div class="container">
-		<div class="row">
-
-			<div class="col-md-12">
-				<h2 class="margin-bottom-none">
-					React+d3.js + Resources
-					<span class="pull-right margin-medium-bottom">
-						<a class="btn btn-success btn-lg btn-xl" href="https://leanpub.com/reactd3js/packages/premium/purchases/new">
-							<span class="text-uppercase"><span class="text-white-dark">Buy now for</span> $59</span>
-						</a>
-					</span>
-				</h2>
-				<p class="lead">
-					The book, the resources, and a screencast.
-				</p>
-			</div>
-		</div>
-			<div class="row">
-		<div class="col-md-6 margin-small-top">
-			<div class="media row">
-				<figure class="pull-left col-xs-12 col-md-4 margin-small-bottom">
-					<img src="img/ap-medium.png" alt="React+d3.js" class="media-object img-thumbnail" />
-				</figure>
-				<div class="media-body col-xs-12 col-md-7">
-					<h3 class="media-heading">React+d3.js</h3>
-					<p>
-						63 pages of code samples and explanation ini PDF, ePUB, or MOBI. A solid guide to building your first data visualization with React and d3.js.
-					</p>
-				</div>
-			</div>
-		</div>
-
-		<div class="clearfix visible-xs"></div>
-
-		<div class="col-md-6 margin-small-top">
-			<div class="media row">
-				<figure class="pull-left col-xs-12 col-md-4 margin-small-bottom">
-					<img class="media-object img-circle" src="img/special-200.png" alt=" " />
-				</figure>
-				<div class="media-body col-xs-12 col-md-7">
-					<h3 class="media-heading">A screencast</h3>
-					<p>
-						Watch a step-by-step screencast of everything you'll read in the book. See code change and evolve before your eyes to create a visualization.
-					</p>
-				</div>
-			</div>
+	    <figure class="col-md-2 col-md-offset-2 margin-small-top">
+		<img src="img/thomas-buhr.jpg" alt="Janice Doe" class="img-responsive img-circle pull-right" />
+	    </figure>
+	    <div class="col-md-5">
+		<blockquote>
+		    <p>
+			An excellent study in how state vs props work and are use
+		    </p>
+		    <small>Thomas J. Buhr, founder of Virtuoso</small>
+		</blockquote>
 	    </div>
 	</div>
 
-	<div class="clearfix visible-xs"></div>
+    </div>
 
-	<div class="row margin-big-vertical">
+    <div class="bg-white-dark padding-medium-bottom">
+	<div class="container">
+	    <div class="row">
+
+		<div class="col-md-12">
+		    <h2 class="margin-bottom-none">
+			React+d3.js + Resources
+			<span class="pull-right margin-medium-bottom">
+			    <a class="btn btn-success btn-lg btn-xl" href="https://leanpub.com/reactd3js/packages/premium/purchases/new">
+				<span class="text-uppercase"><span class="text-white-dark">Buy now for</span> $59</span>
+			    </a>
+			</span>
+		    </h2>
+		    <p class="lead">
+			The book, the resources, and a screencast.
+		    </p>
+		</div>
+	    </div>
+	    <div class="row">
 		<div class="col-md-6 margin-small-top">
-			<div class="media row">
-				<figure class="pull-left col-xs-12 col-md-4 margin-small-bottom">
-					<img class="media-object img-circle" src="img/environment.png" alt=" " />
-				</figure>
-				<div class="media-body col-xs-12 col-md-7">
-					<h3 class="media-heading">A configured work environment</h3>
-					<p>
-						A tested work environment with Grunt, Bower, and Browserify ready to go. Get started immediately.
-					</p>
-				</div>
+		    <div class="media row">
+			<figure class="pull-left col-xs-12 col-md-4 margin-small-bottom">
+			    <img src="img/ap-medium.png" alt="React+d3.js" class="media-object img-thumbnail" />
+			</figure>
+			<div class="media-body col-xs-12 col-md-7">
+			    <h3 class="media-heading">React+d3.js</h3>
+			    <p>
+				63 pages of code samples and explanation ini PDF, ePUB, or MOBI. A solid guide to building your first data visualization with React and d3.js.
+			    </p>
 			</div>
+		    </div>
 		</div>
 
 		<div class="clearfix visible-xs"></div>
 
 		<div class="col-md-6 margin-small-top">
-			<div class="media row">
-				<figure class="pull-left col-xs-12 col-md-4 margin-small-bottom">
-					<img class="media-object img-circle" src="img/working-project.png" alt=" " />
-				</figure>
-				<div class="media-body col-xs-12 col-md-7">
-					<h3 class="media-heading">Working projects</h3>
-					<p>
-						Two git repositories with working visualizations built from samples in the book.
-					</p>
-				</div>
+		    <div class="media row">
+			<figure class="pull-left col-xs-12 col-md-4 margin-small-bottom">
+			    <img class="media-object img-circle" src="img/special-200.png" alt=" " />
+			</figure>
+			<div class="media-body col-xs-12 col-md-7">
+			    <h3 class="media-heading">A screencast</h3>
+			    <p>
+				Watch a step-by-step screencast of everything you'll read in the book. See code change and evolve before your eyes to create a visualization.
+			    </p>
 			</div>
+		    </div>
+	        </div>
+	    </div>
+
+	    <div class="clearfix visible-xs"></div>
+
+	    <div class="row margin-big-vertical">
+		<div class="col-md-6 margin-small-top">
+		    <div class="media row">
+			<figure class="pull-left col-xs-12 col-md-4 margin-small-bottom">
+			    <img class="media-object img-circle" src="img/environment.png" alt=" " />
+			</figure>
+			<div class="media-body col-xs-12 col-md-7">
+			    <h3 class="media-heading">A configured work environment</h3>
+			    <p>
+				A tested work environment with Grunt, Bower, and Browserify ready to go. Get started immediately.
+			    </p>
+			</div>
+		    </div>
 		</div>
-	</div>
+
+		<div class="clearfix visible-xs"></div>
+
+		<div class="col-md-6 margin-small-top">
+		    <div class="media row">
+			<figure class="pull-left col-xs-12 col-md-4 margin-small-bottom">
+			    <img class="media-object img-circle" src="img/working-project.png" alt=" " />
+			</figure>
+			<div class="media-body col-xs-12 col-md-7">
+			    <h3 class="media-heading">Working projects</h3>
+			    <p>
+				Two git repositories with working visualizations built from samples in the book.
+			    </p>
+			</div>
+		    </div>
+		</div>
+	    </div>
         </div>
-</div>
+    </div>
 
-<div class="container padding-medium-bottom">
+    <div class="container padding-medium-bottom">
 	<div class="row">
-		<div class="col-md-4">
-			<img src="img/ap-medium.png" alt="The Amazing Product" class="img-thumbnail margin-big-top" />
-		</div>
-		<div class="col-md-8">
-			<h2 class="margin-bottom-none">
-				React+d3.js
-				<span class="pull-right margin-medium-bottom">
-					<a class="btn btn-success btn-lg btn-xl" href="https://leanpub.com/reactd3js/packages/basic/purchases/new">
-						<span class="text-uppercase"><span class="text-white-dark">Buy now for</span> $19</span>
-					</a>
-				</span>
-			</h2>
-			<p class="lead">
-				The budget option.
-			</p>
-			<p>
-				Creating visualizations with React and d3.js is an amazing experience that will make your life easier. That's why I want you to learn this material even if you're on a budget.
-			</p>
-			<p>
-				You get the book, a working project, and an environment to get you started.
-			</p>
-		</div>
+	    <div class="col-md-4">
+		<img src="img/ap-medium.png" alt="The Amazing Product" class="img-thumbnail margin-big-top" />
+	    </div>
+	    <div class="col-md-8">
+		<h2 class="margin-bottom-none">
+		    React+d3.js
+		    <span class="pull-right margin-medium-bottom">
+			<a class="btn btn-success btn-lg btn-xl" href="https://leanpub.com/reactd3js/packages/basic/purchases/new">
+			    <span class="text-uppercase"><span class="text-white-dark">Buy now for</span> $19</span>
+			</a>
+		    </span>
+		</h2>
+		<p class="lead">
+		    The budget option.
+		</p>
+		<p>
+		    Creating visualizations with React and d3.js is an amazing experience that will make your life easier. That's why I want you to learn this material even if you're on a budget.
+		</p>
+		<p>
+		    You get the book, a working project, and an environment to get you started.
+		</p>
+	    </div>
 	</div>
-</div>
+    </div>
 
-<div class="bg-white-dark padding-big-top padding-big-bottom">
+    <div class="bg-white-dark padding-big-top padding-big-bottom">
 	<div class="container">
-		<div class="row">
-			<div class="col-md-10 col-md-offset-1">
-				<p class="text-center"><strong>Questions?</strong> Please <a href="mailto:swizec@swizec..com"><span class="icon icon-envelope-alt"></span>&#32;drop me a line</a> and I&#8217;ll do my best to answer them.</p>
-			</div>
+	    <div class="row">
+		<div class="col-md-10 col-md-offset-1">
+		    <p class="text-center"><strong>Questions?</strong> Please <a href="mailto:swizec@swizec..com"><span class="icon icon-envelope-alt"></span>&#32;drop me a line</a> and I&#8217;ll do my best to answer them.</p>
 		</div>
+	    </div>
 	</div>
-</div>
+    </div>
 
-<div class="container padding-medium-bottom">
+    <div class="container padding-medium-bottom">
 	<div class="row">
-		<div class="col-md-5 col-md-offset-1">
-			<h2>
-				Is React+d3.js for me?
-			</h2>
-			<p>
-			    Yes. <br>If you already know JavaScript and you've tried d3.js before, this is the book for you. If you just want to learn about React, that's great too. Test readers said it's great for learning how to use React.<br>
-                            But if you're new to web programming, I suggest finding something easier.
- 			</p>
-		</div>
-		<div class="col-md-5">
-			<h2>
-				Which package should I choose?
-			</h2>
-			<p>
-			    That depends on what you need. If you're a single developer trying to learn about React and writing reusable visualization components. Go for the premium package. Some of the material looks better when it moves.<br>
-                            But if you have a team that's growing, definitely go for the team package. Sharing is caring and with the team license you can share all materials with as many team members as you want.
-			</p>
-		</div>
+	    <div class="col-md-5 col-md-offset-1">
+		<h2>
+		    Is React+d3.js for me?
+		</h2>
+		<p>
+		    Yes. <br>If you already know JavaScript and you've tried d3.js before, this is the book for you. If you just want to learn about React, that's great too. Test readers said it's great for learning how to use React.<br>
+                    But if you're new to web programming, I suggest finding something easier.
+ 		</p>
+	    </div>
+	    <div class="col-md-5">
+		<h2>
+		    Which package should I choose?
+		</h2>
+		<p>
+		    That depends on what you need. If you're a single developer trying to learn about React and writing reusable visualization components. Go for the premium package. Some of the material looks better when it moves.<br>
+                    But if you have a team that's growing, definitely go for the team package. Sharing is caring and with the team license you can share all materials with as many team members as you want.
+		</p>
+	    </div>
 	</div>
 	<div class="row">
-		<div class="col-md-5 col-md-offset-1">
-			<h2>
-				What if I hate React+d3.js?
-			</h2>
-			<p>
-                            That's fair. The book is published through Leanpub and they guarantee a full 45-day refund. No questions asked. But please do let me know why you hated it.
-			</p>
-		</div>
-		<div class="col-md-5">
-			<h2>
-				I have another question!
-			</h2>
-			<p>
-				Awesome! Just ping me on twitter or send me an email. I'm @swizec.
-			</p>
-		</div>
+	    <div class="col-md-5 col-md-offset-1">
+		<h2>
+		    What if I hate React+d3.js?
+		</h2>
+		<p>
+                    That's fair. The book is published through Leanpub and they guarantee a full 45-day refund. No questions asked. But please do let me know why you hated it.
+		</p>
+	    </div>
+	    <div class="col-md-5">
+		<h2>
+		    I have another question!
+		</h2>
+		<p>
+		    Awesome! Just ping me on twitter or send me an email. I'm @swizec.
+		</p>
+	    </div>
 	</div>
-</div>
+    </div>
 
-<div class="bg-white-dark padding-medium-bottom">
+    <div class="bg-white-dark padding-medium-bottom">
 	<div class="container">
-		<div class="row">
+	    <div class="row">
 
-			<h2 class="text-center">Choose a package</h2>
+		<h2 class="text-center">Choose a package</h2>
 
-			<div class="col-md-12">
+		<div class="col-md-12">
 
-				<ul class="pricing-table list-unstyled panel row">
-					<li class="col-md-3 first">
-						<h2 class="h3">React+d3.js</h2>
-						<ul>
-							<li>The book</li>
-							<li>Configured environment</li>
-							<li>One working project</li>
-						</ul>
-						<p>
-							<a class="btn btn-default btn-lg btn-block" href="https://leanpub.com/reactd3js/packages/basic/purchases/new">
-								<span class="text-uppercase"><span class="text-muted">Buy now for</span> $19</span>
-							</a>
-						</p>
-					</li>
+		    <ul class="pricing-table list-unstyled panel row">
+			<li class="col-md-3 first">
+			    <h2 class="h3">React+d3.js</h2>
+			    <ul>
+				<li>The book</li>
+				<li>Configured environment</li>
+				<li>One working project</li>
+			    </ul>
+			    <p>
+				<a class="btn btn-default btn-lg btn-block" href="https://leanpub.com/reactd3js/packages/basic/purchases/new">
+				    <span class="text-uppercase"><span class="text-muted">Buy now for</span> $19</span>
+				</a>
+			    </p>
+			</li>
 
-					<li class="col-md-3 first">
-						<h2 class="h3">React+d3.js + resources</h2>
-						<ul>
-							<li>The book</li>
-							<li>Configured environment</li>
-							<li>Two working projects</li>
-							<li>A screencast</li>
-						</ul>
-						<p>
-							<a class="btn btn-default btn-lg btn-block" href="https://leanpub.com/reactd3js/packages/premium/purchases/new">
-								<span class="text-uppercase"><span class="text-muted">Buy now for</span> $59</span>
-							</a>
-						</p>
-					</li>
+			<li class="col-md-3 first">
+			    <h2 class="h3">React+d3.js + resources</h2>
+			    <ul>
+				<li>The book</li>
+				<li>Configured environment</li>
+				<li>Two working projects</li>
+				<li>A screencast</li>
+			    </ul>
+			    <p>
+				<a class="btn btn-default btn-lg btn-block" href="https://leanpub.com/reactd3js/packages/premium/purchases/new">
+				    <span class="text-uppercase"><span class="text-muted">Buy now for</span> $59</span>
+				</a>
+			    </p>
+			</li>
 
-                                        <li class="col-md-3">
-                                            <h2 class="h3">React+d3.js for teams</h2>
-						<ul>
-							<li>The book</li>
-							<li>Configured environment</li>
-							<li>Two working projects</li>
-							<li>A screencast</li>
-							<li>Team license</li>
-						</ul>
-                                                <p>
-							<a class="btn btn-default btn-lg btn-block" href="https://leanpub.com/reactd3js/packages/team/purchases/new">
-								<span class="text-uppercase"><span class="text-muted">Buy now for</span> $299</span>
-							</a>
-						</p>
+                        <li class="col-md-3">
+                            <h2 class="h3">React+d3.js for teams</h2>
+			    <ul>
+				<li>The book</li>
+				<li>Configured environment</li>
+				<li>Two working projects</li>
+				<li>A screencast</li>
+				<li>Team license</li>
+			    </ul>
+                            <p>
+				<a class="btn btn-default btn-lg btn-block" href="https://leanpub.com/reactd3js/packages/team/purchases/new">
+				    <span class="text-uppercase"><span class="text-muted">Buy now for</span> $299</span>
+				</a>
+			    </p>
 
-					</li>
+			</li>
 
-					<li class="col-md-3 active" style="margin-top:-7px">
-						<h2 class="h3">React+d3.js + Resources + Swizec</h2>
-						<ul>
-							<li>The book</li>
-							<li>Configured environment</li>
-							<li>Two working projects</li>
-							<li>A screencast</li>
-							<li>Team license</li>
-							<li>An hour of my time<br>to discuss anything</li>
-						</ul>
-						<p>
-							<a class="btn btn-success btn-lg btn-block" href="https://leanpub.com/reactd3js/packages/platinum/purchases/new">
-								<span class="text-uppercase"><span class="text-white-dark">Buy now for</span> $499</span>
-							</a>
-						</p>
-					</li>
+			<li class="col-md-3 active" style="margin-top:-7px">
+			    <h2 class="h3">React+d3.js + Resources + Swizec</h2>
+			    <ul>
+				<li>The book</li>
+				<li>Configured environment</li>
+				<li>Two working projects</li>
+				<li>A screencast</li>
+				<li>Team license</li>
+				<li>An hour of my time<br>to discuss anything</li>
+			    </ul>
+			    <p>
+				<a class="btn btn-success btn-lg btn-block" href="https://leanpub.com/reactd3js/packages/platinum/purchases/new">
+				    <span class="text-uppercase"><span class="text-white-dark">Buy now for</span> $499</span>
+				</a>
+			    </p>
+			</li>
 
 
-				</ul>
+		    </ul>
 
-			</div>
 		</div>
+	    </div>
 	</div>
-</div>
+    </div>
 
-<footer class="margin-big-top text-center small-smaller">
+    <footer class="margin-big-top text-center small-smaller">
 	<p><small><span property="dct:title">Subtle Patterns</span> (<a rel="cc:attributionURL" property="cc:attributionName" href="http://subtlepatterns.com">Subtle Patterns</a>) / <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></small></p>
-</footer>
+    </footer>
 
-<script src="//codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
-<script src="bootstrap/js/bootstrap.min.js"></script>
-<script src="example_viz/build/bundle.js"
+    <script src="//codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="example_viz/build/bundle.js"
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+     <script>
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-1464315-23', 'auto');
-  ga('send', 'pageview');
+     ga('create', 'UA-1464315-23', 'auto');
+     ga('send', 'pageview');
 
-</script>
+    </script>
 
 </body>
 </html>

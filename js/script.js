@@ -22,10 +22,10 @@ function getUrlParameter(sParam)
 
     var coupons = {
         dashingd3js: {
-            basic: 7,
-            premium: 37,
-            team: 187,
-            platinum: 299
+            basic: 14,
+            premium: 39,
+            team: 199,
+            platinum: 349
         }
     };
     var coupon_hi = {

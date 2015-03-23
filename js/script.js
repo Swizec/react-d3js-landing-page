@@ -26,10 +26,17 @@ function getUrlParameter(sParam)
             premium: 39,
             team: 199,
             platinum: 349
+        },
+        html5weekly: {
+            basic: 15,
+            premium: 47,
+            team: 239,
+            platinum: 399
         }
     };
     var coupon_hi = {
-        dashingd3js: "Hey DashingD3js reader, enjoy your <strong style='font-size: 1.2em'>25%</strong> coupon! :)"
+        dashingd3js: "Hey DashingD3js reader, enjoy your <strong style='font-size: 1.2em'>25%</strong> coupon! :)",
+        html5weekly: "Hey HTML5 Weekly reader, enjoy your <strong style='font-size: 1.2em'>20%</strong> coupon! :)"
     };
 
     $(".navbar").css("display", "block")

@@ -32,11 +32,18 @@ function getUrlParameter(sParam)
             premium: 47,
             team: 239,
             platinum: 399
+        },
+        d3noob: {
+            basic: 14,
+            premium: 44,
+            team: 219,
+            platinum: 369
         }
     };
     var coupon_hi = {
         dashingd3js: "Hey DashingD3js reader, enjoy your <strong style='font-size: 1.2em'>25%</strong> coupon! :)",
-        html5weekly: "Hey HTML5 Weekly reader, enjoy your <strong style='font-size: 1.2em'>20%</strong> coupon! :)"
+        html5weekly: "Hey HTML5 Weekly reader, enjoy your <strong style='font-size: 1.2em'>20%</strong> coupon! :)",
+        d3noob: "Hey D3 Tips and Tricks reader, enjoy your <strong style='font-size: 1.2em'>25%</strong> coupon! :)"
     };
 
     $(".navbar").css("display", "block")

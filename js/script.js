@@ -61,3 +61,12 @@ function getUrlParameter(sParam)
                                      "<s style='opacity: .4'>$"+price+"</s> $"+coupons[coupon][$el.data("type")]));
     });
 })(jQuery);
+
+(function ($) {
+
+    $(".open_form").click(function () {
+        console.log("clicked!");
+        _dcq.push(["showForm", { id: "5362865" }]);
+    });
+
+})(jQuery);

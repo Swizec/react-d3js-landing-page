@@ -64,8 +64,7 @@ function getUrlParameter(sParam)
 
 (function ($) {
 
-    $(".open_form").click(function () {
-        console.log("clicked!");
+    $(".get_sample").click(function () {
         _dcq.push(["showForm", { id: "5362865" }]);
     });
 

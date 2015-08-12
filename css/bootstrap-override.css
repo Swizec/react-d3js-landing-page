@@ -281,3 +281,13 @@ em {
 	}
 
 }
+
+.carousel-indicators li {
+    border: 1px solid gray;
+    position: relative;
+    top: 15px;
+}
+
+.carousel-indicators li.active {
+    background-color: gray;
+}

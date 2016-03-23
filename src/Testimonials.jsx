@@ -1,7 +1,8 @@
 
 import React from 'react';
+import { Image, Carousel, CarouselItem } from 'react-bootstrap';
 
-import { Image } from 'react-bootstrap';
+import Section from './Section';
 
 const TestimonialData = {
     d3noob: {
@@ -13,6 +14,16 @@ const TestimonialData = {
         img: 'img/aristides.jpg',
         quote: "I'm starting a new position where I will focus on data visualization using React and d3. I got everything I needed from the book, your examples were straight forward and easy to follow. Thanks!",
         who: "Aristides Staffieri, Engineer at ProtectWise"
+    },
+    thomas_buhr: {
+        img: 'img/thomas-buhr.jpg',
+        quote: "An excellent study in how state vs props work and are used",
+        who: "Thomas J. Buhr, founder of Virtuoso"
+    },
+    thomas_fee: {
+        img: 'img/thomas-fee.jpg',
+        quote: "I was not expecting a detailed setup description using npm -g, grunt, and bower. I was very pleased with that. :)",
+        who: "Thomas Fee, Senior Software Engineer at Interactive Data"
     }
 };
 
@@ -33,5 +44,20 @@ const Testimonial = ({ which }) => {
         </div>
     );
 }
+
+const CarouselTestimonial = (k) => (
+    <CarouselItem key={k}>
+        <Testimonial which={k} />
+    </CarouselItem>
+);
+
+export const TestimonialsCarousel = ({ keynames }) => (
+    <Section>
+        <Carousel className="row testimonial-carousel">
+            {keynames.map(CarouselTestimonial)}
+        </Carousel>
+    </Section>
+);
+
 
 export default Testimonial;

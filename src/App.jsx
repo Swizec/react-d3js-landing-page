@@ -1,10 +1,10 @@
 
 import React, { Component } from 'react';
 
-import { Row, Col, Thumbnail, Carousel, CarouselItem } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import Section, { FluffySection } from './Section';
 import { LeftColumn, RightColumn } from './Columns';
-import Testimonial from './Testimonials';
+import Testimonial, { TestimonialsCarousel } from './Testimonials';
 
 const Header = () => (
     <header className="text-left container">
@@ -48,25 +48,12 @@ const BookIntro = () => (
     </FluffySection>
 );
 
-const TestimonialsCarousel = () => (
-    <Section>
-        <Carousel className="row testimonial-carousel">
-            <CarouselItem>
-                <Testimonial which="d3noob" />
-            </CarouselItem>
-            <CarouselItem>
-                <Testimonial which="aristides" />
-            </CarouselItem>
-        </Carousel>
-    </Section>
-);
-
 const App = () => (
     <div>
         <div className="bg-white-dark padding-small-top"></div>
         <Header />
         <BookIntro />
-        <TestimonialsCarousel />
+        <TestimonialsCarousel keynames={['d3noob', 'aristides', 'thomas_buhr', 'thomas_fee']} />
     </div>
 );
 

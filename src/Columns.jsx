@@ -7,7 +7,7 @@ export class LeftColumn extends Component {
         let md = this.props.md || 4;
 
         return (
-            <Col xs={12} md={md} mdOffset={1} className={this.props.className}>
+            <Col xs={12} md={md} mdOffset={1} {...this.props}>
             {this.props.children}
             </Col>
         );
@@ -17,7 +17,7 @@ export class LeftColumn extends Component {
 export class WideLeftColumn extends Component {
     render() {
         return (
-            <LeftColumn md={6} className={this.props.className}>
+            <LeftColumn md={6} {...this.props}>
                 {this.props.children}
             </LeftColumn>
         )
@@ -26,10 +26,10 @@ export class WideLeftColumn extends Component {
 
 export class RightColumn extends Component {
     render() {
-        let md = this.props.md || 4;
+        let md = this.props.md || 6;
 
         return (
-            <Col xs={12} md={md} className={this.props.className}>
+            <Col xs={12} md={md} {...this.props}>
             {this.props.children}
             </Col>
         );
@@ -39,7 +39,7 @@ export class RightColumn extends Component {
 export class NarrowRightColumn extends Component {
     render() {
         return (
-            <RightColumn md={4} className={this.props.className}>
+            <RightColumn md={4} {...this.props}>
                 {this.props.children}
             </RightColumn>
         );
@@ -49,7 +49,9 @@ export class NarrowRightColumn extends Component {
 export class SingleColumn extends Component {
     render() {
         return (
-            null
+            <Col md={10} mdOffset={1} {...this.props}>
+            {this.props.children}
+            </Col>
         );
     }
 }

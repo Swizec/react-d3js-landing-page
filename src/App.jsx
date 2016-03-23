@@ -1,9 +1,10 @@
 
 import React, { Component } from 'react';
 
-import { Row, Col, Thumbnail } from 'react-bootstrap';
-import { FluffySection } from './Section';
+import { Row, Col, Thumbnail, Carousel, CarouselItem } from 'react-bootstrap';
+import Section, { FluffySection } from './Section';
 import { LeftColumn, RightColumn } from './Columns';
+import Testimonial from './Testimonials';
 
 const Header = () => (
     <header className="text-left container">
@@ -47,11 +48,25 @@ const BookIntro = () => (
     </FluffySection>
 );
 
+const TestimonialsCarousel = () => (
+    <Section>
+        <Carousel className="row testimonial-carousel">
+            <CarouselItem>
+                <Testimonial which="d3noob" />
+            </CarouselItem>
+            <CarouselItem>
+                <Testimonial which="aristides" />
+            </CarouselItem>
+        </Carousel>
+    </Section>
+);
+
 const App = () => (
     <div>
         <div className="bg-white-dark padding-small-top"></div>
         <Header />
         <BookIntro />
+        <TestimonialsCarousel />
     </div>
 );
 

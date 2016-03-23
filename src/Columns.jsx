@@ -4,20 +4,52 @@ import { Col } from 'react-bootstrap';
 
 export class LeftColumn extends Component {
     render() {
+        let md = this.props.md || 4;
+
         return (
-            <Col xs={12} md={4} mdOffset={1}>
+            <Col xs={12} md={md} mdOffset={1} className={this.props.className}>
             {this.props.children}
             </Col>
         );
     }
 }
 
-export class RightColumn extends Component {
+export class WideLeftColumn extends Component {
     render() {
         return (
-            <Col xs={12} md={6}>
+            <LeftColumn md={6} className={this.props.className}>
+                {this.props.children}
+            </LeftColumn>
+        )
+    }
+}
+
+export class RightColumn extends Component {
+    render() {
+        let md = this.props.md || 4;
+
+        return (
+            <Col xs={12} md={md} className={this.props.className}>
             {this.props.children}
             </Col>
+        );
+    }
+}
+
+export class NarrowRightColumn extends Component {
+    render() {
+        return (
+            <RightColumn md={4} className={this.props.className}>
+                {this.props.children}
+            </RightColumn>
+        );
+    }
+}
+
+export class SingleColumn extends Component {
+    render() {
+        return (
+            null
         );
     }
 }

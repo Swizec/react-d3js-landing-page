@@ -24,6 +24,11 @@ const TestimonialData = {
         img: 'img/thomas-fee.jpg',
         quote: "I was not expecting a detailed setup description using npm -g, grunt, and bower. I was very pleased with that. :)",
         who: "Thomas Fee, Senior Software Engineer at Interactive Data"
+    },
+    michel: {
+        img: 'img/michel.jpg',
+        quote: "Teller proves in his 'React+d3' book that React is not 'just the view', but a powerful tool to create declarative abstractions on top of low level visualization libraries like d3.",
+        who: 'Michel Weststrate, creator of MobX'
     }
 };
 

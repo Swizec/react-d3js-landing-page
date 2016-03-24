@@ -16,7 +16,7 @@ const App = () => (
         <Content.BookIntro className="margin-big-bottom" />
         <hr />
         <LowSection className="margin-medium-bottom">
-            <TestimonialsCarousel keynames={['d3noob', 'aristides',
+            <TestimonialsCarousel keynames={['michel', 'd3noob', 'aristides',
                                              'thomas_buhr', 'thomas_fee']} />
         </LowSection>
         <GreenSection>
@@ -28,6 +28,7 @@ const App = () => (
         </DarkSection>
         <Section>
             <Content.What />
+            <Testimonial which="michel" />
         </Section>
         <DarkSection>
             <Content.FreeSample />
@@ -55,7 +56,7 @@ const App = () => (
         </Section>
         <DarkSection>
             <Packages.Picker />
-            <TestimonialsCarousel keynames={['d3noob', 'aristides',
+            <TestimonialsCarousel keynames={['michel', 'd3noob', 'aristides',
                                              'thomas_buhr', 'thomas_fee']} />
         </DarkSection>
     </div>

@@ -142,3 +142,48 @@ export const Feature = ({ img, title, description, circle }) => (
         </Row>
     </HalfColumn>
 );
+
+
+export const Picker = () => (
+    <div>
+        <h2 className="text-center">Choose a package</h2>
+        <Col md={12}>
+        <ul className="pricing-table list-unstyled panel row">
+            <TablePackage name="student" price="19" id="ZDTh" className="first" />
+            <TablePackage name="engineer" price="79" id="actX" />
+            <TablePackage name="business" price="399" id="nXLz" className="active" />
+        </ul>
+        </Col>
+    </div>
+);
+
+const FeatureList = {
+    student: ['React+d3.js [PDF/epub/mobi]',
+              'D3 Tips and Tricks by Malcolm Maclean',
+              'Free updates',
+              '45 day money-back guarantee'],
+    engineer: [],
+    business: []
+};
+
+
+export const TablePackage = ({ name, price, id, className }) => (
+    <li className={classNames(className, 'col-md-4')}>
+	<h2 className="h3">{name}</h2>
+	<ul>
+            {FeatureList[name].map((f, i) => (<li key={name+i}>{f}</li>))}
+	</ul>
+	<p><BuyButton price={price} id={id} /></p>
+    </li>
+);
+
+
+
+export const BuyButton = ({ id, price, className }) => (
+    <a className={classNames(className, 'btn btn-default btn-lg btn-block btn-buy')}
+       href={`https://gumroad.com/l/${id}?wanted=true`}>
+        <span className="text-uppercase">
+            <span className="text-muted">Buy now for</span> ${price}
+        </span>
+    </a>
+);

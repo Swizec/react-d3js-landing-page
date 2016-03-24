@@ -40,9 +40,18 @@ const App = () => (
         <DarkSection>
             <Packages.Engineer />
         </DarkSection>
-        <LowSection>
+        <LowSection className="margin-medium-bottom">
             <Packages.Student />
         </LowSection>
+        <DarkSection className="padding-big-top">
+            <Content.Questions />
+        </DarkSection>
+        <Section>
+            <Content.FAQ />
+        </Section>
+        <DarkSection>
+            <Packages.Picker />
+        </DarkSection>
     </div>
 );
 

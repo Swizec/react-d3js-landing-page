@@ -40,7 +40,7 @@ export class FluffySection extends Section {
 export class DarkSection extends Section {
     render() {
         return (
-            <div className="bg-white-dark padding-big-bottom">
+            <div className={classNames(this.props.className, 'bg-white-dark padding-big-bottom')}>
 	        <div className="container">
 	            <Row>
                         {this.props.children}

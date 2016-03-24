@@ -3,7 +3,7 @@ import React from 'react';
 import { Row, Col, Image, Input, ButtonInput } from 'react-bootstrap';
 
 import Section, { SectionTitle, Panel } from './Section';
-import { LeftColumn, WideLeftColumn, RightColumn, NarrowRightColumn, SingleColumn, MiddleColumn } from './Columns';
+import { LeftColumn, WideLeftColumn, RightColumn, NarrowRightColumn, SingleColumn, MiddleColumn, HalfColumn } from './Columns';
 
 export const Header = () => (
     <header className="text-left container">
@@ -213,4 +213,53 @@ export const Author = () => (
         </RightColumn>
     </Row>
 
+);
+
+export const Questions = () => (
+    <SingleColumn>
+        <p className="text-center"><strong>Questions?</strong> Please <a href="mailto:swizec@swizec..com"><span className="icon icon-envelope-alt"></span>&#32;drop me a line</a> and I&#8217;ll do my best to answer them.</p>
+    </SingleColumn>
+);
+
+export const FAQ = () => (
+    <div>
+        <Row>
+            <Col md={5} mdOffset={1}>
+                <h2>
+		    Is React+d3.js for me?
+		</h2>
+		<p>
+		    Yes. <br />If you already know JavaScript and you've tried d3.js before, this is the book for you. If you just want to learn about React, that's great too. Test readers said it's great for learning how to use React.<br />
+                    But if you're new to web programming, I suggest finding something easier.
+ 		</p>
+            </Col>
+            <Col md={5}>
+                <h2>
+		    Which package should I choose?
+		</h2>
+		<p>
+		    That depends on what you need. If you're a single developer trying to learn about React and writing reusable visualization components, go for the Engineer package. Some of the material looks better when it moves.br/>
+                    But if you have a team that's growing,  go for the Business package. I'll set up a call to help you apply these principles in your specific case. And you'll get a license that lets you share the book with all team members.
+		</p>
+            </Col>
+        </Row>
+        <Row>
+            <Col md={5} mdOffset={1}>
+                <h2>
+		    What if I hate React+d3js ES6?
+		</h2>
+		<p>
+                    That's fair. I have a 45-day full money back guarantee. Just send me an email.
+		</p>
+            </Col>
+            <Col md={5}>
+                <h2>
+		    I have another question!
+		</h2>
+		<p>
+		    Awesome! Just ping me on twitter or send me an email. I'm @swizec.
+		</p>
+            </Col>
+        </Row>
+    </div>
 );

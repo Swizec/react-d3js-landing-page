@@ -1,5 +1,5 @@
 
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import classNames from 'classnames';
 import { Row } from 'react-bootstrap';
 
@@ -53,13 +53,17 @@ export class DarkSection extends Section {
 
 export class SectionTitle extends Component {
     render() {
+        let className = classNames(this.props.className,
+                                   'col-md-10 col-md-offset-1',
+                                   this.props.nomargin ? 'margin-bottom-none' : '');
         return (
-            <h2 className={classNames(this.props.className, 'col-md-10 col-md-offset-1')}>
+            <h2 className={className}>
                 {this.props.children}
             </h2>
         )
     };
 }
+SectionTitle.propTypes = { nomargin: PropTypes.bool };
 
 export class Panel extends Component {
     render() {

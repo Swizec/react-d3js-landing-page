@@ -129,7 +129,7 @@ export const What = () => (
 export const FreeSample = () => (
     <div>
         <Row>
-            <SectionTitle className="margin-bottom-none">Get a free sample</SectionTitle>
+            <SectionTitle nomargin>Get a free sample</SectionTitle>
             <SingleColumn className="lead">A taste of what's included with the book.</SingleColumn>
         </Row>
 
@@ -171,3 +171,26 @@ export const DripForm = ({ id, children }) => {
         </form>
     );
 };
+
+export const Screencast = () => (
+    <div>
+        <Row>
+            <SectionTitle nomargin>Full HD screencast</SectionTitle>
+            <SingleColumn className="lead text">Watching code appear before your eyes makes it easier to understand.</SingleColumn>
+        </Row>
+        <Row>
+            <SingleColumn>
+                <div className="text-center">
+                    <Image src="img/screencast.gif" alt="screencast-preview" thumbnail />
+                </div>
+                <p>
+		    A 60 minute full HD screencast will guide you through everything in the book and show you just how it all fits together.
+		</p>
+
+		<p>
+		    Don't miss something just because you made a typo.
+		</p>
+            </SingleColumn>
+        </Row>
+    </div>
+);

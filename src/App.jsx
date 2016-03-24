@@ -6,27 +6,30 @@ import Section, { LowSection, FluffySection, DarkSection, SectionTitle } from '.
 import { LeftColumn, WideLeftColumn, RightColumn, NarrowRightColumn } from './Columns';
 import Testimonial, { TestimonialsCarousel } from './Testimonials';
 
-import { Header, BookIntro, Why, What, FreeSample } from './Content';
+import * as Content from './Content';
 
 const App = () => (
     <div>
         <div className="bg-white-dark padding-small-top"></div>
-        <Header />
-        <BookIntro className="margin-big-bottom" />
+        <Content.Header />
+        <Content.BookIntro className="margin-big-bottom" />
         <hr />
         <LowSection className="margin-medium-bottom">
             <TestimonialsCarousel keynames={['d3noob', 'aristides',
                                              'thomas_buhr', 'thomas_fee']} />
         </LowSection>
         <DarkSection>
-            <Why />
+            <Content.Why />
         </DarkSection>
         <Section>
-            <What />
+            <Content.What />
         </Section>
         <DarkSection>
-            <FreeSample />
+            <Content.FreeSample />
         </DarkSection>
+        <Section>
+            <Content.Screencast />
+        </Section>
     </div>
 );
 

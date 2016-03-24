@@ -1,9 +1,52 @@
 
 import React from 'react';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Image, Input, ButtonInput } from 'react-bootstrap';
 
-import { SectionTitle } from './Section';
-import { LeftColumn, WideLeftColumn, RightColumn, NarrowRightColumn, SingleColumn } from './Columns';
+import Section, { SectionTitle, Panel } from './Section';
+import { LeftColumn, WideLeftColumn, RightColumn, NarrowRightColumn, SingleColumn, MiddleColumn } from './Columns';
+
+export const Header = () => (
+    <header className="text-left container">
+        <Row>
+            <Col md={10} mdOffset={1}>
+	    <h1>Have you tried React?</h1>
+	    <p className="lead">React with d3.js was the most fun I've had in years.</p>
+            </Col>
+	</Row>
+    </header>
+);
+
+export const BookIntro = ({ className }) => (
+    <Section className={className}>
+        <LeftColumn>
+            <p>
+		Creating dynamic data visualizations on the web is a pain in the ass.
+	    </p>
+
+	    <p>
+                You either have to use dumbed down libraries that won't let you do what you want, or make everything from scratch. Every time.
+            </p>
+            <p>
+                You want a <strong>quick way to build complex visualizations</strong>. Build once, use everywhere. In every project. Don't believe me? Scroll down.
+	    </p>
+
+	    <p>
+		With <strong>React+d3.js</strong> you'll learn how to build re-usable visualization components in about an hour.
+	    </p>
+
+	    <p>
+		<em><strong>Interested?<br/>
+		    <a href="#packages">Go straight to the packages.</a></strong></em>
+	    </p>
+        </LeftColumn>
+        <RightColumn>
+            <figure className="text-center">
+		<img src="img/cover.png" alt="React+d3js ES6 edition" className="img-thumbnail" />
+	    </figure>
+        </RightColumn>
+    </Section>
+);
+
 
 export const Why = () => (
     <div>
@@ -82,3 +125,49 @@ export const What = () => (
         </Row>
     </div>
 );
+
+export const FreeSample = () => (
+    <div>
+        <Row>
+            <SectionTitle className="margin-bottom-none">Get a free sample</SectionTitle>
+            <SingleColumn className="lead">A taste of what's included with the book.</SingleColumn>
+        </Row>
+
+        <Row>
+            <SingleColumn>
+                <Panel>
+                    <Image src="img/sample.png" rounded responsive />
+                    <SampleForm />
+                </Panel>
+            </SingleColumn>
+        </Row>
+    </div>
+);
+
+export const SampleForm = () => (
+    <DripForm id="5362865">
+        <h3 data-drip-attribute="headline">
+            React+d3.js sample chapter and mini-course
+        </h3>
+        <p data-drip-attribute="description">
+            Leave your email and get a free sample of React+d3.js and a mini email course. They will teach you about the basic architecture of React apps and show you how JSX makes your code better.
+        </p>
+    </DripForm>
+);
+
+export const DripForm = ({ id, children }) => {
+    let url = `https://www.getdrip.com/forms/${id}/submissions`;
+
+    return (
+        <form action={url} method="post" target="_blank" data-drip-embedded-form={id}>
+            {children}
+            <MiddleColumn>
+                <Input type="text" placeholder="Email"
+                       label="Email Address" name="fields[email]" />
+                <input type="submit" name="submit" value="Sign Up"
+                       data-drip-attribute="sign-up-button"
+                       className="btn btn-lg btn-success text-uppercase" />
+            </MiddleColumn>
+        </form>
+    );
+};

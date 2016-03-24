@@ -55,3 +55,13 @@ export class SingleColumn extends Component {
         );
     }
 }
+
+export class MiddleColumn extends Component {
+    render() {
+        return (
+            <Col md={6} mdOffset={3} {...this.props}>
+            {this.props.children}
+            </Col>
+        );
+    }
+}

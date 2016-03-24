@@ -52,11 +52,9 @@ const CarouselTestimonial = (k) => (
 );
 
 export const TestimonialsCarousel = ({ keynames, className }) => (
-    <Section className={className}>
-        <Carousel className="row testimonial-carousel">
-            {keynames.map(CarouselTestimonial)}
-        </Carousel>
-    </Section>
+    <Carousel className="row testimonial-carousel">
+        {keynames.map(CarouselTestimonial)}
+    </Carousel>
 );
 
 

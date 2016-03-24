@@ -30,7 +30,7 @@ export class LowSection extends Component {
 export class FluffySection extends Section {
     render() {
         return (
-            <Section className="container-pattern padding-big-bottom">
+            <Section className={classNames(this.props.className, 'container-pattern padding-big-bottom')}>
                 {this.props.children}
             </Section>
         )

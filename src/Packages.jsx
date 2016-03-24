@@ -7,11 +7,11 @@ import { Row, Col, Image, ButtonInput, Button } from 'react-bootstrap';
 import Section, { SectionTitle, Panel } from './Section';
 import { HalfColumn, FullColumn } from './Columns';
 
-export const Complete = () => (
+export const Business = () => (
     <div>
         <Row className="padding-medium-bottom">
             <SectionTitle nomargin md={12} mdOffset={0}>
-                The complete package
+                The business package
 
                 <BigBuyButton id="nXLz" price="399" className="pull-right" />
             </SectionTitle>
@@ -22,6 +22,45 @@ export const Complete = () => (
         <FeatureRow left="book" right="big_consulting" />
         <FeatureRow left="environment" right="projects" />
         <FeatureRow left="screencast" right="team_license" />
+    </div>
+);
+
+export const Engineer = () => (
+    <div>
+        <Row className="padding-medium-bottom">
+            <SectionTitle nomargin md={12} mdOffset={0}>
+                Engineer package
+
+                <BigBuyButton id="actX" price="79" className="pull-right" />
+            </SectionTitle>
+            <FullColumn className="lead">
+                The book, the resources, the 30min coaching
+            </FullColumn>
+        </Row>
+        <FeatureRow left="book" right="small_consulting" />
+        <FeatureRow left="environment" right="projects" />
+        <FeatureRow left="screencast" />
+    </div>
+);
+
+export const Student = () => (
+    <div>
+        <Col md={4}>
+        <Image src="img/ap-medium.png" alt="React+d3js ES6" thumbnail className="margin-big-top" />
+        </Col>
+        <Col md={8}>
+        <h2 className="margin-bottom-none" nomargin>
+            Student
+            <BigBuyButton id="ZDTh" price="19" className="pull-right" />
+        </h2>
+        <p className="lead">The budget option</p>
+        <p>
+	    Creating visualizations with React and d3.js is an amazing experience that will make your life easier. That's why I want you to learn this material even if you're on a budget.
+	</p>
+	<p>
+	    You'll get React+d3js ES6, a configured work environment, and 7 sample projects.
+	</p>
+        </Col>
     </div>
 );
 
@@ -43,6 +82,11 @@ const Features = {
         img: 'img/me-special.png',
         title: '2hrs 1-to-team coaching',
         description: 'I will help your team apply the concepts from React+d3.js in your specific situation. Either in a call, or in person if possible.'
+    },
+    small_consulting: {
+        img: 'img/me-special.png',
+        title: '30min consulting',
+        description: 'Schedule a call and I\'ll you apply the concepts from React+d3.js in your specific situation.'
     },
     environment: {
         img: 'img/environment.png',
@@ -74,6 +118,8 @@ export const FeatureRow = ({ left, right }) => (
 );
 
 export const NamedFeature = ({ name }) => {
+    if (!name) return (<span></span>);
+
     let { img, title, description } = Features[name],
         circle = name != 'book';
 

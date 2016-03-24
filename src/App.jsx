@@ -34,9 +34,15 @@ const App = () => (
         <DarkSection>
             <Content.Author />
         </DarkSection>
-        <Section>
-            <Packages.Complete />
-        </Section>
+        <FluffySection>
+            <Packages.Business />
+        </FluffySection>
+        <DarkSection>
+            <Packages.Engineer />
+        </DarkSection>
+        <LowSection>
+            <Packages.Student />
+        </LowSection>
     </div>
 );
 

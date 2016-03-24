@@ -51,6 +51,20 @@ export class DarkSection extends Section {
     }
 };
 
+export class GreenSection extends Section {
+    render() {
+        return (
+             <div className={classNames(this.props.className, 'bg-white-dark-example padding-big-bottom')} style={{background: 'rgba(235,251,225,0.9)', borderTop: '#cad9bf', borderBottom: '#cad9bf'}}>
+	        <div className="container">
+	            <Row>
+                        {this.props.children}
+                    </Row>
+                </div>
+             </div>
+        );
+    }
+}
+
 export class SectionTitle extends Component {
     render() {
         let md = this.props.md,

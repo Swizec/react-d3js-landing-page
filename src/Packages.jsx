@@ -7,21 +7,26 @@ import { Row, Col, Image, ButtonInput, Button } from 'react-bootstrap';
 import Section, { SectionTitle, Panel } from './Section';
 import { HalfColumn, FullColumn } from './Columns';
 
+const StudentID = 'GXOpa';
+const EngineerID = 'iWevQ';
+const BusinessID = 'ygzt';
+
 export const Business = () => (
     <div>
         <Row className="padding-medium-bottom">
             <SectionTitle nomargin md={12} mdOffset={0}>
                 The business package
 
-                <BigBuyButton id="nXLz" price="399" className="pull-right" />
+                <BigBuyButton id={BusinessID} price="399" className="pull-right" />
             </SectionTitle>
             <FullColumn className="lead">
                 The book, the resources, the 1-on-team coaching
             </FullColumn>
         </Row>
         <FeatureRow left="book" right="big_consulting" />
-        <FeatureRow left="environment" right="projects" />
-        <FeatureRow left="screencast" right="team_license" />
+        <FeatureRow left="environment" right="screencast" />
+        <FeatureRow left="projects" right="team_license" />
+        <FeatureRow left="weekly_livecoding" />
     </div>
 );
 
@@ -31,7 +36,7 @@ export const Engineer = () => (
             <SectionTitle nomargin md={12} mdOffset={0}>
                 Engineer package
 
-                <BigBuyButton id="actX" price="79" className="pull-right" />
+                <BigBuyButton id={EngineerID} price="79" className="pull-right" />
             </SectionTitle>
             <FullColumn className="lead">
                 The book, the resources, the 30min coaching
@@ -39,7 +44,7 @@ export const Engineer = () => (
         </Row>
         <FeatureRow left="book" right="small_consulting" />
         <FeatureRow left="environment" right="projects" />
-        <FeatureRow left="screencast" />
+        <FeatureRow left="screencast" right="weekly_livecoding" />
     </div>
 );
 
@@ -51,14 +56,14 @@ export const Student = () => (
         <Col md={8}>
         <h2 className="margin-bottom-none" nomargin>
             Student
-            <BigBuyButton id="ZDTh" price="19" className="pull-right" />
+            <BigBuyButton id={StudentID} price="19" className="pull-right" />
         </h2>
         <p className="lead">The budget option</p>
         <p>
 	    Creating visualizations with React and d3.js is an amazing experience that will make your life easier. That's why I want you to learn this material even if you're on a budget.
 	</p>
 	<p>
-	    You'll get React+d3js ES6, a configured work environment, and 7 sample projects.
+	    You'll get React+d3js ES6, a configured work environment, and the finished book project to play with.
 	</p>
         </Col>
     </div>
@@ -76,7 +81,7 @@ const Features = {
     book: {
         img: 'img/ap-medium.png',
         title: 'React+d3js ES6',
-        description: '63 pages of code samples and explanation in PDF, ePUB, or MOBI. A solid guide to building your first data visualization with React and d3.js.'
+        description: '115 pages of code samples and explanation in PDF, ePUB, or MOBI. A solid guide to building your first data visualization with React and d3.js.'
     },
     big_consulting: {
         img: 'img/me-special.png',
@@ -91,12 +96,12 @@ const Features = {
     environment: {
         img: 'img/environment.png',
         title: 'A configured work environment',
-        description: 'A tested work environment with Grunt, Bower, and Browserify ready to go. Get started immediately.'
+        description: 'A tested work environment with Webpack and Babel ready to go. Don\'t like Webpack? There\'s a Grunt+Browserify version too. Get started immediately.'
     },
     projects: {
         img: 'img/working-project.png',
         title: '7 sample projects',
-        description: 'Git repositories with working projects built with React and d3js'
+        description: 'Git repositories with working projects built with React and d3js.'
     },
     screencast: {
         img: 'img/special-200.png',
@@ -107,6 +112,11 @@ const Features = {
         img: 'img/team.png',
         title: 'Unlimited team license',
         description: 'Share everything in the package with as many people on your team as you want. Any way you want.'
+    },
+    weekly_livecoding: {
+        img: 'img/special-200.png',
+        title: 'Weekly livecoding',
+        description: (<span>Weekly livecoding sessions with React and d3js. Come say hi and <b>ask me anything</b></span>)
     }
 };
 
@@ -149,21 +159,43 @@ export const Picker = () => (
         <h2 className="text-center">Choose a package</h2>
         <Col md={12}>
         <ul className="pricing-table list-unstyled panel row">
-            <TablePackage name="student" price="19" id="ZDTh" className="first" />
-            <TablePackage name="engineer" price="79" id="actX" />
-            <TablePackage name="business" price="399" id="nXLz" className="active" />
+            <TablePackage name="student" price="19" id={StudentID} className="first" />
+            <TablePackage name="engineer" price="79" id={EngineerID} />
+            <TablePackage name="business" price="399" id={BusinessID} className="active" />
         </ul>
         </Col>
     </div>
 );
 
 const FeatureList = {
-    student: ['React+d3.js [PDF/epub/mobi]',
-              'D3 Tips and Tricks by Malcolm Maclean',
+    student: ['React+d3js ES6 [PDF/epub/mobi]',
+              'React+d3js ES5 [PDF/epub/mobi]',
+              'Set up work environment',
+              'Fully finished example project',
+              'Weekly livecoding sessions',
               'Free updates',
               '45 day money-back guarantee'],
-    engineer: [],
-    business: []
+    engineer: ['React+d3js ES6 [PDF/epub/mobi]',
+               'React+d3js ES5 [PDF/epub/mobi]',
+               'Set up work environment',
+               'Fully finished example project',
+               '6 more sample projects',
+               'Weekly livecoding sessions',
+               (<b>30min 1-on-1 consulting</b>),
+               (<b>Free coffee when I'm in your city</b>),
+               'Free updates',
+               '45 day money-back guarantee'],
+    business: ['React+d3js ES6 [PDF/epub/mobi]',
+               'React+d3js ES5 [PDF/epub/mobi]',
+               'Set up work environment',
+               'Fully finished example project',
+               '6 other projects',
+               'Weekly livecoding sessions',
+               (<b>2hrs 1-on-team coaching</b>),
+               (<b>Free coffee when I'm in your city</b>),
+               (<b>Team license</b>),
+               'Free updates',
+               '45 day money-back guarantee'],
 };
 
 

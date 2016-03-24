@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Row, Col, Image, Input, ButtonInput } from 'react-bootstrap';
+import { Row, Col, Image, Input, ButtonInput, Carousel, CarouselItem } from 'react-bootstrap';
 
 import Section, { SectionTitle, Panel } from './Section';
 import { LeftColumn, WideLeftColumn, RightColumn, NarrowRightColumn, SingleColumn, MiddleColumn, HalfColumn } from './Columns';
@@ -9,8 +9,8 @@ export const Header = () => (
     <header className="text-left container">
         <Row>
             <Col md={10} mdOffset={1}>
-	    <h1>Have you tried React?</h1>
-	    <p className="lead">React with d3.js was the most fun I've had in years.</p>
+	    <h1>Do you think React is beautiful?</h1>
+	    <p className="lead">React with d3.js in ES6 was the most fun I've had in years.</p>
             </Col>
 	</Row>
     </header>
@@ -20,14 +20,14 @@ export const BookIntro = ({ className }) => (
     <Section className={className}>
         <LeftColumn>
             <p>
-		Creating dynamic data visualizations on the web is a pain in the ass.
+		Creating beautiful dynamic visualizationsb on the web is a pain in the ass.
 	    </p>
 
 	    <p>
-                You either have to use dumbed down libraries that won't let you do what you want, or make everything from scratch. Every time.
+                You either have to use dumbed down libraries that won't let you do advanced animations and user interaction, or make everything from scratch. Every time.
             </p>
             <p>
-                You want a <strong>quick way to build complex visualizations</strong>. Build once, use everywhere. In every project. Don't believe me? Scroll down.
+                You want a <strong>quick way to build complex visualizations</strong>. Build once, use everywhere. In every project. Don't believe me? Scroll down to the gallery.
 	    </p>
 
 	    <p>
@@ -36,12 +36,12 @@ export const BookIntro = ({ className }) => (
 
 	    <p>
 		<em><strong>Interested?<br/>
-		    <a href="#packages">Go straight to the packages.</a></strong></em>
+		    <a href="#free-sample">Get the free sample chapter.</a></strong></em>
 	    </p>
         </LeftColumn>
         <RightColumn>
             <figure className="text-center">
-		<img src="img/cover.png" alt="React+d3js ES6 edition" className="img-thumbnail" />
+		<img src="img/cover.png" alt="React+d3js ES6 edition" className="img-thumbnail get_sample" />
 	    </figure>
         </RightColumn>
     </Section>
@@ -57,18 +57,18 @@ export const Why = () => (
 	    </p>
 
             <p>
-                No more strange spaghetti JavaScript. No more business logic tied to HTML. When was the last time you felt safe changing the nesting structure of your HTML? The last time you knew the app won't break just because a designer changed something?.
+                No more strange spaghetti JavaScript. No more business logic tied to HTML. When was the last time you felt safe changing the nesting structure of your HTML? The last time you knew the app won't break just because your designer made a change?.
             </p>
 
             <p>
-                It's even worse with visualizations. Libraries that work juuuust a little differently than you'd want, d3.js code you wrote last time, but can't reuse anywhere else. And updating the visualization together with the rest of the interface is a beast.
+                It's even <b>worse with visualizations</b>. Libraries that work juuuust a little differently than you want, d3.js code you wrote last time, but can't reuse anywhere else. And updating the visualization together with the rest of the interface is a beast.
             </p>
 
 	    <p>
 	        React with d3.js fixes all of that.
             </p>
             <p>
-                But learning a whole new approach to coding is hard. It takes time and effort. Time you'd rather spend solving your real problems. Making code cleaner, easier to maintain, and delivering value to your users.
+                But learning a whole new approach to coding is hard. It takes time and effort. Time you'd rather spend solving your real problems. Making code <b>cleaner</b>, <b>easier to maintain</b>, and <b>delivering value to your users</b>.
 	    </p>
         </WideLeftColumn>
         <NarrowRightColumn className="text-center">
@@ -80,21 +80,21 @@ export const Why = () => (
 export const What = () => (
     <div>
         <Row>
-            <SectionTitle>React+d3.js the book</SectionTitle>
+            <SectionTitle>React+d3js ES6</SectionTitle>
             <SingleColumn>
                 <p>
-		    React+d3.js is designed to be short, but comprehensive.
+		    React+d3js ES6 is designed to be short, but comprehensive.
 	        </p>
 
 	        <p>
-		    In about an hour, it will guide you through a whole React and d3.js project from start to finish.<br />
-		    Everything from setting up code compilation, to creating reusable visualization components.
+		    In about an hour, it guides you through a whole React and d3.js project from start to finish. Using code written in <b>modern ES6</b> fully <b>compatible with React 15</b>.<br />
+		    Everything from setting up code compilation with Webpack and Babel, to creating reusable visualization components. There's even a whole <b>3,000 word section on animations</b> and using Redux data changes as an animation and game engine.
 	        </p>
             </SingleColumn>
         </Row>
         <Row>
             <LeftColumn>
-                <h3>React+d3.js</h3>
+                <h3>React+d3js ES6</h3>
 
 		<p>
 		    Learn how to build reusable visualization components that work anywhere, with any data.
@@ -129,8 +129,9 @@ export const What = () => (
 export const FreeSample = () => (
     <div>
         <Row>
+            <a name="free-sample"></a>
             <SectionTitle nomargin>Get a free sample</SectionTitle>
-            <SingleColumn className="lead">A taste of what's included with the book.</SingleColumn>
+            <SingleColumn className="lead">See what the book is like.</SingleColumn>
         </Row>
 
         <Row>
@@ -238,7 +239,7 @@ export const FAQ = () => (
 		    Which package should I choose?
 		</h2>
 		<p>
-		    That depends on what you need. If you're a single developer trying to learn about React and writing reusable visualization components, go for the Engineer package. Some of the material looks better when it moves.br/>
+		    That depends on what you need. If you're a single developer trying to learn about React and writing reusable visualization components, go for the Engineer package. Some of the material looks better when it moves.<br/>
                     But if you have a team that's growing,  go for the Business package. I'll set up a call to help you apply these principles in your specific case. And you'll get a license that lets you share the book with all team members.
 		</p>
             </Col>
@@ -262,4 +263,27 @@ export const FAQ = () => (
             </Col>
         </Row>
     </div>
+);
+
+export const Gallery = () => (
+    <Row>
+        <Carousel>
+            <CarouselItem>
+                <div className="text-center">
+                    <iframe src="http://swizec.github.io/space-invaders/" width="800" height="500" />
+                </div>
+            </CarouselItem>
+            <CarouselItem>
+                <div className="text-center">
+                    <iframe src="http://swizec.github.io/react-particles-experiment" width="800" height="400" />
+                </div>
+            </CarouselItem>
+            <CarouselItem>
+                <div className="text-center">
+                    <iframe src="http://swizec.github.io/h1b-software-salaries" width="800" height="400" />
+                </div>
+            </CarouselItem>
+        </Carousel>
+        <p>A better integrated gallery is on its way. I ran out of time yak shaving this website into React. You can see the real gallery progress here -><br /> <a href="https://www.livecoding.tv/swizec/videos/oOqGo-sun-230pm-pst-reactd3reduxfun-screencast-3">Real Gallery Progress</a></p>
+    </Row>
 );

@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 
 import { Row, Col } from 'react-bootstrap';
-import Section, { LowSection, FluffySection, DarkSection, SectionTitle } from './Section';
+import Section, { LowSection, FluffySection, DarkSection, SectionTitle, GreenSection } from './Section';
 import { LeftColumn, WideLeftColumn, RightColumn, NarrowRightColumn } from './Columns';
 import Testimonial, { TestimonialsCarousel } from './Testimonials';
 
@@ -19,6 +19,10 @@ const App = () => (
             <TestimonialsCarousel keynames={['d3noob', 'aristides',
                                              'thomas_buhr', 'thomas_fee']} />
         </LowSection>
+        <GreenSection>
+            <SectionTitle>Live Examples Gallery</SectionTitle>
+            <Content.Gallery />
+        </GreenSection>
         <DarkSection>
             <Content.Why />
         </DarkSection>
@@ -51,6 +55,8 @@ const App = () => (
         </Section>
         <DarkSection>
             <Packages.Picker />
+            <TestimonialsCarousel keynames={['d3noob', 'aristides',
+                                             'thomas_buhr', 'thomas_fee']} />
         </DarkSection>
     </div>
 );

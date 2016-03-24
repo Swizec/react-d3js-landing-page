@@ -194,3 +194,23 @@ export const Screencast = () => (
         </Row>
     </div>
 );
+
+export const Author = () => (
+    <Row>
+        <LeftColumn className="padding-big-top margin-medium-top">
+            <figure className="text-center">
+                <Image src="img/me.png" alt="Swizec Teller" circle responsive className="margin-medium-top" />
+            </figure>
+        </LeftColumn>
+        <RightColumn>
+            <h2>About the Author</h2>
+	    <p>Hi, I’m Swizec Teller. A digital nomad and full stack web engineer.</p>
+            <p>I travel the world and help startups win. From setting up new teams and training juniors, to fixing spaghetti code and implementing new features.</p>
+            <p>My code has been used by MasterCard, Commerzbank, Google, Mashable, Lyft, and many others.</p>
+            <p>When I’m not coding, I’m writing.</p>
+            <p>At least 5000 people bought my books ... I don’t know if that’s a lot, but it’s more than zero. I like that.</p>
+            <p>My work has been featured in Business Insider, LifeHacker, Huffington Post, and several dead-tree magazines. I’ve spoken on BBC Radio, appeared on Slovenian national television, and given talks all over the world.</p>
+        </RightColumn>
+    </Row>
+
+);

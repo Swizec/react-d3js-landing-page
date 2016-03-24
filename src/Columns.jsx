@@ -24,6 +24,26 @@ export class WideLeftColumn extends Component {
     }
 }
 
+export class HalfColumn extends Component {
+    render() {
+        return (
+            <LeftColumn md={6} mdOffset={0} {...this.props}>
+                {this.props.children}
+            </LeftColumn>
+        )
+    }
+}
+
+export class FullColumn extends Component {
+    render() {
+        return (
+            <LeftColumn md={12} mdOffset={0} {...this.props}>
+                {this.props.children}
+            </LeftColumn>
+        )
+    }
+}
+
 export class RightColumn extends Component {
     render() {
         let md = this.props.md || 6;

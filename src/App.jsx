@@ -7,6 +7,7 @@ import { LeftColumn, WideLeftColumn, RightColumn, NarrowRightColumn } from './Co
 import Testimonial, { TestimonialsCarousel } from './Testimonials';
 
 import * as Content from './Content';
+import * as Packages from './Packages';
 
 const App = () => (
     <div>
@@ -29,6 +30,12 @@ const App = () => (
         </DarkSection>
         <Section>
             <Content.Screencast />
+        </Section>
+        <DarkSection>
+            <Content.Author />
+        </DarkSection>
+        <Section>
+            <Packages.Complete />
         </Section>
     </div>
 );

@@ -53,8 +53,10 @@ export class DarkSection extends Section {
 
 export class SectionTitle extends Component {
     render() {
-        let className = classNames(this.props.className,
-                                   'col-md-10 col-md-offset-1',
+        let md = this.props.md,
+            mdOffset = this.props.mdOffset,
+            className = classNames(this.props.className,
+                                   `col-md-${md} col-md-offset-${mdOffset}`,
                                    this.props.nomargin ? 'margin-bottom-none' : '');
         return (
             <h2 className={className}>
@@ -64,6 +66,7 @@ export class SectionTitle extends Component {
     };
 }
 SectionTitle.propTypes = { nomargin: PropTypes.bool };
+SectionTitle.defaultProps = { md: 10, mdOffset: 1 }
 
 export class Panel extends Component {
     render() {

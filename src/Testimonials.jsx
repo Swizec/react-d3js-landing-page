@@ -29,6 +29,21 @@ const TestimonialData = {
         img: 'img/michel.jpg',
         quote: "Teller proves in his 'React+d3' book that React is not 'just the view', but a powerful tool to create declarative abstractions on top of low level visualization libraries like d3.",
         who: 'Michel Weststrate, creator of MobX'
+    },
+    myusef: {
+        img: 'img/4DWQ9dz2.jpg',
+        quote: "Great read with solid foundations to get you started crawling with react  and up to a sprint!",
+        who: 'MΛHDI, creator of Gyroscope'
+    },
+    patrick: {
+        img: 'img/davidson.jpg',
+        quote: "You just blew my mind! This is going to save me so much time.",
+        who: 'Patrick Davidson, Developer at Phytozome Group, JGI, Lawrence Berkeley Lab'
+    },
+    ulterior: {
+        img: 'img/9WOxpg5t.png',
+        quote: '@Swizec going through the free chapter of your book, well written, approachable and a joy to read! Looking forward to the complete edition.',
+        who: 'Ulterior, @boleroo'
     }
 };
 

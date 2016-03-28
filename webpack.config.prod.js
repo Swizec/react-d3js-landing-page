@@ -33,6 +33,11 @@ module.exports = {
       loaders: ['babel'],
       include: path.join(__dirname, 'src')
     },
+    {
+      test: /\.js|\.jsx?/,
+      loaders: ['babel'],
+      include: path.join(__dirname, 'node_modules/react-examples-gallery')
+    },
       {
         test: /\.less$/,
         loader: "style!css!less"

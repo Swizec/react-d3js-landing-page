@@ -36,7 +36,7 @@ const Testimonial = ({ which }) => {
     let {img, quote, who} = TestimonialData[which];
 
     return (
-        <div>
+        <div style={{height: '140px'}}>
             <figure className="col-md-2 col-md-offset-1 margin-small-top">
                 <Image circle src={img} alt={who}
                        style={{height: '110px'}}

@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Row, Col, Image, Input, ButtonInput, Carousel, CarouselItem } from 'react-bootstrap';
+import Gallery from 'react-examples-gallery';
 
 import Section, { SectionTitle, Panel } from './Section';
 import { LeftColumn, WideLeftColumn, RightColumn, NarrowRightColumn, SingleColumn, MiddleColumn, HalfColumn } from './Columns';
@@ -265,25 +266,17 @@ export const FAQ = () => (
     </div>
 );
 
-export const Gallery = () => (
-    <Row>
-        <Carousel>
-            <CarouselItem>
-                <div className="text-center">
-                    <iframe src="http://swizec.github.io/space-invaders/" width="800" height="500" />
-                </div>
-            </CarouselItem>
-            <CarouselItem>
-                <div className="text-center">
-                    <iframe src="http://swizec.github.io/react-particles-experiment" width="800" height="400" />
-                </div>
-            </CarouselItem>
-            <CarouselItem>
-                <div className="text-center">
-                    <iframe src="http://swizec.github.io/h1b-software-salaries" width="800" height="400" />
-                </div>
-            </CarouselItem>
-        </Carousel>
-        <p>A better integrated gallery is on its way. I ran out of time yak shaving this website into React. You can see the real gallery progress here -><br /> <a href="https://www.livecoding.tv/swizec/videos/oOqGo-sun-230pm-pst-reactd3reduxfun-screencast-3">Real Gallery Progress</a></p>
-    </Row>
-);
+export const Examples = () => {
+    let urls = ['http://swizec.github.io/space-invaders/',
+                'http://swizec.github.io/h1b-software-salaries',
+                'http://swizec.github.io/react-particles-experiment',
+                'http://swizec.github.io/flux-testing/',
+                'http://swizec.github.io/react-testing-example/',
+                'http://swizec.github.io/candidate-bucket-chart/'];
+
+    return (
+        <Row style={{height: '600px'}}>
+            <Gallery urls={urls} />
+        </Row>
+    );
+};

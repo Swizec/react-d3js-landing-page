@@ -57,6 +57,7 @@
     "classnames": "^2.2.3",
     "react": "^0.14.3",
     "react-bootstrap": "^0.28.3",
-    "react-dom": "^0.14.3"
+    "react-dom": "^0.14.3",
+    "react-examples-gallery": "^1.0.1"
   }
 }

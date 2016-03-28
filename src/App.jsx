@@ -19,9 +19,11 @@ const App = () => (
             <TestimonialsCarousel keynames={['michel', 'd3noob', 'aristides',
                                              'thomas_buhr', 'thomas_fee']} />
         </LowSection>
-        <GreenSection>
-            <SectionTitle>Live Examples Gallery</SectionTitle>
-            <Content.Gallery />
+        <GreenSection nocontainer>
+            <Row>
+                <SectionTitle>Live Examples Gallery</SectionTitle>
+            </Row>
+            <Content.Examples />
         </GreenSection>
         <DarkSection>
             <Content.Why />

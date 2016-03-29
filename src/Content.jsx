@@ -21,7 +21,7 @@ export const BookIntro = ({ className }) => (
     <Section className={className}>
         <LeftColumn>
             <p>
-		Creating beautiful dynamic visualizationsb on the web is a pain in the ass.
+		Creating beautiful dynamic visualizations on the web is a pain in the ass.
 	    </p>
 
 	    <p>
@@ -141,6 +141,24 @@ export const FreeSample = () => (
                     <Image src="img/sample.png" rounded responsive />
                     <SampleForm />
                 </Panel>
+            </SingleColumn>
+        </Row>
+    </div>
+);
+
+export const Talk = () => (
+    <div>
+        <Row>
+            <SectionTitle nomargin>Reusable data visualization with React and d3.js</SectionTitle>
+            <SingleColumn className="lead">Watch my talk from HTML5DevConf 2015</SingleColumn>
+        </Row>
+        <Row className="text-center">
+            <iframe width="853" height="480" src="https://www.youtube.com/embed/UP1nCXG2t4M" frameborder="0" allowfullscreen></iframe>
+        </Row>
+        <Row>
+            <SingleColumn>
+                <p>The talk shows a proof of concept approach to making fancy animations with React and d3js - a Space Invaders game. I explain the basic approach, where I got the idea, and show off some code.</p>
+                <p>You don't have to watch the whole talk, it's all in the React+d3js ES6 book.</p>
             </SingleColumn>
         </Row>
     </div>

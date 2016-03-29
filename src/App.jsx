@@ -42,6 +42,9 @@ const App = () => (
             <Content.FreeSample />
             <Testimonial which="ulterior" />
         </DarkSection>
+        <GreenSection>
+            <Content.Talk />
+        </GreenSection>
         <Section>
             <Content.Screencast />
             <Testimonial which="myusef" />

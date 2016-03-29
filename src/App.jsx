@@ -25,6 +25,7 @@ const App = () => (
                 <SectionTitle>Live Examples Gallery</SectionTitle>
             </Row>
             <Content.Examples />
+            <Content.SampleLink />
         </GreenSection>
         <DarkSection>
             <Row>
@@ -37,6 +38,7 @@ const App = () => (
         <Section>
             <Content.What />
             <Testimonial which="michel" />
+            <Content.SampleLink />
         </Section>
         <DarkSection>
             <Content.FreeSample />
@@ -44,6 +46,7 @@ const App = () => (
         </DarkSection>
         <GreenSection>
             <Content.Talk />
+            <Content.SampleLink />
         </GreenSection>
         <Section>
             <Content.Screencast />

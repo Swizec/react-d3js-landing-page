@@ -156,6 +156,7 @@ export const Feature = ({ img, title, description, circle }) => (
 
 export const Picker = () => (
     <div>
+        <a name="packages"></a>
         <h2 className="text-center">Choose a package</h2>
         <Col md={12}>
         <ul className="pricing-table list-unstyled panel row">

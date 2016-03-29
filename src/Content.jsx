@@ -37,7 +37,7 @@ export const BookIntro = ({ className }) => (
 
 	    <p>
 		<em><strong>Interested?<br/>
-		    <a href="#free-sample">Get the free sample chapter.</a></strong></em>
+		    <a href="#free-sample">Read the free sample chapter.</a></strong></em>
 	    </p>
         </LeftColumn>
         <RightColumn>
@@ -46,6 +46,15 @@ export const BookIntro = ({ className }) => (
 	    </figure>
         </RightColumn>
     </Section>
+);
+
+export const SampleLink = () => (
+    <Row className="text-center">
+        <p>
+	    <em><strong>Interested?<br/>
+	        <a href="#free-sample">Read the free sample chapter.</a></strong></em>
+        </p>
+    </Row>
 );
 
 

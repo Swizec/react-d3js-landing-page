@@ -52,7 +52,9 @@ export const SampleLink = () => (
     <Row className="text-center">
         <p>
 	    <em><strong>Interested?<br/>
-	        <a href="#free-sample">Read the free sample chapter.</a></strong></em>
+	        <a href="#free-sample">Read the free sample chapter.</a></strong>
+                <br/><span style={{fontSize: '0.8em'}}>Or scroll down for packages</span>
+            </em>
         </p>
     </Row>
 );
@@ -158,6 +160,7 @@ export const FreeSample = () => (
 export const Talk = () => (
     <div>
         <Row>
+            <a name="space-invaders-talk"></a>
             <SectionTitle nomargin>Reusable data visualization with React and d3.js</SectionTitle>
             <SingleColumn className="lead">Watch my talk from HTML5DevConf 2015</SingleColumn>
         </Row>

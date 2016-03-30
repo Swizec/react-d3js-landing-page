@@ -22,6 +22,7 @@ const App = () => (
         </LowSection>
         <GreenSection nocontainer>
             <Row>
+                <a name="examples-gallery"></a>
                 <SectionTitle>Live Examples Gallery</SectionTitle>
             </Row>
             <Content.Examples />

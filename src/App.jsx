@@ -16,7 +16,8 @@ const App = () => (
         <Content.BookIntro className="margin-big-bottom" />
         <hr />
         <LowSection className="margin-medium-bottom">
-            <TestimonialsCarousel keynames={['michel', 'ulterior', 'myusef', 'patrick',
+            <TestimonialsCarousel keynames={['bjorg1', 'michel', 'ulterior', 'myusef',
+                                             'patrick', 'bjorg2',
                                              'd3noob', 'aristides',
                                              'thomas_buhr', 'thomas_fee']} />
         </LowSection>
@@ -45,6 +46,7 @@ const App = () => (
             <Testimonial which="michel" />
             <Content.Index />
             <Content.SampleLink />
+            <TestimonialsCarousel keynames={['bjorg1', 'bjorg2']} />
         </Section>
         <DarkSection>
             <Content.FreeSample />
@@ -53,6 +55,7 @@ const App = () => (
         <GreenSection>
             <Content.Talk />
             <Content.SampleLink />
+            <Testimonial which="bjorg2" />
         </GreenSection>
         <Section>
             <Content.Screencast />
@@ -79,8 +82,8 @@ const App = () => (
         </Section>
         <DarkSection>
             <Packages.Picker />
-            <TestimonialsCarousel keynames={['michel', 'patrick', 'ulterior',
-                                             'myusef', 'd3noob', 'aristides',
+            <TestimonialsCarousel keynames={['bjorg1', 'michel', 'patrick', 'ulterior',
+                                             'myusef', 'bjorg2', 'd3noob', 'aristides',
                                              'thomas_buhr', 'thomas_fee']} />
         </DarkSection>
     </div>

@@ -44,6 +44,16 @@ const TestimonialData = {
         img: 'img/9WOxpg5t.png',
         quote: '@Swizec going through the free chapter of your book, well written, approachable and a joy to read! Looking forward to the complete edition.',
         who: 'Ulterior, @boleroo'
+    },
+    bjorg1: {
+        img: 'img/BR.jpg',
+        quote: "The 'A good work environment' section is just pure gold. Way too many times I've read an article or seen instructional videos describing a good environment, followed by '... but we shall not be doing this in here.' Good job on walking the walk.",
+        who: 'Bjorgvin Reynisson'
+    },
+    bjorg2: {
+        img: 'img/BR.jpg',
+        quote: "Finally, this is just a very good read. There's a nice tone to it. The explainations are good, and I like it when you point out where there are alternative solutions you have not tried yet. I also do like the lenght of the book. Excellent job.",
+        who: 'Bjorgvin Reynisson'
     }
 };
 

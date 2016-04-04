@@ -37,7 +37,7 @@ export const BookIntro = ({ className }) => (
 
 	    <p>
 		<em><strong>Interested?<br/>
-		    <a href="#free-sample">Read the free sample chapter.</a></strong></em>
+		    <a href="#free-sample">Get a free chapter.</a></strong></em>
 	    </p>
         </LeftColumn>
         <RightColumn>
@@ -52,7 +52,7 @@ export const SampleLink = () => (
     <Row className="text-center">
         <p>
 	    <em><strong>Interested?<br/>
-	        <a href="#free-sample">Read the free sample chapter.</a></strong>
+	        <a href="#free-sample">Get a free chapter.</a></strong>
                 <br/><span style={{fontSize: '0.8em'}}>Or scroll down for packages</span>
             </em>
         </p>
@@ -134,6 +134,74 @@ export const What = () => (
 		    </li>
 		</ul>
             </RightColumn>
+        </Row>
+    </div>
+);
+
+export const Index = () => (
+    <div>
+        <Row>
+            <SectionTitle nomargin>What's in the book</SectionTitle>
+            <SingleColumn className="lead">Table of contents</SingleColumn>
+        </Row>
+
+        <Row>
+            <SingleColumn>
+                <h3>Introduction</h3>
+                <ul>
+                    <li>Why you should read React+d3.js</li>
+                    <li>What you need to know</li>
+                    <li>How to read this book</li>
+                    <li>ES5 and ES6 versions</li>
+                </ul>
+                <h3>Why React and d3.js</h3>
+                <ul>
+                    <li>Buzzword soup explained</li>
+                    <li>JSX</li>
+                </ul>
+                <h3>A good work environment</h3>
+                <ul>
+                    <li>Bundle with Webpack</li>
+                    <li>Compile with Babel</li>
+                    <li>Quickstart</li>
+                    <li>NPM for dependencies and tools</li>
+                    <li>Step-by-step with boilerplate</li>
+                    <li>Add Less compiling</li>
+                    <li>Serve static files in development</li>
+                    <li>Webpack nice-to-haves</li>
+                    <li>Optionally enable ES7</li>
+                    <li>Check that everything works</li>
+                    <li>Remove sample code</li>
+                    <li>The environment in depth</li>
+                    <li>That’s it. Time to play!</li>
+                </ul>
+                <h3>Visualizing data with React and d3.js</h3>
+                <ul>
+                    <li>The basic approach</li>
+                    <li>The Architecture</li>
+                    <li>The HTML skeleton</li>
+                    <li>Structuring your React app</li>
+                    <li>Bootstrap your app into place</li>
+                    <li>Start with a basic component</li>
+                    <li>Asynchronously loading data</li>
+                    <li>Making your first dataviz component – a Histogram</li>
+                    <li>Wrapping a pure-d3 element in React - an Axis</li>
+                    <li>Interacting with the user</li>
+                    <li>Component reusability</li>
+                    <li>Making disparate components act together</li>
+                </ul>
+                <h3>Animating with React, Redux, and d3</h3>
+                <ul>
+                    <li>Here’s how it works</li>
+                    <li>3 presentation components</li>
+                    <li>6 Actions</li>
+                    <li>1 Container component</li>
+                    <li>1 Reducer</li>
+                    <li>What we learned</li>
+                </ul>
+                <h3>Conclusion</h3>
+                <h3>Appendix - Browserify-based environment</h3>
+            </SingleColumn>
         </Row>
     </div>
 );

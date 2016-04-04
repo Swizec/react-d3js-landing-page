@@ -43,6 +43,7 @@ const App = () => (
         <Section>
             <Content.What />
             <Testimonial which="michel" />
+            <Content.Index />
             <Content.SampleLink />
         </Section>
         <DarkSection>

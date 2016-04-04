@@ -52,12 +52,12 @@ const Testimonial = ({ which }) => {
 
     return (
         <div style={{height: '140px'}}>
-            <figure className="col-md-2 col-md-offset-1 margin-small-top">
+            <figure className="col-xs-2 col-md-1 col-md-offset-1 margin-small-top">
                 <Image circle src={img} alt={who}
-                       style={{height: '110px'}}
-                       className="pull-right" />
+                       style={{height: '110px'}} />
             </figure>
-            <blockquote className="col-md-7">
+            <blockquote className="col-xs-9 col-xs-offset-1 col-md-7"
+                        style={{marginLeft: '25px'}}>
 	        <p>{quote}</p>
 	        <small>{who}</small>
             </blockquote>

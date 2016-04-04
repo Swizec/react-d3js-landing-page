@@ -80,7 +80,7 @@ export class SectionTitle extends Component {
         let md = this.props.md,
             mdOffset = this.props.mdOffset,
             className = classNames(this.props.className,
-                                   `col-md-${md} col-md-offset-${mdOffset}`,
+                                   `col-md-${md} col-md-offset-${mdOffset} col-xs-12 col-xs-offset-1`,
                                    this.props.nomargin ? 'margin-bottom-none' : '');
         return (
             <h2 className={className}>

@@ -21,12 +21,16 @@ const App = () => (
                                              'thomas_buhr', 'thomas_fee']} />
         </LowSection>
         <GreenSection nocontainer>
-            <Row>
-                <a name="examples-gallery"></a>
-                <SectionTitle>Live Examples Gallery</SectionTitle>
-            </Row>
+            <div className="container">
+                <Row>
+                    <a name="examples-gallery"></a>
+                    <SectionTitle>Live Examples Gallery</SectionTitle>
+                </Row>
+            </div>
             <Content.Examples />
-            <Content.SampleLink />
+            <div className="container">
+                <Content.SampleLink />
+            </div>
         </GreenSection>
         <DarkSection>
             <Row>

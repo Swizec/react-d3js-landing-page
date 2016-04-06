@@ -32,7 +32,7 @@ export const BookIntro = ({ className }) => (
 	    </p>
 
 	    <p>
-		With <strong>React+d3js ES6</strong> you'll learn how to build re-usable visualization components in about an hour.
+		With <strong itemProp="name">React+d3js ES6</strong> you'll <span itemProp="description">learn how to build re-usable visualization components in about an hour</span>.
 	    </p>
 
 	    <p>
@@ -42,7 +42,7 @@ export const BookIntro = ({ className }) => (
         </LeftColumn>
         <RightColumn>
             <figure className="text-center">
-		<img src="img/cover.png" alt="React+d3js ES6 edition" className="img-thumbnail get_sample" />
+		<img src="img/cover.png" alt="React+d3js ES6 edition" className="img-thumbnail get_sample" itemProp="image" />
 	    </figure>
         </RightColumn>
     </Section>
@@ -296,15 +296,15 @@ export const Screencast = () => (
 );
 
 export const Author = () => (
-    <Row>
+    <Row itemProp="brand" itemScope itemType="http://schema.org/Brand">
         <LeftColumn className="padding-big-top margin-medium-top">
             <figure className="text-center">
-                <Image src="img/me.png" alt="Swizec Teller" circle responsive className="margin-medium-top" />
+                <Image src="img/me.png" alt="Swizec Teller" circle responsive className="margin-medium-top" itemProp="logo" />
             </figure>
         </LeftColumn>
         <RightColumn>
             <h2>About the Author</h2>
-	    <p>Hi, I’m Swizec Teller. A digital nomad and full stack web engineer.</p>
+	    <p>Hi, I’m <span itemProp="name">Swizec Teller</span>. A digital nomad and full stack web engineer.</p>
             <p>I travel the world and help startups win. From setting up new teams and training juniors, to fixing spaghetti code and implementing new features.</p>
             <p>My code has been used by MasterCard, Commerzbank, Google, Mashable, Lyft, and many others.</p>
             <p>When I’m not coding, I’m writing.</p>

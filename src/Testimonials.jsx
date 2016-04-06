@@ -61,15 +61,15 @@ const Testimonial = ({ which }) => {
     let {img, quote, who} = TestimonialData[which];
 
     return (
-        <div style={{height: '140px'}}>
+        <div style={{height: '140px'}} itemProp="review" itemScope itemType="http://schema.org/Review">
             <figure className="col-xs-2 col-md-1 col-md-offset-1 margin-small-top">
                 <Image circle src={img} alt={who}
                        style={{height: '110px'}} />
             </figure>
             <blockquote className="col-xs-9 col-xs-offset-1 col-md-7"
                         style={{marginLeft: '25px'}}>
-	        <p>{quote}</p>
-	        <small>{who}</small>
+	        <p itemProp="reviewBody">{quote}</p>
+	        <small itemProp="author" itemScope itemType="http://schema.org/Person"><span itemProp="name">{who}</span></small>
             </blockquote>
         </div>
     );

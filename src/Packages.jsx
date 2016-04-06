@@ -12,14 +12,14 @@ const EngineerID = 'iWevQ';
 const BusinessID = 'ygzt';
 
 export const Business = () => (
-    <div>
+    <div itemProp="offers" itemScope itemType="http://schema.org/Offer">
         <Row className="padding-medium-bottom">
             <SectionTitle nomargin md={12} mdOffset={0}>
-                The business package
+                <span itemProp="name">The business package</span>
 
                 <BigBuyButton id={BusinessID} price="399" className="pull-right" />
             </SectionTitle>
-            <FullColumn className="lead">
+            <FullColumn className="lead" itemProp="description">
                 The book, the resources, the 1-on-team coaching
             </FullColumn>
         </Row>
@@ -31,14 +31,14 @@ export const Business = () => (
 );
 
 export const Engineer = () => (
-    <div>
+    <div itemProp="offers" itemScope itemType="http://schema.org/Offer">
         <Row className="padding-medium-bottom">
             <SectionTitle nomargin md={12} mdOffset={0}>
-                Engineer package
+                <span itemProp="name">Engineer package</span>
 
                 <BigBuyButton id={EngineerID} price="79" className="pull-right" />
             </SectionTitle>
-            <FullColumn className="lead">
+            <FullColumn className="lead" itemProp="description">
                 The book, the resources, the 30min coaching
             </FullColumn>
         </Row>
@@ -49,16 +49,16 @@ export const Engineer = () => (
 );
 
 export const Student = () => (
-    <div>
+    <div itemProp="offers" itemScope itemType="http://schema.org/Offer">
         <Col md={4}>
         <Image src="img/ap-medium.png" alt="React+d3js ES6" thumbnail className="margin-big-top" />
         </Col>
         <Col md={8}>
         <h2 className="margin-bottom-none" nomargin>
-            Student
+            <span itemProp="name">Student</span>
             <BigBuyButton id={StudentID} price="19" className="pull-right" />
         </h2>
-        <p className="lead">The budget option</p>
+        <p className="lead" itemProp="description">The basics you need to get started</p>
         <p>
 	    Creating visualizations with React and d3.js is an amazing experience that will make your life easier. That's why I want you to learn this material even if you're on a budget.
 	</p>
@@ -73,7 +73,7 @@ export const Student = () => (
 export const BigBuyButton = ({ id, price, className }) => (
     <a className={classNames(className, 'btn btn-success btn-lg btn-xl btn-buy text-uppercase')}
        href={`https://gumroad.com/l/${id}?wanted=true`}>
-        <span className="text-white-dark">Buy now for</span> ${price}
+        <span className="text-white-dark">Buy now for</span> <span itemProp="price">${price}</span>
     </a>
 );
 

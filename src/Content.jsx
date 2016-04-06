@@ -32,7 +32,7 @@ export const BookIntro = ({ className }) => (
 	    </p>
 
 	    <p>
-		With <strong>React+d3.js</strong> you'll learn how to build re-usable visualization components in about an hour.
+		With <strong>React+d3js ES6</strong> you'll learn how to build re-usable visualization components in about an hour.
 	    </p>
 
 	    <p>

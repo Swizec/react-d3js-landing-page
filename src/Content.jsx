@@ -10,8 +10,8 @@ export const Header = () => (
     <header className="text-left container">
         <Row>
             <Col md={10} mdOffset={1}>
-	    <h1>Do you think React is beautiful?</h1>
-	    <p className="lead">React with d3.js in ES6 was the most fun I've had in years.</p>
+	    <h1>Do you like dataviz?</h1>
+	    <p className="lead">React with d3.js in ES6 was the most fun I've had turning data into pictures.</p>
             </Col>
 	</Row>
     </header>
@@ -21,11 +21,14 @@ export const BookIntro = ({ className }) => (
     <Section className={className}>
         <LeftColumn>
             <p>
-		Creating beautiful dynamic visualizations on the web is a pain in the ass.
+                Did you know software <b>engineers make $20,000 more than programmers</b>? I had no idea it was <i>that</i> bad until I built some shiny graphs and saw the difference. I never called myself a programmer again.
+            </p>
+            <p>
+		But creating <b>dynamic and interactive data visualizations</b> on the web is a pain in the ass.
 	    </p>
 
 	    <p>
-                You either have to use dumbed down libraries that won't let you do advanced animations and user interaction, or make everything from scratch. Every time.
+                You either have to use dumbed down libraries that won't let you do advanced custom stuff, or make everything from scratch. Every time.
             </p>
             <p>
                 You want a <strong>quick way to build complex visualizations</strong>. Build once, use everywhere. In every project. Don't believe me? Scroll down to the gallery.
@@ -36,8 +39,8 @@ export const BookIntro = ({ className }) => (
 	    </p>
 
 	    <p>
-		<em><strong>Interested?<br/>
-		    <a href="#free-sample">Get a free chapter.</a></strong></em>
+		<em><strong>Wanna learn?<br/>
+		    <a href="#free-sample">Start with a free chapter.</a></strong></em>
 	    </p>
         </LeftColumn>
         <RightColumn>
@@ -51,8 +54,8 @@ export const BookIntro = ({ className }) => (
 export const SampleLink = () => (
     <Row className="text-center">
         <p>
-	    <em><strong>Interested?<br/>
-	        <a href="#free-sample">Get a free chapter.</a></strong>
+	    <em><strong>Wanna build cool stuff?<br/>
+	        <a href="#free-sample">Start with a free chapter and crash course.</a></strong>
                 <br/><span style={{fontSize: '0.8em'}}>Or scroll down for packages</span>
             </em>
         </p>
@@ -365,9 +368,10 @@ export const FAQ = () => (
 );
 
 export const Examples = () => {
-    let urls = ['http://swizec.github.io/space-invaders/',
+    let urls = ['http://swizec.github.io/react-particles-experiment',
+                'http://swizec.github.io/space-invaders/',
+                'https://gyrosco.pe/swizec/',
                 'http://swizec.github.io/h1b-software-salaries',
-                'http://swizec.github.io/react-particles-experiment',
                 'http://swizec.github.io/flux-testing/',
                 'http://swizec.github.io/react-testing-example/',
                 'http://swizec.github.io/candidate-bucket-chart/'];

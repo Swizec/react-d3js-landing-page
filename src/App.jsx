@@ -13,14 +13,13 @@ const App = () => (
     <div>
         <div className="bg-white-dark padding-small-top"></div>
         <Content.Header />
-        <Content.BookIntro className="margin-big-bottom" />
-        <hr />
-        <LowSection className="margin-medium-bottom">
+        <LowSection>
             <TestimonialsCarousel keynames={['bjorg1', 'michel', 'ulterior', 'myusef',
                                              'patrick', 'bjorg2',
                                              'd3noob', 'aristides',
                                              'thomas_buhr', 'thomas_fee']} />
         </LowSection>
+        <Content.BookIntro className="margin-big-bottom" />
         <GreenSection nocontainer>
             <div className="container">
                 <Row>

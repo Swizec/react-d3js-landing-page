@@ -10,8 +10,8 @@ export const Header = () => (
     <header className="text-left container">
         <Row>
             <Col md={10} mdOffset={1}>
-	    <h1>Do you like dataviz?</h1>
-	    <p className="lead">React with d3.js in ES6 was the most fun I've had turning data into pictures.</p>
+	    <h1>Become a data visualization engineer</h1>
+	    <p className="lead">React with d3.js in ES6 is the best way to <b>turn data into knowledge</b>.</p>
             </Col>
 	</Row>
     </header>

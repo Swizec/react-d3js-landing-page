@@ -15,9 +15,12 @@ app.use(require('webpack-hot-middleware')(compiler));
 
 // enable loading local static files
 app.use(express.static('public'));
+app.get('/thanks.html', function (req, res) {
+    res.sendFile(path.join(__dirname, 'thanks.html'));
+});
 
 app.get('*', function(req, res) {
-  res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.listen(3000, 'localhost', function(err) {

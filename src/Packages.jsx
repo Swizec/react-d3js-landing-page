@@ -69,13 +69,23 @@ export const Student = () => (
     </div>
 );
 
+export const BigBuyButton = ({ id, price, className }, context) => {
+    let offer = price*context.offer.value,
+        strike = offer == price ? '' : (<strike>${price}</strike>);
 
-export const BigBuyButton = ({ id, price, className }) => (
-    <a className={classNames(className, 'btn btn-success btn-lg btn-xl btn-buy text-uppercase')}
-       href={`https://gumroad.com/l/${id}?wanted=true`}>
-        <span className="text-white-dark">Buy now for</span> <span itemProp="price">${price}</span>
+    return (
+        <a className={classNames(className, 'btn btn-success btn-lg btn-xl btn-buy text-uppercase')}
+           href={`https://gumroad.com/l/${id}/${context.offer.name}?wanted=true`}>
+        <span className="text-white-dark">Buy now for {strike}</span> <span itemProp="price">${offer}</span>
     </a>
-);
+    )
+};
+
+BigBuyButton.contextTypes = {offer: React.PropTypes.shape(
+    {name: React.PropTypes.string,
+     value: React.PropTypes.number}
+)};
+
 
 const Features = {
     book: {
@@ -214,11 +224,21 @@ export const TablePackage = ({ name, price, id, className }) => (
 
 
 
-export const BuyButton = ({ id, price, className }) => (
-    <a className={classNames(className, 'btn btn-default btn-lg btn-block btn-buy')}
-       href={`https://gumroad.com/l/${id}?wanted=true`}>
-        <span className="text-uppercase">
-            <span className="text-muted">Buy now for</span> ${price}
-        </span>
-    </a>
-);
+export const BuyButton = ({ id, price, className }, context) => {
+    let offer = price*context.offer.value,
+        strike = offer == price ? '' : (<strike>${price}</strike>);
+
+    return (
+        <a className={classNames(className, 'btn btn-default btn-lg btn-block btn-buy')}
+           href={`https://gumroad.com/l/${id}/${context.offer.name}?wanted=true`}>
+            <span className="text-uppercase">
+                <span className="text-muted">Buy now for</span> {strike} ${offer}
+            </span>
+        </a>
+    );
+};
+
+BuyButton.contextTypes = {offer: React.PropTypes.shape(
+    {name: React.PropTypes.string,
+     value: React.PropTypes.number}
+)};

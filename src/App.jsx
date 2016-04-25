@@ -10,7 +10,7 @@ import * as Content from './Content';
 import * as Packages from './Packages';
 
 const OfferMapping = new Map([
-    ['yay-visa', .5]
+//    ['yay-visa', .5]
 ]);
 
 class App extends Component {

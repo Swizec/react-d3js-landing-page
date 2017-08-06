@@ -1,9 +1,9 @@
 
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-import { Row, Col } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 import Section, { LowSection, FluffySection, DarkSection, SectionTitle, GreenSection } from './Section';
-import { LeftColumn, WideLeftColumn, RightColumn, NarrowRightColumn } from './Columns';
 import Testimonial, { TestimonialsCarousel } from './Testimonials';
 
 import * as Content from './Content';
@@ -15,14 +15,16 @@ const OfferMapping = new Map([
 
 class App extends Component {
     static contextTypes = {
-        offer: React.PropTypes.shape(
-            {name: React.PropTypes.string,
-             value: React.PropTypes.number})
+        offer: PropTypes.shape({
+            name: PropTypes.string,
+            value: PropTypes.number
+        })
     };
     static childContextTypes = {
-        offer: React.PropTypes.shape(
-            {name: React.PropTypes.string,
-             value: React.PropTypes.number})
+        offer: PropTypes.shape({
+            name: PropTypes.string,
+            value: PropTypes.number
+        })
     };
 
     getChildContext() {
@@ -49,7 +51,6 @@ class App extends Component {
                 <GreenSection nocontainer>
                     <div className="container">
                         <Row>
-                            <a name="examples-gallery"></a>
                             <SectionTitle>Live Examples Gallery</SectionTitle>
                         </Row>
                     </div>

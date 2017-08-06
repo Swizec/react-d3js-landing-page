@@ -2,8 +2,6 @@
 import React from 'react';
 import { Image, Carousel, CarouselItem } from 'react-bootstrap';
 
-import Section from './Section';
-
 const TestimonialData = {
     d3noob: {
         img: 'img/d3noob.png',

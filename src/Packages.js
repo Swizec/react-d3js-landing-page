@@ -1,10 +1,11 @@
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import { Row, Col, Image, ButtonInput, Button } from 'react-bootstrap';
+import { Row, Col, Image } from 'react-bootstrap';
 
-import Section, { SectionTitle, Panel } from './Section';
+import { SectionTitle } from './Section';
 import { HalfColumn, FullColumn } from './Columns';
 
 const StudentID = 'GXOpa';
@@ -54,7 +55,7 @@ export const Student = () => (
         <Image src="img/ap-medium.png" alt="React+d3js ES6" thumbnail className="margin-big-top" />
         </Col>
         <Col md={8}>
-        <h2 className="margin-bottom-none" nomargin>
+        <h2 className="margin-bottom-none">
             <span itemProp="name">Student</span>
             <BigBuyButton id={StudentID} price="19" className="pull-right" />
         </h2>
@@ -71,7 +72,7 @@ export const Student = () => (
 
 export const BigBuyButton = ({ id, price, className }, context) => {
     let offer = price*context.offer.value,
-        strike = offer == price ? '' : (<strike>${price}</strike>);
+        strike = offer === price ? '' : (<strike>${price}</strike>);
 
     return (
         <a className={classNames(className, 'btn btn-success btn-lg btn-xl btn-buy text-uppercase')}
@@ -81,10 +82,12 @@ export const BigBuyButton = ({ id, price, className }, context) => {
     )
 };
 
-BigBuyButton.contextTypes = {offer: React.PropTypes.shape(
-    {name: React.PropTypes.string,
-     value: React.PropTypes.number}
-)};
+BigBuyButton.contextTypes = {
+    offer: PropTypes.shape({
+        name: PropTypes.string,
+        value: PropTypes.number
+    })
+};
 
 
 const Features = {
@@ -141,7 +144,7 @@ export const NamedFeature = ({ name }) => {
     if (!name) return (<span></span>);
 
     let { img, title, description } = Features[name],
-        circle = name != 'book';
+        circle = name !== 'book';
 
     return (
         <Feature img={img} title={title} description={description} circle={circle} />
@@ -166,7 +169,6 @@ export const Feature = ({ img, title, description, circle }) => (
 
 export const Picker = () => (
     <div>
-        <a name="packages"></a>
         <h2 className="text-center">Choose a package</h2>
         <Col md={12}>
         <ul className="pricing-table list-unstyled panel row">
@@ -226,7 +228,7 @@ export const TablePackage = ({ name, price, id, className }) => (
 
 export const BuyButton = ({ id, price, className }, context) => {
     let offer = price*context.offer.value,
-        strike = offer == price ? '' : (<strike>${price}</strike>);
+        strike = offer === price ? '' : (<strike>${price}</strike>);
 
     return (
         <a className={classNames(className, 'btn btn-default btn-lg btn-block btn-buy')}
@@ -238,7 +240,9 @@ export const BuyButton = ({ id, price, className }, context) => {
     );
 };
 
-BuyButton.contextTypes = {offer: React.PropTypes.shape(
-    {name: React.PropTypes.string,
-     value: React.PropTypes.number}
-)};
+BuyButton.contextTypes = {
+    offer: PropTypes.shape({
+        name: PropTypes.string,
+        value: PropTypes.number
+    })
+};

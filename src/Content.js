@@ -1,9 +1,10 @@
 
 import React from 'react';
 import { Row, Col, Image, FormControl } from 'react-bootstrap';
+import YouTube from 'react-youtube';
 
 import Section, { SectionTitle, Panel } from './Section';
-import { LeftColumn, WideLeftColumn, RightColumn, NarrowRightColumn, SingleColumn, MiddleColumn, HalfColumn } from './Columns';
+import { LeftColumn, WideLeftColumn, RightColumn, NarrowRightColumn, SingleColumn, MiddleColumn } from './Columns';
 
 export const Header = () => (
     <header className="text-left container">
@@ -211,7 +212,6 @@ export const Index = () => (
 export const FreeSample = () => (
     <div>
         <Row>
-            <a name="free-sample"></a>
             <SectionTitle nomargin>Get a free sample</SectionTitle>
             <SingleColumn className="lead">See what the book is like.</SingleColumn>
         </Row>
@@ -230,12 +230,11 @@ export const FreeSample = () => (
 export const Talk = () => (
     <div>
         <Row>
-            <a name="space-invaders-talk"></a>
             <SectionTitle nomargin>Reusable data visualization with React and d3.js</SectionTitle>
             <SingleColumn className="lead">Watch my talk from HTML5DevConf 2015</SingleColumn>
         </Row>
         <Row className="text-center">
-            <iframe width="853" height="480" src="https://www.youtube.com/embed/UP1nCXG2t4M" frameborder="0" allowfullscreen></iframe>
+            <YouTube videoId="UP1nCXG2t4M" opts={{width: 853, height: 480}} />
         </Row>
         <Row>
             <SingleColumn>

@@ -9,6 +9,8 @@ import Testimonial, { TestimonialsCarousel } from './Testimonials';
 import * as Content from './Content';
 import * as Packages from './Packages';
 
+import './App.css';
+
 const OfferMapping = new Map([
 //    ['yay-visa', .5]
 ]);

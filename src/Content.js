@@ -5,13 +5,14 @@ import YouTube from 'react-youtube';
 
 import Section, { SectionTitle, Panel } from './Section';
 import { LeftColumn, WideLeftColumn, RightColumn, NarrowRightColumn, SingleColumn, MiddleColumn } from './Columns';
+import { openDripForm } from './helpers';
 
 export const Header = () => (
     <header className="text-left container">
         <Row>
             <Col md={10} mdOffset={1}>
 	    <h1>Become a data visualization engineer</h1>
-	    <p className="lead">React with d3.js in ES6 is the best way to <b>turn data into knowledge</b>.</p>
+	    <p className="lead">React with D3v4 in ES6 is the best way to <b>turn data into knowledge</b>.</p>
             </Col>
 	</Row>
     </header>
@@ -43,9 +44,13 @@ export const BookIntro = ({ className }) => (
 		    <a href="#free-sample">Start with a free chapter.</a></strong></em>
 	    </p>
         </LeftColumn>
-        <RightColumn>
+        <RightColumn style={{display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: 700}}>
             <figure className="text-center">
-		<img src="img/cover.png" alt="React+d3js ES6 edition" className="img-thumbnail get_sample" itemProp="image" />
+		<img src="img/cover.png"
+                     alt="React+D3v4 edition"
+                     className="img-thumbnail get_sample"
+                     itemProp="image"
+                     onClick={openDripForm} />
 	    </figure>
         </RightColumn>
     </Section>

@@ -5,7 +5,7 @@ import YouTube from 'react-youtube';
 
 import Section, { SectionTitle, Panel } from './Section';
 import { LeftColumn, WideLeftColumn, RightColumn, NarrowRightColumn, SingleColumn, MiddleColumn } from './Columns';
-import { openDripForm } from './helpers';
+import { openDripForm, TOCUl, MainLi, SubLi } from './helpers';
 
 export const Header = () => (
     <header className="text-left container">
@@ -156,59 +156,112 @@ export const Index = () => (
         <Row>
             <SingleColumn>
                 <h3>Introduction</h3>
-                <ul>
-                    <li>Why you should read React+d3.js</li>
-                    <li>What you need to know</li>
-                    <li>How to read this book</li>
-                    <li>ES5 and ES6 versions</li>
-                </ul>
-                <h3>Why React and d3.js</h3>
-                <ul>
-                    <li>Buzzword soup explained</li>
-                    <li>JSX</li>
-                </ul>
-                <h3>A good work environment</h3>
-                <ul>
-                    <li>Bundle with Webpack</li>
-                    <li>Compile with Babel</li>
-                    <li>Quickstart</li>
-                    <li>NPM for dependencies and tools</li>
-                    <li>Step-by-step with boilerplate</li>
-                    <li>Add Less compiling</li>
-                    <li>Serve static files in development</li>
-                    <li>Webpack nice-to-haves</li>
-                    <li>Optionally enable ES7</li>
-                    <li>Check that everything works</li>
-                    <li>Remove sample code</li>
-                    <li>The environment in depth</li>
-                    <li>That’s it. Time to play!</li>
-                </ul>
+                <TOCUl>
+                    <MainLi>Foreword</MainLi>
+                    <MainLi>Why you should read React + D3v4</MainLi>
+                    <MainLi>What you need to know</MainLi>
+                    <MainLi>How to read this book</MainLi>
+                    <MainLi>Why React and D3.js</MainLi>
+                    <MainLi>Buzzword soup explained</MainLi>
+                    <MainLi>JSX</MainLi>
+                </TOCUl>
                 <h3>Visualizing data with React and d3.js</h3>
-                <ul>
-                    <li>The basic approach</li>
-                    <li>The Architecture</li>
-                    <li>The HTML skeleton</li>
-                    <li>Structuring your React app</li>
-                    <li>Bootstrap your app into place</li>
-                    <li>Start with a basic component</li>
-                    <li>Asynchronously loading data</li>
-                    <li>Making your first dataviz component – a Histogram</li>
-                    <li>Wrapping a pure-d3 element in React - an Axis</li>
-                    <li>Interacting with the user</li>
-                    <li>Component reusability</li>
-                    <li>Making disparate components act together</li>
-                </ul>
-                <h3>Animating with React, Redux, and d3</h3>
-                <ul>
-                    <li>Here’s how it works</li>
-                    <li>3 presentation components</li>
-                    <li>6 Actions</li>
-                    <li>1 Container component</li>
-                    <li>1 Reducer</li>
-                    <li>What we learned</li>
-                </ul>
+                <TOCUl>
+                    <MainLi>The basic approach</MainLi>
+                    <MainLi>Blackbox Components</MainLi>
+                    <SubLi>A quick blackbox example - a D3 axis</SubLi>
+                    <SubLi>A quick blackbox example - a React+D3 axis</SubLi>
+                    <MainLi>A D3 blackbox higher order component – HOC</MainLi>
+                    <MainLi>Full-feature Integration</MainLi>
+                    <SubLi>A color scale</SubLi>
+                    <MainLi>You’re awesome</MainLi>
+                    <MainLi>State Handling Architecture</MainLi>
+                    <SubLi>Basic architecture</SubLi>
+                    <SubLi>A caveat</SubLi>
+                    <MainLi>Structuring your React app</MainLi>
+                    <MainLi>Set up a local environment with create-react-app</MainLi>
+                    <SubLi>Make sure you have node.js</SubLi>
+                    <SubLi>Install create-react-app</SubLi>
+                    <SubLi>Run create-react-app</SubLi>
+                    <SubLi>What you get</SubLi>
+                    <SubLi>Install dependencies for this book</SubLi>
+                </TOCUl>
+                <h3>A big example project - 176,113 tech salaries visualized</h3>
+                <TOCUl>
+                    <MainLi>Show a Preloader</MainLi>
+                    <SubLi>Step 1: Get the image</SubLi>
+                    <SubLi>Step 2: Preloader component</SubLi>
+                    <SubLi>Step 3: Update App</SubLi>
+                    <SubLi>Step 4: Load Bootstrap styles</SubLi>
+                    <MainLi>Asynchronously load data</MainLi>
+                    <SubLi>Step 0: Get the data</SubLi>
+                    <SubLi>Step 1: Prep App.js</SubLi>
+                    <SubLi>Step 2: Prep data parsing functions</SubLi>
+                    <SubLi>Step 3: Load the datasets</SubLi>
+                    <SubLi>Step 4: Tie the datasets together</SubLi>
+                    <MainLi>Render a choropleth map of the US</MainLi>
+                    <SubLi>Step 1: Prep App.js</SubLi>
+                    <SubLi>Step 2: CountyMap/index.js</SubLi>
+                    <SubLi>Step 3: CountyMap/CountyMap.js</SubLi>
+                    <SubLi>Step 4: CountyMap/County.js</SubLi>
+                    <MainLi>Render a Histogram of salaries</MainLi>
+                    <SubLi>Step 1: Prep App.js</SubLi>
+                    <SubLi>Step 2: CSS changes</SubLi>
+                    <SubLi>Step 3: Histogram component</SubLi>
+                    <SubLi>Step 4: HistogramBar (sub)component</SubLi>
+                    <SubLi>Step 5: Axis HOC</SubLi>
+                    <MainLi>Make it understandable - meta info</MainLi>
+                    <SubLi>Dynamic title</SubLi>
+                    <SubLi>Dynamic description</SubLi>
+                    <SubLi>Median household line</SubLi>
+                    <MainLi>Add user controls for data slicing and dicing</MainLi>
+                    <SubLi>Step 1: Update App.js</SubLi>
+                    <SubLi>Step 2: Build Controls component</SubLi>
+                    <SubLi>Step 3: Build ControlRow component</SubLi>
+                    <SubLi>Step 4: Build Toggle component</SubLi>
+                    <SubLi>Step 5: Add US state and Job Title filters</SubLi>
+                    <MainLi>A small speed optimization</MainLi>
+                    <MainLi>Rudimentary routing</MainLi>
+                    <MainLi>Prep for launch</MainLi>
+                    <SubLi>Setting up deployment</SubLi>
+                    <SubLi>Twitter and Facebook cards and SEO</SubLi>
+                    <SubLi>Full dataset</SubLi>
+                    <MainLi>Launch!</MainLi>
+                </TOCUl>
+                <h3>Animation</h3>
+                <TOCUl>
+                    <MainLi>Using a game loop for rich animation</MainLi>
+                    <SubLi>A bouncing ball</SubLi>
+                    <MainLi>Using transitions for simple animation</MainLi>
+                    <SubLi>Rainbow snake</SubLi>
+                    <MainLi>Enter/update/exit animation</MainLi>
+                    <SubLi>Animated alphabet</SubLi>
+                    <MainLi>Animating with React, Redux, and d3</MainLi>
+                    <SubLi>Here’s how it works</SubLi>
+                    <SubLi>3 presentation components</SubLi>
+                    <SubLi>6 Redux Actions</SubLi>
+                    <SubLi>1 Container component</SubLi>
+                    <SubLi>1 Redux Reducer</SubLi>
+                    <SubLi>What we learned</SubLi>
+                </TOCUl>
+                <h3>Speed optimizations</h3>
+                <TOCUl>
+                    <MainLi>Using canvas</MainLi>
+                    <SubLi>Why Canvas</SubLi>
+                    <SubLi>The trouble with HTML5 Canvas</SubLi>
+                    <MainLi>Declarative HTML5 Canvas with Konva and react-konva</MainLi>
+                    <SubLi>A particle generator pushed to 20,000 elements with Canvas</SubLi>
+                    <SubLi>Billiards simulation with MobX and canvas</SubLi>
+                    <MainLi>Using a React alternative like Preact or Inferno</MainLi>
+                    <SubLi>Stress testing with a recursive fractal</SubLi>
+                    <SubLi>Trying the stress test in Preact and Inferno</SubLi>
+                </TOCUl>
                 <h3>Conclusion</h3>
-                <h3>Appendix - Browserify-based environment</h3>
+                <h3>Appendixes</h3>
+                <TOCUl>
+                    <MainLi>Appendix A - roll your own environment</MainLi>
+                    <MainLi>Appendix B - Browserify-based environment</MainLi>
+                </TOCUl>
             </SingleColumn>
         </Row>
     </div>

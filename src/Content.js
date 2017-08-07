@@ -7,12 +7,14 @@ import Section, { SectionTitle, Panel } from './Section';
 import { LeftColumn, WideLeftColumn, RightColumn, NarrowRightColumn, SingleColumn, MiddleColumn } from './Columns';
 import { openDripForm, TOCUl, MainLi, SubLi } from './helpers';
 
+import coverImg from './img/cover2.png';
+
 export const Header = () => (
     <header className="text-left container">
         <Row>
             <Col md={10} mdOffset={1}>
-	    <h1>Become a data visualization engineer</h1>
-	    <p className="lead">React with D3v4 in ES6 is the best way to <b>turn data into knowledge</b>.</p>
+	    <h1>Stuck copy pasting random D3 examples?</h1>
+	    <p className="lead"><b>Become a data visualization engineer</b> with React + D3v4.</p>
             </Col>
 	</Row>
     </header>
@@ -22,35 +24,37 @@ export const BookIntro = ({ className }) => (
     <Section className={className}>
         <LeftColumn>
             <p>
-                Did you know software <b>engineers make $20,000 more than programmers</b>? I had no idea it was <i>that</i> bad until I built some shiny graphs and saw the difference. I never called myself a programmer again.
+                Did you know software <b>engineers make $20,000/year more than programmers</b>? I had no idea it was <i>that</i> bad until I built some graphs and saw the difference. I never called myself a programmer again.
             </p>
             <p>
-		But creating <b>dynamic and interactive data visualizations</b> on the web is a pain in the ass.
-	    </p>
-
-	    <p>
-                You either have to use dumbed down libraries that won't let you do advanced custom stuff, or make everything from scratch. Every time.
+		But creating <b>dynamic</b> and <b>interactive data visualizations</b> on the web is a pain in the ass. It gets <i>really</i> hard when you add <b>animation</b>, inter-connected <b>dashboards</b>, and <b>fast performance</b> on mobile devices.
             </p>
             <p>
-                You want a <strong>quick way to build complex visualizations</strong>. Build once, use everywhere. In every project. Don't believe me? Scroll down to the gallery.
-	    </p>
+                You're either using <b>libraries you can't customize</b>, <b>copy pasting D3 examples</b> you don't understand, or <b>battling documentation</b> to write spaghetti <b>code you can't reuse</b>.
+            </p>
+            <p>
+                Trust me, we've all been there.
+            </p>
+            <p>
+                But it doesn't have to be that way. With <b>React+D3v4</b> you'll learn <b>the basics</b> of building <b>fast data visualization components</b> in about an hour. Get started <b>immediately without installing anything</b>, right in your browser.
+            </p>
+            <p>
+                Don't know React? <b>React+D3v4 starts at the very beginning</b>. Struggling with D3? <b>Every function is explained</b>. New to modern JavaScript syntax? React+D3v4 <b>comes with an ES6 cheatsheet</b>.
+            </p>
 
 	    <p>
-		With <strong itemProp="name">React+d3js ES6</strong> you'll <span itemProp="description">learn how to build re-usable visualization components in about an hour</span>.
-	    </p>
-
-	    <p>
-		<em><strong>Wanna learn?<br/>
-		    <a href="#free-sample">Start with a free chapter.</a></strong></em>
+		<em><strong>Ready to get started?<br/>
+		    <a href="#free-sample">Try the free chapter.👇</a></strong></em>
 	    </p>
         </LeftColumn>
-        <RightColumn style={{display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: 700}}>
+        <RightColumn style={{display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: 800}}>
             <figure className="text-center">
-		<img src="img/cover.png"
-                     alt="React+D3v4 edition"
-                     className="img-thumbnail get_sample"
-                     itemProp="image"
-                     onClick={openDripForm} />
+                <a href="#free-sample">
+		    <img src={coverImg}
+                         alt="React+D3v4 edition"
+                         className="img-thumbnail get_sample"
+                         itemProp="image" />
+                </a>
 	    </figure>
         </RightColumn>
     </Section>
@@ -270,7 +274,7 @@ export const Index = () => (
 export const FreeSample = () => (
     <div>
         <Row>
-            <SectionTitle nomargin>Get a free sample</SectionTitle>
+            <SectionTitle nomargin id="free-sample">Get a free sample</SectionTitle>
             <SingleColumn className="lead">See what the book is like.</SingleColumn>
         </Row>
 

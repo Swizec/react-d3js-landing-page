@@ -78,13 +78,12 @@ export class GreenSection extends Section {
 
 export class SectionTitle extends Component {
     render() {
-        let md = this.props.md,
-            mdOffset = this.props.mdOffset,
+        let { md, mdOffset, nomargin, id } = this.props,
             className = classNames(this.props.className,
                                    `col-md-${md} col-md-offset-${mdOffset} col-xs-12 col-xs-offset-1`,
-                                   this.props.nomargin ? 'margin-bottom-none' : '');
+                                   nomargin ? 'margin-bottom-none' : '');
         return (
-            <h2 className={className}>
+            <h2 className={className} id={id}>
                 {this.props.children}
             </h2>
         )

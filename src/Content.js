@@ -24,7 +24,7 @@ export const BookIntro = ({ className }) => (
     <Section className={className}>
         <LeftColumn>
             <p>
-                Did you know software <b>engineers make $20,000/year more than programmers</b>? I had no idea it was <i>that</i> bad until I built some graphs and saw the difference. I never called myself a programmer again.
+                Did you know software <b>engineers make $20,000/year more than programmers</b>? I had no idea a simple job title meant that much until I built some graphs and saw the difference. I never called myself a programmer again.
             </p>
             <p>
 		But creating <b>dynamic</b> and <b>interactive data visualizations</b> on the web is a pain in the ass. It gets <i>really</i> hard when you add <b>animation</b>, inter-connected <b>dashboards</b>, and <b>fast performance</b> on mobile devices.
@@ -39,9 +39,11 @@ export const BookIntro = ({ className }) => (
                 But it doesn't have to be that way. With <b>React+D3v4</b> you'll learn <b>the basics</b> of building <b>fast data visualization components</b> in about an hour. Get started <b>immediately without installing anything</b>, right in your browser.
             </p>
             <p>
-                Don't know React? <b>React+D3v4 starts at the very beginning</b>. Struggling with D3? <b>Every function is explained</b>. New to modern JavaScript syntax? React+D3v4 <b>comes with an ES6 cheatsheet</b>.
+                Don't know React? <b>React+D3v4 starts at the very beginning</b>. Struggling with D3? <b>Every function is explained</b>. New to modern JavaScript syntax? React+D3v4 <b>comes with an interactive ES6 cheatsheet</b>.
             </p>
-
+            <p>
+                Get the confidence you need to excell.💪
+            </p>
 	    <p>
 		<em><strong>Ready to get started?<br/>
 		    <a href="#free-sample">Try the free chapter.👇</a></strong></em>
@@ -63,8 +65,8 @@ export const BookIntro = ({ className }) => (
 export const SampleLink = () => (
     <Row className="text-center">
         <p>
-	    <em><strong>Wanna build cool stuff?<br/>
-	        <a href="#free-sample">Start with a free chapter and crash course.</a></strong>
+	    <em><strong>Ready to get started?<br/>
+	        <a href="#free-sample">Try the free chapter. 👇</a></strong>
                 <br/><span style={{fontSize: '0.8em'}}>Or scroll down for packages</span>
             </em>
         </p>
@@ -77,23 +79,41 @@ export const Why = () => (
         <SectionTitle>Learning a new paradigm is hard</SectionTitle>
         <WideLeftColumn>
             <p>
-	        React offers a completely new way of thinking about web applications.
+                <b>React is the biggest revolution</b> in JavaScript programming since jQuery came on the scene 10 years ago, and <b>D3 is unlike anything</b> you've ever seen before.
+            </p>
+            <p>
+	        If you're a seasoned veteran, or a fresh beginner, React and D3 can <b>leave you scratching your head</b>. You look at the code and you understand the individual words and functions, and stuff makes sense on its own, but you put them together and <b>it looks like magic</b>.
 	    </p>
-
             <p>
-                No more strange spaghetti JavaScript. No more business logic tied to HTML. When was the last time you felt safe changing the nesting structure of your HTML? The last time you knew the app won't break just because your designer made a change?.
-            </p>
-
-            <p>
-                It's even <b>worse with visualizations</b>. Libraries that work juuuust a little differently than you want, d3.js code you wrote last time, but can't reuse anywhere else. And updating the visualization together with the rest of the interface is a beast.
-            </p>
-
-	    <p>
-	        React with d3.js fixes all of that.
+                <em>"How the hell is it doing that?"</em> is the most common phrase I hear when teaching people about React and D3.
             </p>
             <p>
-                But learning a whole new approach to coding is hard. It takes time and effort. Time you'd rather spend solving your real problems. Making code <b>cleaner</b>, <b>easier to maintain</b>, and <b>delivering value to your users</b>.
-	    </p>
+                You see, the problem comes from how we all start writing code. <em>"It's like a cooking recipe"</em>, teachers will say.</p>
+            <p>
+                Take a bellpepper and cut it up. Then sprinkle some salt and pepper, add olive oil, and voila: you have a refreshing salad. A very simple salad with a single ingredient, but a salad nontheless.
+            </p>
+            <p>
+                That's called imperative programming. It reads as a series of steps. <em>How</em> to do something.
+            </p>
+            <p>
+                React and D3, on the other hand, are declarative. <b>You don't write <em>How</em> you want your code to work, you write <em>What</em> you want to achieve</b>. Your bellpepper salad recipe looks more like this: <br />
+                &lt;Salad&gt;<br/>
+                &nbsp;&nbsp;&lt;Oil /&gt;<br/>
+                &nbsp;&nbsp;&lt;Bellpepper cut salted /&gt;<br/>
+                &lt;/Salad&gt;<br/>
+            </p>
+            <p>
+               You look at that and you immediately know you're going to get a salad that includes oil and bellpeppers. No need to carefully study the entire recipe to understand what you're making. The recipe <i>declares</i> what it's making.
+            </p>
+            <p>
+                Declarative code makes your project <b>cleaner</b> and <b>easier to maintain</b>, which means you <b>spend more time delivering value to your users and clients</b>.
+            </p>
+            <p>
+                But <b>learning how to think declaratively</b> is hard. It feels like voodoo magic until you get used to it. Believe me, we've all been there. It still hurts my brain sometimes.
+            </p>
+            <p>
+                That's why <b>React+D3v4</b> takes you on a journey through <b>7 projects</b> and <b>5 interactive examples</b>. <b>Learn the basics in about an hour</b> then dive as deep as you want to solidify your knowledge. Get <b>the confidence you need to excell</b> at your job.
+            </p>
         </WideLeftColumn>
         <NarrowRightColumn className="text-center">
             <span className="icon icon-frown icon-white icon-6x"></span>

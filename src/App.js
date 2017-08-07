@@ -50,17 +50,6 @@ class App extends Component {
                                                      'thomas_buhr', 'thomas_fee']} />
                 </LowSection>
                 <Content.BookIntro className="margin-big-bottom" />
-                <GreenSection nocontainer>
-                    <div className="container">
-                        <Row>
-                            <SectionTitle>Live Examples Gallery</SectionTitle>
-                        </Row>
-                    </div>
-
-                    <div className="container">
-                        <Content.SampleLink />
-                    </div>
-                </GreenSection>
                 <DarkSection>
                     <Row>
                         <Content.Why />

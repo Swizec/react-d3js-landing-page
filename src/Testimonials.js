@@ -52,6 +52,11 @@ const TestimonialData = {
         img: require('./img/avatars/BR.jpg'),
         quote: "Finally, this is just a very good read. There's a nice tone to it. The explainations are good, and I like it when you point out where there are alternative solutions you have not tried yet. I also do like the lenght of the book. Excellent job.",
         who: 'Bjorgvin Reynisson'
+    },
+    julio: {
+        img: require('./img/avatars/julio.png'),
+        quote: "The examples in V4 are off the hook. No wonder its been so much work, you have really extended the learning process into fun, interactive projects. I was specifically trying to learn topojson an map visualizations! What a breeze!",
+        who: "Julio Gudiño"
     }
 };
 

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import { Row } from 'react-bootstrap';
-import Section, { LowSection, FluffySection, DarkSection, SectionTitle, GreenSection } from './Section';
+import Section, { LowSection, FluffySection, DarkSection, GreenSection } from './Section';
 import Testimonial, { TestimonialsCarousel } from './Testimonials';
 
 import * as Content from './Content';
@@ -44,7 +44,7 @@ class App extends Component {
                 <div className="bg-white-dark padding-small-top"></div>
                 <Content.Header />
                 <LowSection>
-                    <TestimonialsCarousel keynames={['bjorg1', 'michel', 'ulterior',
+                    <TestimonialsCarousel keynames={['julio', 'bjorg1', 'michel', 'ulterior',
                                                      'myusef', 'patrick', 'bjorg2',
                                                      'd3noob', 'aristides',
                                                      'thomas_buhr', 'thomas_fee']} />
@@ -59,8 +59,10 @@ class App extends Component {
                     </Row>
                 </DarkSection>
                 <Section>
-                    <Content.What />
-                    <Testimonial which="michel" />
+                    <Content.WhatExplain />
+                    <Testimonial which="julio" />
+                    <Content.WhatExamples />
+                    <Content.SampleLink />
                     <Content.Index />
                     <Content.SampleLink />
                     <TestimonialsCarousel keynames={['bjorg1', 'bjorg2']} />

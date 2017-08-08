@@ -5,7 +5,8 @@ import YouTube from 'react-youtube';
 
 import Section, { SectionTitle, Panel } from './Section';
 import { LeftColumn, WideLeftColumn, RightColumn, NarrowRightColumn, SingleColumn, MiddleColumn } from './Columns';
-import { openDripForm, TOCUl, MainLi, SubLi } from './helpers';
+import { TOCUl, MainLi, SubLi } from './helpers';
+import Example from './Examples';
 
 import coverImg from './img/cover2.png';
 
@@ -24,7 +25,7 @@ export const BookIntro = ({ className }) => (
     <Section className={className}>
         <LeftColumn>
             <p>
-                Did you know software <b>engineers make $20,000/year more than programmers</b>? I had no idea a simple job title meant that much until I built some graphs and saw the difference. I never called myself a programmer again.
+                Did you know software <b>engineers make $20,000/year more than programmers</b>? I had no idea a job title meant that much until I built some graphs and saw the difference. I never called myself a programmer again.
             </p>
             <p>
 		But creating <b>dynamic</b> and <b>interactive data visualizations</b> on the web is a pain in the ass. It gets <i>really</i> hard when you add <b>animation</b>, inter-connected <b>dashboards</b>, and <b>fast performance</b> on mobile devices.
@@ -33,7 +34,7 @@ export const BookIntro = ({ className }) => (
                 You're either using <b>libraries you can't customize</b>, <b>copy pasting D3 examples</b> you don't understand, or <b>battling documentation</b> to write spaghetti <b>code you can't reuse</b>.
             </p>
             <p>
-                Trust me, we've all been there.
+                It's okay, we've all been there.
             </p>
             <p>
                 But it doesn't have to be that way. With <b>React+D3v4</b> you'll learn <b>the basics</b> of building <b>fast data visualization components</b> in about an hour. Get started <b>immediately without installing anything</b>, right in your browser.
@@ -54,7 +55,7 @@ export const BookIntro = ({ className }) => (
                 <a href="#free-sample">
 		    <img src={coverImg}
                          alt="React+D3v4 edition"
-                         className="img-thumbnail get_sample"
+                         className="img-thumbnail"
                          itemProp="image" />
                 </a>
 	    </figure>
@@ -76,40 +77,40 @@ export const SampleLink = () => (
 
 export const Why = () => (
     <div>
-        <SectionTitle>Learning a new paradigm is hard</SectionTitle>
+        <SectionTitle>Learning a new coding paradigm is hard</SectionTitle>
         <WideLeftColumn>
             <p>
-                <b>React is the biggest revolution</b> in JavaScript programming since jQuery came on the scene 10 years ago, and <b>D3 is unlike anything</b> you've ever seen before.
+                <b>React is the biggest revolution</b> in JavaScript programming since jQuery hit the scene 10 years ago, and <b>D3 is unlike anything</b> you've seen before.
             </p>
             <p>
-	        If you're a seasoned veteran, or a fresh beginner, React and D3 can <b>leave you scratching your head</b>. You look at the code and you understand the individual words and functions, and stuff makes sense on its own, but you put them together and <b>it looks like magic</b>.
+	        If you're a seasoned veteran, or a fresh beginner, React and D3 can <b>leave you scratching your head</b>. You look at the code and you understand individual words and functions, everything makese sense on its own, but put it together and <b>it looks like magic</b>.
 	    </p>
             <p>
-                <em>"How the hell is it doing that?"</em> is the most common phrase I hear when teaching people about React and D3.
+                <em>"How the hell is it doing that?"</em> is the most common phrase I hear when teaching people about React and D3. <em>"What do I put in a component? Should it be a state or a prop? These D3 examples don't make any sense"</em>
             </p>
             <p>
-                You see, the problem comes from how we all start writing code. <em>"It's like a cooking recipe"</em>, teachers will say.</p>
+                The problem comes from how most of us first learn to code. <em>"It's like a cooking recipe"</em>, teachers will say.</p>
             <p>
-                Take a bellpepper and cut it up. Then sprinkle some salt and pepper, add olive oil, and voila: you have a refreshing salad. A very simple salad with a single ingredient, but a salad nontheless.
+                Take a bellpepper and cut it up. Then sprinkle some salt and pepper, add olive oil, and voila: you have a refreshing salad. A very simple salad with a single ingredient, but it's a salad. You can follow along and eventually you will understand what the code does.
             </p>
             <p>
                 That's called imperative programming. It reads as a series of steps. <em>How</em> to do something.
             </p>
             <p>
-                React and D3, on the other hand, are declarative. <b>You don't write <em>How</em> you want your code to work, you write <em>What</em> you want to achieve</b>. Your bellpepper salad recipe looks more like this: <br />
+                But React and D3 are declarative. <b>You don't write <em>How</em> you want your code to work, you write <em>What</em> you want to achieve</b>. Your bellpepper salad recipe looks more like this: <br />
                 &lt;Salad&gt;<br/>
                 &nbsp;&nbsp;&lt;Oil /&gt;<br/>
                 &nbsp;&nbsp;&lt;Bellpepper cut salted /&gt;<br/>
                 &lt;/Salad&gt;<br/>
             </p>
             <p>
-               You look at that and you immediately know you're going to get a salad that includes oil and bellpeppers. No need to carefully study the entire recipe to understand what you're making. The recipe <i>declares</i> what it's making.
+                You look at that and you immediately know it's a salad. It involves oil and bellpeppers. You don't have to read all the steps to know the result. <b>The recipe declares what it's making</b>.
             </p>
             <p>
                 Declarative code makes your project <b>cleaner</b> and <b>easier to maintain</b>, which means you <b>spend more time delivering value to your users and clients</b>.
             </p>
             <p>
-                But <b>learning how to think declaratively</b> is hard. It feels like voodoo magic until you get used to it. Believe me, we've all been there. It still hurts my brain sometimes.
+                But <b>learning how to think declaratively</b> is hard. It feels like voodoo <b>magic until you get used to it</b>. We've all been there. To this day it still hurts my brain sometimes.
             </p>
             <p>
                 That's why <b>React+D3v4</b> takes you on a journey through <b>7 projects</b> and <b>5 interactive examples</b>. <b>Learn the basics in about an hour</b> then dive as deep as you want to solidify your knowledge. Get <b>the confidence you need to excell</b> at your job.
@@ -121,53 +122,76 @@ export const Why = () => (
     </div>
 );
 
-export const What = () => (
-    <div>
+export const WhatExplain = () => (
         <Row>
-            <SectionTitle>React+d3js ES6</SectionTitle>
+            <SectionTitle>Become a data visualization engineer with React+D3v4</SectionTitle>
             <SingleColumn>
                 <p>
-		    React+d3js ES6 is designed to be short, but comprehensive.
+		    React+D3v4 gives you a <b>quick overview of the basics</b> to get you started, followed by a <b>deep dive</b> that <b>solidifies your knowledge</b> through varied projects and examples. <b>Build working code</b> that you can <b>show off to your friends, boss, and coworkers</b>.
 	        </p>
-
-	        <p>
-		    In about an hour, it guides you through a whole React and d3.js project from start to finish. Using code written in <b>modern ES6</b> fully <b>compatible with React 15</b>.<br />
-		    Everything from setting up code compilation with Webpack and Babel, to creating reusable visualization components. There's even a whole <b>3,000 word section on animations</b> and using Redux data changes as an animation and game engine.
-	        </p>
+                <p>
+                    Learn the basics with <b>interactive examples right in your browser</b> &mdash; no need to install anything. Forget about Npm and Webpack and Babel and Node. <b>Just React and D3</b>.
+                </p>
+                <p>
+                    <b>Dive into 7 projects</b> that teach you how it all fits together. Build <b>interactive visualizations</b>, create <b>animations</b>, and build <b>fast performance with canvas</b>. Learn everything there is to know about building <b>beautiful apps with React and D3</b>.
+                </p>
+                <p>
+                    From the very <b>basics of React and D3</b>, to state handling with <b>Redux</b> and <b>MobX</b>, React alternatives like <b>Preact</b> and <b>Inferno</b>.
+                </p>
             </SingleColumn>
         </Row>
-        <Row>
-            <LeftColumn>
-                <h3>React+d3js ES6</h3>
+);
 
-		<p>
-		    Learn how to build reusable visualization components that work anywhere, with any data.
-		</p>
-
-		<p>
-		    Fly through the code with to-the-point instructions and a healthy dose of interesting banter.
-		</p>
-            </LeftColumn>
-            <RightColumn mdOffset={1}>
-                <h3>Using React with d3.js</h3>
-
-		<ul className="icons-ul">
-		    <li><span className="icon-li icon-sitemap"></span>
-			<strong>Declarative.</strong><br />
-			Say what you want, not how.
-		    </li>
-		    <li><span className="icon-li icon-random"></span>
-			<strong>Reusable.</strong><br />
-			Code once, use everywhere.
-		    </li>
-		    <li><span className="icon-li icon-bolt"></span>
-			<strong>Fast.</strong><br />
-			Render only the stuff that changes.
-		    </li>
-		</ul>
-            </RightColumn>
+export const WhatExamples = () => (
+    <div>
+        <Row className="margin-small-bottom">
+            <SingleColumn>
+                <h3>Following React+D3v4 you will build 👇</h3>
+            </SingleColumn>
         </Row>
+        <Example which="choropleth-map" left />
+        <Example which="histogram" right />
+        <Example which="dashboard" />
+        <Example which="rainbow-snake" left />
+        <Example which="alphabet" right />
+        <Example which="particles" left />
+        <Example which="bouncing-marbles" right />
+        <Example which="dancing-tree" />
     </div>
+);
+
+export const WhatDetails = () => (
+    <Row>
+        <LeftColumn>
+            <h3>React+d3js ES6</h3>
+
+	    <p>
+		Learn how to build reusable visualization components that work anywhere, with any data.
+	    </p>
+
+	    <p>
+		Fly through the code with to-the-point instructions and a healthy dose of interesting banter.
+	    </p>
+        </LeftColumn>
+        <RightColumn mdOffset={1}>
+            <h3>Using React with d3.js</h3>
+
+	    <ul className="icons-ul">
+		<li><span className="icon-li icon-sitemap"></span>
+		    <strong>Declarative.</strong><br />
+		    Say what you want, not how.
+		</li>
+		<li><span className="icon-li icon-random"></span>
+		    <strong>Reusable.</strong><br />
+		    Code once, use everywhere.
+		</li>
+		<li><span className="icon-li icon-bolt"></span>
+		    <strong>Fast.</strong><br />
+		    Render only the stuff that changes.
+		</li>
+	    </ul>
+        </RightColumn>
+    </Row>
 );
 
 export const Index = () => (

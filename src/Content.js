@@ -318,14 +318,14 @@ export const Index = () => (
 export const FreeSample = () => (
     <div>
         <Row>
-            <SectionTitle nomargin id="free-sample">Get a free sample</SectionTitle>
-            <SingleColumn className="lead">See what the book is like.</SingleColumn>
+            <SectionTitle nomargin id="free-sample">Get a free chapter and email crash course</SectionTitle>
+            <SingleColumn className="lead">See what React+D3v4 is like, learn the basics.</SingleColumn>
         </Row>
 
         <Row>
             <SingleColumn>
                 <Panel>
-                    <Image src="img/sample.png" rounded responsive />
+                    <Image src={require('./img/sample.png')} rounded responsive />
                     <SampleForm />
                 </Panel>
             </SingleColumn>
@@ -337,7 +337,7 @@ export const Talk = () => (
     <div>
         <Row>
             <SectionTitle nomargin>Reusable data visualization with React and d3.js</SectionTitle>
-            <SingleColumn className="lead">Watch my talk from HTML5DevConf 2015</SingleColumn>
+            <SingleColumn className="lead">Watch my talk from HTML5DevConf and the Bay Area D3 Meetup</SingleColumn>
         </Row>
         <Row className="text-center">
             <YouTube videoId="UP1nCXG2t4M" opts={{width: 853, height: 480}} />
@@ -345,7 +345,17 @@ export const Talk = () => (
         <Row>
             <SingleColumn>
                 <p>The talk shows a proof of concept approach to making fancy animations with React and d3js - a Space Invaders game. I explain the basic approach, where I got the idea, and show off some code.</p>
-                <p>You don't have to watch the whole talk, it's all in the React+d3js ES6 book.</p>
+                <p>You don't have to watch the whole talk, it's all in React+D3v4.</p>
+            </SingleColumn>
+        </Row>
+        <Row className="text-center">
+            <YouTube videoId="47uMw-2mb4U" opts={{width: 853, height: 480}} />
+        </Row>
+        <Row>
+            <SingleColumn>
+                <p>
+                    This talk is more hands on. I show how the animated alphabet, particle generator, and talk about the benefits of componentization when it comes to building modern data visualization.
+                </p>
             </SingleColumn>
         </Row>
     </div>
@@ -354,7 +364,7 @@ export const Talk = () => (
 export const SampleForm = () => (
     <DripForm id="5362865">
         <h3 data-drip-attribute="headline">
-            React+d3.js sample chapter and mini-course
+            React+D3v4 sample chapter and email course
         </h3>
         <p data-drip-attribute="description">
             Leave your email and get a free sample of React+d3.js and a mini email course. They will teach you about the basic architecture of React apps and show you how JSX makes your code better.
@@ -382,7 +392,7 @@ export const DripForm = ({ id, children }) => {
 export const Screencast = () => (
     <div>
         <Row>
-            <SectionTitle nomargin>Full HD screencast</SectionTitle>
+            <SectionTitle nomargin>Several full HD screencast</SectionTitle>
             <SingleColumn className="lead text">Watching code appear before your eyes makes it easier to understand.</SingleColumn>
         </Row>
         <Row>
@@ -391,11 +401,7 @@ export const Screencast = () => (
                     <Image src="img/screencast.gif" alt="screencast-preview" thumbnail />
                 </div>
                 <p>
-		    A 60 minute full HD screencast will guide you through everything in the book and show you just how it all fits together.
-		</p>
-
-		<p>
-		    Don't miss something just because you made a typo.
+		    Get several full HD screencasts from my live streaming sessions. Watch me build the examples in this book from scratch. Including mistakes and <b>thought process behind every decision</b>.
 		</p>
             </SingleColumn>
         </Row>
@@ -406,7 +412,7 @@ export const Author = () => (
     <Row itemProp="brand" itemScope itemType="http://schema.org/Brand">
         <LeftColumn className="padding-big-top margin-medium-top">
             <figure className="text-center">
-                <Image src="img/me.png" alt="Swizec Teller" circle responsive className="margin-medium-top" itemProp="logo" />
+                <Image src={require('./img/swizec.png')} alt="Swizec Teller" circle responsive className="margin-medium-top" itemProp="logo" />
             </figure>
         </LeftColumn>
         <RightColumn>

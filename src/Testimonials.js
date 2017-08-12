@@ -57,6 +57,11 @@ const TestimonialData = {
         img: require('./img/avatars/julio.png'),
         quote: "The examples in V4 are off the hook. No wonder its been so much work, you have really extended the learning process into fun, interactive projects. I was specifically trying to learn topojson an map visualizations! What a breeze!",
         who: "Julio Gudiño"
+    },
+    paulo: {
+        img: require('./img/avatars/paulo.jpg'),
+        quote: "I love having practical examples to help me learn new things faster. D3's docs alone are okay but marrying them with React (as a react newbie) is not as straightforward as someone handholding you through the process. And, since I don't have hours after work or on weekends to hack on things like I used to before I was married (or had kids), I need to optimize my learning.",
+        who: "Paulo Elias"
     }
 };
 

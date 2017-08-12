@@ -2,6 +2,7 @@
 import React from 'react';
 import { Row, Thumbnail } from 'react-bootstrap';
 import { LeftColumn, RightColumn, WideLeftColumn, NarrowRightColumn, MiddleColumn } from './Columns';
+import { openDripForm } from './helpers';
 
 const Examples = {
     'choropleth-map': {
@@ -84,7 +85,9 @@ const LeftExample = ({ which }) => {
     return (
         <Row className="margin-small-bottom">
             <LeftColumn>
-                <Thumbnail src={src} title={title} />
+                <a href="" onClick={openDripForm}>
+                    <Thumbnail src={src} title={title}  />
+                </a>
             </LeftColumn>
             <RightColumn>
                 {description}
@@ -103,7 +106,9 @@ const RightExample = ({ which }) => {
                 {description}
             </WideLeftColumn>
             <NarrowRightColumn>
-                <Thumbnail src={src} title={title} />
+                <a href="" onClick={openDripForm}>
+                    <Thumbnail src={src} title={title} />
+                </a>
             </NarrowRightColumn>
         </Row>
 
@@ -117,7 +122,9 @@ const CenterExample = ({ which }) => {
         <Row className="margin-small-bottom">
             <MiddleColumn>
                 {description}
-                <Thumbnail src={src} title={title} />
+                <a href="" onClick={openDripForm}>
+                    <Thumbnail src={src} title={title} />
+                </a>
             </MiddleColumn>
         </Row>
 

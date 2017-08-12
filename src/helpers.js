@@ -1,7 +1,8 @@
 
 import React from 'react';
 
-export const openDripForm = () => {
+export const openDripForm = (e) => {
+    e.preventDefault();
     window._dcq.push(["showForm", {id: "5362865"}]);
 }
 

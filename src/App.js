@@ -44,10 +44,7 @@ class App extends Component {
                 <div className="bg-white-dark padding-small-top"></div>
                 <Content.Header />
                 <LowSection>
-                    <TestimonialsCarousel keynames={['julio', 'bjorg1', 'michel', 'ulterior',
-                                                     'myusef', 'patrick', 'bjorg2',
-                                                     'd3noob', 'aristides',
-                                                     'thomas_buhr', 'thomas_fee']} />
+                    <Testimonial which="patrick" />
                 </LowSection>
                 <Content.BookIntro className="margin-big-bottom" />
                 <DarkSection>
@@ -55,14 +52,15 @@ class App extends Component {
                         <Content.Why />
                     </Row>
                     <Row>
-                        <Testimonial which="patrick" />
+                        <Testimonial which="aristides" />
                     </Row>
                 </DarkSection>
                 <Section>
                     <Content.WhatExplain />
                     <Testimonial which="julio" />
                     <Content.WhatExamples />
-                    <Content.SampleLink />
+                    <Content.SampleLink jump />
+                    <Testimonial which="paulo" />
                     <Content.Index />
                     <Content.SampleLink />
                     <TestimonialsCarousel keynames={['bjorg1', 'bjorg2']} />

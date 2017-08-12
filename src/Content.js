@@ -3,9 +3,9 @@ import React from 'react';
 import { Row, Col, Image, FormControl } from 'react-bootstrap';
 import YouTube from 'react-youtube';
 
-import Section, { SectionTitle, Panel } from './Section';
+import Section, { LowSection, SectionTitle, Panel } from './Section';
 import { LeftColumn, WideLeftColumn, RightColumn, NarrowRightColumn, SingleColumn, MiddleColumn } from './Columns';
-import { TOCUl, MainLi, SubLi } from './helpers';
+import { TOCUl, MainLi, SubLi, openDripForm } from './helpers';
 import Example from './Examples';
 
 import coverImg from './img/cover2.png';
@@ -22,13 +22,10 @@ export const Header = () => (
 );
 
 export const BookIntro = ({ className }) => (
-    <Section className={className}>
+    <LowSection className={className}>
         <LeftColumn>
             <p>
-                Did you know software <b>engineers make $20,000/year more than programmers</b>? I had no idea a job title meant that much until I built some graphs and saw the difference. I never called myself a programmer again.
-            </p>
-            <p>
-		But creating <b>dynamic</b> and <b>interactive data visualizations</b> on the web is a pain in the ass. It gets <i>really</i> hard when you add <b>animation</b>, inter-connected <b>dashboards</b>, and <b>fast performance</b> on mobile devices.
+		Creating <b>dynamic</b> and <b>interactive data visualizations</b> on the web is a pain in the ass. It gets <i>really</i> hard when you add <b>animation</b>, inter-connected <b>dashboards</b>, and <b>fast performance</b> on mobile devices.
             </p>
             <p>
                 You're either using <b>libraries you can't customize</b>, <b>copy pasting D3 examples</b> you don't understand, or <b>battling documentation</b> to write spaghetti <b>code you can't reuse</b>.
@@ -37,10 +34,19 @@ export const BookIntro = ({ className }) => (
                 It's okay, we've all been there.
             </p>
             <p>
-                But it doesn't have to be that way. With <b>React+D3v4</b> you'll learn <b>the basics</b> of building <b>fast data visualization components</b> in about an hour. Get started <b>immediately without installing anything</b>, right in your browser.
+                But it doesn't have to be that way.
             </p>
             <p>
-                Don't know React? <b>React+D3v4 starts at the very beginning</b>. Struggling with D3? <b>Every function is explained</b>. New to modern JavaScript syntax? React+D3v4 <b>comes with an interactive ES6 cheatsheet</b>.
+                 With <b>React+D3v4</b> you'll learn <b>the basics</b> of building <b>fast data visualization components</b> in about an hour. Get started <b>immediately without installing anything</b>.
+            </p>
+            <p>
+                Don't know React? <b>React+D3v4 starts at the very beginning</b>.
+            </p>
+            <p>
+                Struggling with D3? <b>Every function is explained</b>.
+            </p>
+            <p>
+                New to modern JavaScript syntax? React+D3v4 comes with an <b>interactive ES6 cheatsheet</b>.
             </p>
             <p>
                 Get the confidence you need to excell.💪
@@ -52,7 +58,7 @@ export const BookIntro = ({ className }) => (
         </LeftColumn>
         <RightColumn style={{display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: 800}}>
             <figure className="text-center">
-                <a href="#free-sample">
+                <a href="" onClick={openDripForm}>
 		    <img src={coverImg}
                          alt="React+D3v4 edition"
                          className="img-thumbnail"
@@ -60,15 +66,15 @@ export const BookIntro = ({ className }) => (
                 </a>
 	    </figure>
         </RightColumn>
-    </Section>
+    </LowSection>
 );
 
-export const SampleLink = () => (
+export const SampleLink = ({ jump }) => (
     <Row className="text-center">
         <p>
 	    <em><strong>Ready to get started?<br/>
 	        <a href="#free-sample">Try the free chapter. 👇</a></strong>
-                <br/><span style={{fontSize: '0.8em'}}>Or scroll down for packages</span>
+                <br/><span style={{fontSize: '0.8em'}}>Or {jump ? <a href="#packages">jump to packages 👉</a> : "scroll down for packages"}</span>
             </em>
         </p>
     </Row>
@@ -82,9 +88,6 @@ export const Why = () => (
             <p>
                 <b>React is the biggest revolution</b> in JavaScript programming since jQuery hit the scene 10 years ago, and <b>D3 is unlike anything</b> you've seen before.
             </p>
-            <p>
-	        If you're a seasoned veteran, or a fresh beginner, React and D3 can <b>leave you scratching your head</b>. You look at the code and you understand individual words and functions, everything makese sense on its own, but put it together and <b>it looks like magic</b>.
-	    </p>
             <p>
                 <em>"How the hell is it doing that?"</em> is the most common phrase I hear when teaching people about React and D3. <em>"What do I put in a component? Should it be a state or a prop? These D3 examples don't make any sense"</em>
             </p>
@@ -146,7 +149,7 @@ export const WhatExamples = () => (
     <div>
         <Row className="margin-small-bottom">
             <SingleColumn>
-                <h3>Following React+D3v4 you will build 👇</h3>
+                <h3>React+D3v4 gives you practical examples 👇</h3>
             </SingleColumn>
         </Row>
         <Example which="choropleth-map" left />
@@ -318,8 +321,8 @@ export const Index = () => (
 export const FreeSample = () => (
     <div>
         <Row>
-            <SectionTitle nomargin id="free-sample">Get a free chapter and email crash course</SectionTitle>
-            <SingleColumn className="lead">See what React+D3v4 is like, learn the basics.</SingleColumn>
+            <SectionTitle nomargin id="free-sample">Start with a free chapter and email crash course</SectionTitle>
+            <SingleColumn className="lead">See what React+D3v4 is like and learn the basics.</SingleColumn>
         </Row>
 
         <Row>
@@ -337,7 +340,7 @@ export const Talk = () => (
     <div>
         <Row>
             <SectionTitle nomargin>Reusable data visualization with React and d3.js</SectionTitle>
-            <SingleColumn className="lead">Watch my talk from HTML5DevConf and the Bay Area D3 Meetup</SingleColumn>
+            <SingleColumn className="lead">Watch my talks from HTML5DevConf and the Bay Area D3 Meetup</SingleColumn>
         </Row>
         <Row className="text-center">
             <YouTube videoId="UP1nCXG2t4M" opts={{width: 853, height: 480}} />

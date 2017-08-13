@@ -76,7 +76,10 @@ class App extends Component {
                 </GreenSection>
                 <Section>
                     <Content.Screencast />
-                    <Testimonial which="myusef" />
+                    <Content.SampleLink jump />
+                    <Testimonial which="cyrus" />
+                    <Content.Course />
+                    <Content.SampleLink jump />
                 </Section>
                 <DarkSection>
                     <Content.Author />

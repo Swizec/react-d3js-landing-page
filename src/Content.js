@@ -7,6 +7,7 @@ import Section, { LowSection, SectionTitle, Panel } from './Section';
 import { LeftColumn, WideLeftColumn, RightColumn, NarrowRightColumn, SingleColumn, MiddleColumn } from './Columns';
 import { TOCUl, MainLi, SubLi, openDripForm } from './helpers';
 import Example from './Examples';
+import FeaturedIn from './Featured';
 
 import coverImg from './img/cover2.png';
 
@@ -395,7 +396,7 @@ export const DripForm = ({ id, children }) => {
 export const Screencast = () => (
     <div>
         <Row>
-            <SectionTitle nomargin>Several full HD screencast</SectionTitle>
+            <SectionTitle nomargin>7 full HD screencasts</SectionTitle>
             <SingleColumn className="lead text">Watching code appear before your eyes makes it easier to understand.</SingleColumn>
         </Row>
         <Row>
@@ -404,12 +405,34 @@ export const Screencast = () => (
                     <Image src="img/screencast.gif" alt="screencast-preview" thumbnail />
                 </div>
                 <p>
-		    Get several full HD screencasts from my live streaming sessions. Watch me build the examples in this book from scratch. Including mistakes and <b>thought process behind every decision</b>.
+                    Get 7 full HD screencasts from my live streaming sessions and recap videos. <b>Watch me build</b> some of the examples in React+D3v4 from scatch. Including mistakes and <b>thought process behind every decision</b>.
 		</p>
+                <p>
+                    Watch <b>extra projects</b> that don't feature in the book. Like a map of global migrations and a visualization of FreeCodeCamp developer survey data.
+                </p>
             </SingleColumn>
         </Row>
     </div>
 );
+
+export const Course = () => (
+    <div>
+        <Row>
+            <SectionTitle nomargin>A Course with interactive code samples</SectionTitle>
+            <SingleColumn className="lead text">Learn React and D3v4 with executable code samples right in your browser</SingleColumn>
+        </Row>
+        <Row>
+            <SingleColumn>
+                <div className="text-center">
+                    <Image src={require('./img/examples/bouncing-ball.gif')} thumbnail style={{height: '660px'}} />
+                </div>
+                <p>
+                    Learn faster by doing, <b>no installation needed</b>. 33+ live playgrounds where you can <b>read</b> through my code, <b>run</b> to see what it does, and <b>edit</b> components to see what happens. You can <b>save</b> every playground and come back later.
+                </p>
+            </SingleColumn>
+        </Row>
+    </div>
+)
 
 export const Author = () => (
     <Row itemProp="brand" itemScope itemType="http://schema.org/Brand">
@@ -420,15 +443,33 @@ export const Author = () => (
         </LeftColumn>
         <RightColumn>
             <h2>About the Author</h2>
-	    <p>Hi, I’m <span itemProp="name">Swizec Teller</span>. A digital nomad and full stack web engineer.</p>
-            <p>I travel the world and help startups win. From setting up new teams and training juniors, to fixing spaghetti code and implementing new features.</p>
-            <p>My code has been used by MasterCard, Commerzbank, Google, Mashable, Lyft, and many others.</p>
-            <p>When I’m not coding, I’m writing.</p>
-            <p>At least 5000 people bought my books ... I don’t know if that’s a lot, but it’s more than zero. I like that.</p>
-            <p>My work has been featured in Business Insider, LifeHacker, Huffington Post, and several dead-tree magazines. I’ve spoken on BBC Radio, appeared on Slovenian national television, and given talks all over the world.</p>
+	    <p>
+                Hi, I’m <b>Swizec Teller</b>. I help <b>coders become software engineers</b>.
+            </p>
+            <p>
+                Over the years I've helped over <b>10,000 engineers</b> hone their craft. People from Uber, Oracle, Apple and many others have used my <b>books, articles, and talks</b> to improve their technical skills, get promotions, change jobs, and ship their products faster.
+            </p>
+            <p>
+                Story time 👇
+            </p>
+            <p>
+                React+D3 started as a bet in April 2015. A friend wanted to learn React and challenged me to publish a book. A month later React+D3 launched with 79 pages of hard earned knowledge.
+            </p>
+            <p>
+                In April 2016 it became React+D3 ES6. 117 pages and growing beyond a single big project it was a huge success. I kept going, started live streaming, and publishing videos on YouTube.
+            </p>
+            <p>
+                It's 2017 now and after 10 months of work, <b>React+D3v4</b> is <b>the best book I've ever written</b>. 249 pages, many examples, much code to play with. It's designed like a step-by-step course so you can <b>follow along without breaking a sweat</b>.
+            </p>
+            <p>
+                I based React+D3v4 on <b>20 years of experience</b> with learning how to code <b>on my own</b>, reading blogs and articles, listening to <b>professors</b>, and <b>working with mentors</b>. Yes, that means I wrote my <b>first program when I was 9</b>. I've been doing this all my life and that's why <b>I know every learning technique</b> inside and out.
+            </p>
+            <p>
+                Some of my work has been featured in  👇
+            </p>
+            <FeaturedIn />
         </RightColumn>
     </Row>
-
 );
 
 export const Questions = () => (

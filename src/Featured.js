@@ -64,7 +64,9 @@ const Logos = [
 
 const Featured = () => (
     <div>
-        {Logos.map(({ img, title }) => <LazyLoad verticalOffset={500}><Image src={img} title={title} style={{width: '110px', padding: '5px', maxHeight: '80px', filter: 'grayscale(100%)'}} /></LazyLoad>)}
+        <LazyLoad verticalOffset={500}>
+            {Logos.map(({ img, title }) => <Image src={img} title={title} style={{width: '110px', padding: '5px', maxHeight: '80px', filter: 'grayscale(100%)'}} />)}
+        </LazyLoad>
     </div>
 );
 

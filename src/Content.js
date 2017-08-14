@@ -402,7 +402,7 @@ export const Screencast = () => (
         <Row>
             <SingleColumn>
                 <div className="text-center">
-                    <Image src="img/screencast.gif" alt="screencast-preview" thumbnail />
+                    <Image src={require('./img/screencast.gif')} alt="screencast-preview" thumbnail />
                 </div>
                 <p>
                     Get 7 full HD screencasts from my live streaming sessions and recap videos. <b>Watch me build</b> some of the examples in React+D3v4 from scatch. Including mistakes and <b>thought process behind every decision</b>.
@@ -483,10 +483,11 @@ export const FAQ = () => (
         <Row>
             <Col md={5} mdOffset={1}>
                 <h2>
-		    Is React+d3.js for me?
+		    Is React+D3v4 for me?
 		</h2>
 		<p>
-		    Yes. <br />If you already know JavaScript and you've tried d3.js before, this is the book for you. If you just want to learn about React, that's great too. Test readers said it's great for learning how to use React.<br />
+		    Yes. <br />
+                    If you already know JavaScript and perhaps some React and D3, this book is perfect. It's designed with React and D3 beginners in mind. If you're a veteran, you might want to skip some sections.
                     But if you're new to web programming, I suggest finding something easier.
  		</p>
             </Col>
@@ -495,18 +496,21 @@ export const FAQ = () => (
 		    Which package should I choose?
 		</h2>
 		<p>
-		    That depends on what you need. If you're a single developer trying to learn about React and writing reusable visualization components, go for the Engineer package. Some of the material looks better when it moves.<br/>
-                    But if you have a team that's growing,  go for the Business package. I'll set up a call to help you apply these principles in your specific case. And you'll get a license that lets you share the book with all team members.
+		    That depends on your preferred style of learning.<br />
+                    The book is great if you like to learn the basics in your browser, then switch to a real editor and local environment to go deep.<br/>
+                    The interactive course is great if you'd prefer to stay in your browser throughout.<br />
+                    Coaching is perfect if you have specific questions or prefer explanations tailored to you personally.<br />
+                    The videos are great, if you like to see how everything fits together visually.
 		</p>
             </Col>
         </Row>
         <Row>
             <Col md={5} mdOffset={1}>
                 <h2>
-		    What if I hate React+d3js ES6?
+		    What if I hate React+D3v4?
 		</h2>
 		<p>
-                    That's fair. I have a 45-day full money back guarantee. Just send me an email.
+                    Send me an email and I'll click the magic refund button. You even get to keep the book.
 		</p>
             </Col>
             <Col md={5}>
@@ -519,4 +523,12 @@ export const FAQ = () => (
             </Col>
         </Row>
     </div>
+);
+
+export const Subscription = () => (
+    <Row>
+        <SingleColumn className="text-center lead">
+            Too expensive? <a href="https://www.patreon.com/swizec">Try a subscription instead 👉</a>
+        </SingleColumn>
+    </Row>
 );

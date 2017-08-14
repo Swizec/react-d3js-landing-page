@@ -85,15 +85,14 @@ class App extends Component {
                     <Content.Author />
                 </DarkSection>
                 <FluffySection>
-                    <Packages.Business />
+                    <Packages.Everything />
                 </FluffySection>
                 <DarkSection>
-                    <Packages.Engineer />
-                    <Testimonial which="aristides" />
+                    <Packages.BookCourse />
                 </DarkSection>
-                <LowSection className="margin-medium-bottom">
-                    <Packages.Student />
-                </LowSection>
+                <FluffySection className="margin-medium-bottom">
+                    <Packages.Book />
+                </FluffySection>
                 <DarkSection className="padding-big-top">
                     <Content.Questions />
                 </DarkSection>
@@ -102,7 +101,9 @@ class App extends Component {
                 </Section>
                 <DarkSection>
                     <Packages.Picker />
-                    <TestimonialsCarousel keynames={['bjorg1', 'michel', 'patrick',
+                    <Content.Subscription />
+                    <TestimonialsCarousel keynames={['julio', 'paulo', 'bjorg1', 'michel',
+                                                     'patrick',
                                                      'ulterior', 'myusef', 'bjorg2',
                                                      'd3noob', 'aristides', 'thomas_buhr',
                                                      'thomas_fee']} />

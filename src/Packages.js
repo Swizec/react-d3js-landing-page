@@ -12,40 +12,57 @@ const StudentID = 'GXOpa';
 const EngineerID = 'iWevQ';
 const BusinessID = 'ygzt';
 
-export const Business = () => (
-    <div itemProp="offers" itemScope itemType="http://schema.org/Offer">
-        <Row className="padding-medium-bottom">
-            <SectionTitle nomargin md={12} mdOffset={0}>
-                <span itemProp="name">The business package</span>
+const EverythingID = '';
+const BookCourseID = '';
+const BookID = '';
 
-                <BigBuyButton id={BusinessID} price="399" className="pull-right" />
+export const Everything = () => (
+    <div>
+        <Row className="padding-medium-bottom">
+            <SectionTitle nomargin md={12} mdOffset={0} id="packages">
+                Book + Course + Coaching
+                <BigBuyButton id={EverythingID} price={399} className="pull-right" />
             </SectionTitle>
-            <FullColumn className="lead" itemProp="description">
-                The book, the resources, the 1-on-team coaching
+            <FullColumn className="lead">
+                The book, the interactive course, 1 week of personal coaching
             </FullColumn>
         </Row>
-        <FeatureRow left="book" right="big_consulting" />
-        <FeatureRow left="environment" right="screencast" />
-        <FeatureRow left="projects" right="team_license" />
+        <FeatureRow left="book" right="coaching" />
+        <FeatureRow left="course" right="screencast" />
+        <FeatureRow left="projects" right="weekly_livecoding" />
+    </div>
+);
+
+export const BookCourse = () => (
+    <div>
+        <Row className="padding-medium-bottom">
+            <SectionTitle nomargin md={12} mdOffset={0}>
+                Book + Course
+                <BigBuyButton id={BookCourseID} price={149} className="pull-right" />
+            </SectionTitle>
+            <FullColumn className="lead">
+                The Book and the interactive course
+            </FullColumn>
+        </Row>
+        <FeatureRow left="book" right="course" />
+        <FeatureRow left="screencast" right="projects" />
         <FeatureRow left="weekly_livecoding" />
     </div>
 );
 
-export const Engineer = () => (
-    <div itemProp="offers" itemScope itemType="http://schema.org/Offer">
+export const Book = () => (
+    <div>
         <Row className="padding-medium-bottom">
             <SectionTitle nomargin md={12} mdOffset={0}>
-                <span itemProp="name">Engineer package</span>
-
-                <BigBuyButton id={EngineerID} price="79" className="pull-right" />
+                Just the Book
+                <BigBuyButton id={BookID} price={49} className="pull-right" />
             </SectionTitle>
-            <FullColumn className="lead" itemProp="description">
-                The book, the resources, the 30min coaching
+            <FullColumn className="lead">
+                The Book and some resources
             </FullColumn>
         </Row>
-        <FeatureRow left="book" right="small_consulting" />
-        <FeatureRow left="environment" right="projects" />
-        <FeatureRow left="screencast" right="weekly_livecoding" />
+        <FeatureRow left="book" right="screencast_small" />
+        <FeatureRow left="projects" right="weekly_livecoding" />
     </div>
 );
 
@@ -92,14 +109,14 @@ BigBuyButton.contextTypes = {
 
 const Features = {
     book: {
-        img: 'img/ap-medium.png',
-        title: 'React+d3js ES6',
-        description: '115 pages of code samples and explanation in PDF, ePUB, or MOBI. A solid guide to building your first data visualization with React and d3.js.'
+        img: require('./img/cover.png'),
+        title: 'React+D3v4',
+        description: '249 pages of code samples and explanation in PDF, ePUB, or MOBI. A solid guide to building your first data visualization with React and d3.js.'
     },
-    big_consulting: {
+    coaching: {
         img: 'img/me-special.png',
-        title: '2hrs 1-to-team coaching',
-        description: 'I will help your team apply the concepts from React+d3.js in your specific situation. Either in a call, or in person if possible.'
+        title: '1 week of coaching',
+        description: 'I will help you get started and review your code. Includes up to 1 hour video chat.'
     },
     small_consulting: {
         img: 'img/me-special.png',
@@ -112,14 +129,19 @@ const Features = {
         description: 'A tested work environment with Webpack and Babel ready to go. Don\'t like Webpack? There\'s a Grunt+Browserify version too. Get started immediately.'
     },
     projects: {
-        img: 'img/working-project.png',
-        title: '7 sample projects',
-        description: 'Git repositories with working projects built with React and d3js.'
+        img: require('./img/examples/global-migrations.gif'),
+        title: '7 full projects',
+        description: 'Git repositories with working projects built with React and D3v4.'
     },
     screencast: {
-        img: 'img/special-200.png',
-        title: 'A screencast',
-        description: 'Watch a step-by-step screencast of everything you\'ll read in the book. See code change and evolve before your eyes to create a visualization.'
+        img: require('./img/screencast.gif'),
+        title: '7 Full HD screencasts',
+        description: 'Get 7 full HD screencasts from my live streaming sessions and recap videos. Watch code evolve before your eyes.'
+    },
+    screencast_small: {
+        img: require('./img/screencast.gif'),
+        title: '3 Full HD screencasts',
+        description: 'Get 3 full HD screencasts from my explainer videos.'
     },
     team_license: {
         img: 'img/team.png',
@@ -128,8 +150,13 @@ const Features = {
     },
     weekly_livecoding: {
         img: 'img/special-200.png',
-        title: 'Weekly livecoding',
-        description: (<span>Weekly livecoding sessions with React and d3js. Come say hi and <b>ask me anything</b></span>)
+        title: "Weekly livecoding",
+        description: (<span>Weekly livecoding sessions with React, D3.js and others. Come watch me learn new technologies and solve coding problems live. <b>Ask me anything</b>, it's like office hours</span>)
+    },
+    course: {
+        img: require('./img/examples/bouncing-ball.gif'),
+        title: "Interactive course",
+        description: "Learn React and D3v4 with executable code samples right in your browser"
     }
 };
 
@@ -144,7 +171,7 @@ export const NamedFeature = ({ name }) => {
     if (!name) return (<span></span>);
 
     let { img, title, description } = Features[name],
-        circle = name !== 'book';
+        circle = !['book', 'screencast', 'screencast_small'].includes(name);
 
     return (
         <Feature img={img} title={title} description={description} circle={circle} />
@@ -172,15 +199,36 @@ export const Picker = () => (
         <h2 className="text-center">Choose a package</h2>
         <Col md={12}>
         <ul className="pricing-table list-unstyled panel row">
-            <TablePackage name="student" price="19" id={StudentID} className="first" />
-            <TablePackage name="engineer" price="79" id={EngineerID} />
-            <TablePackage name="business" price="399" id={BusinessID} className="active" />
+            <TablePackage name="book" price={49} id={BookID} className="first" />
+            <TablePackage name="book-course" price={149} id={BookCourseID} />
+            <TablePackage name="book-course-coaching" price={399} id={EverythingID} className="active" />
         </ul>
         </Col>
     </div>
 );
 
 const FeatureList = {
+    book: ['React+D3v4 [PDF/epub/mobi]',
+           '3 full HD screencasts',
+           '7 full projects',
+           'Weekly livecoding sessions',
+           'Free updates',
+           'Money-back guarantee'],
+    'book-course': ['React+D3v4 [PDF/epub/mobi]',
+                    '7 full HD screencasts',
+                    '7 full projects',
+                    'Weekly livecoding sessions',
+                    (<b>Interactive course</b>),
+                    'Free updates',
+                    'Money-back guarantee'],
+    'book-course-coaching': ['React+D3v4 [PDF/epub/mobi]',
+                             '7 full HD screencasts',
+                             '7 full projects',
+                             'Weekly livecoding sessions',
+                             (<b>Interactive course</b>),
+                             (<b>1 week personal coaching</b>),
+                             'Free updates',
+                             'Money-back guarantee'],
     student: ['React+d3js ES6 [PDF/epub/mobi]',
               'React+d3js ES5 [PDF/epub/mobi]',
               'Set up work environment',

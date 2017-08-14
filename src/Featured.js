@@ -54,6 +54,10 @@ const Logos = [
     {
         img: require('./img/publications/webcamp_lj.svg'),
         title: "WebCamp Ljubljana"
+    },
+    {
+        img: require('./img/publications/ponyfoo.png'),
+        title: "Pony Foo Weekly"
     }
 ];
 

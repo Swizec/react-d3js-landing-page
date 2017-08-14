@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Image, Carousel, CarouselItem } from 'react-bootstrap';
+import LazyLoad from 'react-lazy-load';
 
 const TestimonialData = {
     d3noob: {
@@ -76,8 +77,10 @@ const Testimonial = ({ which }) => {
     return (
         <div style={{height: '150px'}} itemProp="review" itemScope itemType="http://schema.org/Review">
             <figure className="col-xs-2 col-md-1 col-md-offset-1 margin-small-top">
-                <Image circle src={img} alt={who}
-                       style={{height: '110px'}} />
+                <LazyLoad verticalOffset={500} height={110}>
+                    <Image circle src={img} alt={who}
+                           style={{height: '110px'}} />
+                </LazyLoad>
             </figure>
             <blockquote className="col-xs-9 col-xs-offset-1 col-md-7"
                         style={{marginLeft: '25px'}}>

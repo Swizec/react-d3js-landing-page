@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import { Row, Col, Image } from 'react-bootstrap';
+import LazyLoad from 'react-lazy-load';
 
 import { SectionTitle } from './Section';
 import { HalfColumn, FullColumn } from './Columns';
@@ -183,8 +184,10 @@ export const Feature = ({ img, title, description, circle }) => (
     <HalfColumn className="margin-small-top">
         <Row className="media">
             <figure className="pull-left col-xs-12 col-md-4 margin-small-bottom">
-                <Image src={img} alt={title} thumbnail={!circle} circle={circle}
-                       className="media-object" />
+                <LazyLoad verticalOffset={900} width={175}>
+                    <Image src={img} alt={title} thumbnail={!circle} circle={circle}
+                           className="media-object" />
+                </LazyLoad>
             </figure>
             <Col xs={12} md={7}>
             <h3 className="media-heading">{title}</h3>

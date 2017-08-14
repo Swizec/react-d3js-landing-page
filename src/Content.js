@@ -61,10 +61,12 @@ export const BookIntro = ({ className }) => (
         <RightColumn style={{display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: 800}}>
             <figure className="text-center">
                 <a href="" onClick={openDripForm}>
-		    <img src={coverImg}
-                         alt="React+D3v4 edition"
-                         className="img-thumbnail"
-                         itemProp="image" />
+                    <LazyLoad verticalOffset={800} width={520}>
+		        <img src={coverImg}
+                             alt="React+D3v4 edition"
+                             className="img-thumbnail"
+                             itemProp="image" />
+                    </LazyLoad>
                 </a>
 	    </figure>
         </RightColumn>
@@ -330,7 +332,7 @@ export const FreeSample = () => (
         <Row>
             <SingleColumn>
                 <Panel>
-                    <LazyLoad verticalOffset={500} height={500}>
+                    <LazyLoad verticalOffset={900} height={500}>
                         <Image src={require('./img/sample.png')} rounded responsive />
                     </LazyLoad>
                     <SampleForm />
@@ -405,7 +407,7 @@ export const Screencast = () => (
         <Row>
             <SingleColumn>
                 <div className="text-center">
-                    <LazyLoad verticalOffset={500} height={500}>
+                    <LazyLoad verticalOffset={900} height={500}>
                         <Image src={require('./img/screencast.gif')} alt="screencast-preview" thumbnail />
                     </LazyLoad>
                 </div>
@@ -429,7 +431,7 @@ export const Course = () => (
         <Row>
             <SingleColumn>
                 <div className="text-center">
-                    <LazyLoad verticalOffset={500} height={650}>
+                    <LazyLoad verticalOffset={900} height={650}>
                         <Image src={require('./img/examples/bouncing-ball.gif')} thumbnail style={{height: '660px'}} />
                     </LazyLoad>
                 </div>
@@ -445,7 +447,7 @@ export const Author = () => (
     <Row itemProp="brand" itemScope itemType="http://schema.org/Brand">
         <LeftColumn className="padding-big-top margin-medium-top">
             <figure className="text-center">
-                <LazyLoad verticalOffset={500}>
+                <LazyLoad verticalOffset={900}>
                     <Image src={require('./img/swizec.png')} alt="Swizec Teller" circle responsive className="margin-medium-top" itemProp="logo" />
                 </LazyLoad>
             </figure>

@@ -88,7 +88,7 @@ const LeftExample = ({ which }) => {
         <Row className="margin-small-bottom">
             <LeftColumn>
                 <a href="" onClick={openDripForm}>
-                    <LazyLoad verticalOffset={500}>
+                    <LazyLoad verticalOffset={500} width={360}>
                         <Thumbnail src={src} title={title}  />
                     </LazyLoad>
                 </a>
@@ -111,7 +111,7 @@ const RightExample = ({ which }) => {
             </WideLeftColumn>
             <NarrowRightColumn>
                 <a href="" onClick={openDripForm}>
-                    <LazyLoad verticalOffset={200}>
+                    <LazyLoad verticalOffset={200} width={360}>
                         <Thumbnail src={src} title={title} />
                     </LazyLoad>
                 </a>
@@ -129,7 +129,7 @@ const CenterExample = ({ which }) => {
             <MiddleColumn>
                 {description}
                 <a href="" onClick={openDripForm}>
-                    <LazyLoad verticalOffset={200}>
+                    <LazyLoad verticalOffset={200} width={360}>
                         <Thumbnail src={src} title={title} />
                     </LazyLoad>
                 </a>

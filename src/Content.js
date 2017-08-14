@@ -445,7 +445,9 @@ export const Author = () => (
     <Row itemProp="brand" itemScope itemType="http://schema.org/Brand">
         <LeftColumn className="padding-big-top margin-medium-top">
             <figure className="text-center">
-                <Image src={require('./img/swizec.png')} alt="Swizec Teller" circle responsive className="margin-medium-top" itemProp="logo" />
+                <LazyLoad verticalOffset={500}>
+                    <Image src={require('./img/swizec.png')} alt="Swizec Teller" circle responsive className="margin-medium-top" itemProp="logo" />
+                </LazyLoad>
             </figure>
         </LeftColumn>
         <RightColumn>

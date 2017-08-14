@@ -7,6 +7,7 @@
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.2",
     "react-dom": "^15.6.1",
+    "react-lazy-load": "^3.0.12",
     "react-youtube": "^7.4.0"
   },
   "devDependencies": {
@@ -16,8 +17,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-      "eject": "react-scripts eject",
-      "deploy": "npm run build && scp -r build/* swizec@swizec.webfactional.com:~/webapps/swizec_reactd3js/"
+    "eject": "react-scripts eject",
+    "deploy": "npm run build && scp -r build/* swizec@swizec.webfactional.com:~/webapps/swizec_reactd3js/"
   },
-    "homepage": "https://swizec.com/reactd3js"
+  "homepage": "https://swizec.com/reactd3js"
 }

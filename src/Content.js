@@ -2,6 +2,7 @@
 import React from 'react';
 import { Row, Col, Image, FormControl } from 'react-bootstrap';
 import YouTube from 'react-youtube';
+import LazyLoad from 'react-lazy-load';
 
 import Section, { LowSection, SectionTitle, Panel } from './Section';
 import { LeftColumn, WideLeftColumn, RightColumn, NarrowRightColumn, SingleColumn, MiddleColumn } from './Columns';
@@ -329,7 +330,9 @@ export const FreeSample = () => (
         <Row>
             <SingleColumn>
                 <Panel>
-                    <Image src={require('./img/sample.png')} rounded responsive />
+                    <LazyLoad verticalOffset={500} height={500}>
+                        <Image src={require('./img/sample.png')} rounded responsive />
+                    </LazyLoad>
                     <SampleForm />
                 </Panel>
             </SingleColumn>
@@ -402,7 +405,9 @@ export const Screencast = () => (
         <Row>
             <SingleColumn>
                 <div className="text-center">
-                    <Image src={require('./img/screencast.gif')} alt="screencast-preview" thumbnail />
+                    <LazyLoad verticalOffset={500} height={500}>
+                        <Image src={require('./img/screencast.gif')} alt="screencast-preview" thumbnail />
+                    </LazyLoad>
                 </div>
                 <p>
                     Get 7 full HD screencasts from my live streaming sessions and recap videos. <b>Watch me build</b> some of the examples in React+D3v4 from scatch. Including mistakes and <b>thought process behind every decision</b>.
@@ -424,7 +429,9 @@ export const Course = () => (
         <Row>
             <SingleColumn>
                 <div className="text-center">
-                    <Image src={require('./img/examples/bouncing-ball.gif')} thumbnail style={{height: '660px'}} />
+                    <LazyLoad verticalOffset={500} height={650}>
+                        <Image src={require('./img/examples/bouncing-ball.gif')} thumbnail style={{height: '660px'}} />
+                    </LazyLoad>
                 </div>
                 <p>
                     Learn faster by doing, <b>no installation needed</b>. 33+ live playgrounds where you can <b>read</b> through my code, <b>run</b> to see what it does, and <b>edit</b> components to see what happens. You can <b>save</b> every playground and come back later.

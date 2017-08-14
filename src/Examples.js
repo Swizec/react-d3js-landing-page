@@ -2,6 +2,8 @@
 import React from 'react';
 import { Row, Thumbnail } from 'react-bootstrap';
 import { LeftColumn, RightColumn, WideLeftColumn, NarrowRightColumn, MiddleColumn } from './Columns';
+import LazyLoad from 'react-lazy-load';
+
 import { openDripForm } from './helpers';
 
 const Examples = {
@@ -86,7 +88,9 @@ const LeftExample = ({ which }) => {
         <Row className="margin-small-bottom">
             <LeftColumn>
                 <a href="" onClick={openDripForm}>
-                    <Thumbnail src={src} title={title}  />
+                    <LazyLoad verticalOffset={500}>
+                        <Thumbnail src={src} title={title}  />
+                    </LazyLoad>
                 </a>
             </LeftColumn>
             <RightColumn>
@@ -107,7 +111,9 @@ const RightExample = ({ which }) => {
             </WideLeftColumn>
             <NarrowRightColumn>
                 <a href="" onClick={openDripForm}>
-                    <Thumbnail src={src} title={title} />
+                    <LazyLoad verticalOffset={200}>
+                        <Thumbnail src={src} title={title} />
+                    </LazyLoad>
                 </a>
             </NarrowRightColumn>
         </Row>
@@ -123,7 +129,9 @@ const CenterExample = ({ which }) => {
             <MiddleColumn>
                 {description}
                 <a href="" onClick={openDripForm}>
-                    <Thumbnail src={src} title={title} />
+                    <LazyLoad verticalOffset={200}>
+                        <Thumbnail src={src} title={title} />
+                    </LazyLoad>
                 </a>
             </MiddleColumn>
         </Row>

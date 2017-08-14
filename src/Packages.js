@@ -12,9 +12,9 @@ const StudentID = 'GXOpa';
 const EngineerID = 'iWevQ';
 const BusinessID = 'ygzt';
 
-const EverythingID = '';
-const BookCourseID = '';
-const BookID = '';
+const EverythingID = 'xtXkW';
+const BookCourseID = 'QeAO';
+const BookID = 'qhuDc';
 
 export const Everything = () => (
     <div>
@@ -93,7 +93,8 @@ export const BigBuyButton = ({ id, price, className }, context) => {
 
     return (
         <a className={classNames(className, 'btn btn-success btn-lg btn-xl btn-buy text-uppercase')}
-           href={`https://gumroad.com/l/${id}/${context.offer.name}?wanted=true`}>
+           href={`https://gumroad.com/l/${id}/${context.offer.name}?wanted=true`}
+           data-gumroad-single-product="true">
         <span className="text-white-dark">Buy now for {strike}</span> <span itemProp="price">${offer}</span>
     </a>
     )
@@ -200,8 +201,8 @@ export const Picker = () => (
         <Col md={12}>
         <ul className="pricing-table list-unstyled panel row">
             <TablePackage name="book" price={49} id={BookID} className="first" />
-            <TablePackage name="book-course" price={149} id={BookCourseID} />
-            <TablePackage name="book-course-coaching" price={399} id={EverythingID} className="active" />
+            <TablePackage name="book+course" price={149} id={BookCourseID} />
+            <TablePackage name="book+course+coaching" price={399} id={EverythingID} className="active" />
         </ul>
         </Col>
     </div>
@@ -209,20 +210,21 @@ export const Picker = () => (
 
 const FeatureList = {
     book: ['React+D3v4 [PDF/epub/mobi]',
-           '3 full HD screencasts',
+           '3 recap videos',
            '7 full projects',
            'Weekly livecoding sessions',
            'Free updates',
            'Money-back guarantee'],
-    'book-course': ['React+D3v4 [PDF/epub/mobi]',
-                    '7 full HD screencasts',
-                    '7 full projects',
+    'book+course': ['React+D3v4 [PDF/epub/mobi]',
+                    '3 recap videos',
+                    '4 full HD screencasts',
                     'Weekly livecoding sessions',
                     (<b>Interactive course</b>),
                     'Free updates',
                     'Money-back guarantee'],
-    'book-course-coaching': ['React+D3v4 [PDF/epub/mobi]',
-                             '7 full HD screencasts',
+    'book+course+coaching': ['React+D3v4 [PDF/epub/mobi]',
+                             '3 recap videos',
+                             '4 full HD screencasts',
                              '7 full projects',
                              'Weekly livecoding sessions',
                              (<b>Interactive course</b>),
@@ -280,7 +282,8 @@ export const BuyButton = ({ id, price, className }, context) => {
 
     return (
         <a className={classNames(className, 'btn btn-default btn-lg btn-block btn-buy')}
-           href={`https://gumroad.com/l/${id}/${context.offer.name}?wanted=true`}>
+           href={`https://gumroad.com/l/${id}/${context.offer.name}?wanted=true`}
+           data-gumroad-single-product="true">
             <span className="text-uppercase">
                 <span className="text-muted">Buy now for</span> {strike} ${offer}
             </span>

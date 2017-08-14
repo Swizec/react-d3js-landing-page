@@ -527,7 +527,7 @@ export const FAQ = () => (
 
 export const Subscription = () => (
     <Row>
-        <SingleColumn className="text-center lead">
+        <SingleColumn className="text-center lead margin-medium-top margin-medium-bottom">
             Too expensive? <a href="https://www.patreon.com/swizec">Try a subscription instead 👉</a>
         </SingleColumn>
     </Row>

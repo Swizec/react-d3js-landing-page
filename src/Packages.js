@@ -149,7 +149,7 @@ const Features = {
         description: 'Share everything in the package with as many people on your team as you want. Any way you want.'
     },
     weekly_livecoding: {
-        img: 'img/special-200.png',
+        img: require('./img/live_coding.png'),
         title: "Weekly livecoding",
         description: (<span>Weekly livecoding sessions with React, D3.js and others. Come watch me learn new technologies and solve coding problems live. <b>Ask me anything</b>, it's like office hours</span>)
     },
@@ -171,7 +171,7 @@ export const NamedFeature = ({ name }) => {
     if (!name) return (<span></span>);
 
     let { img, title, description } = Features[name],
-        circle = !['book', 'screencast', 'screencast_small'].includes(name);
+        circle = !['book', 'screencast', 'screencast_small', 'weekly_livecoding'].includes(name);
 
     return (
         <Feature img={img} title={title} description={description} circle={circle} />

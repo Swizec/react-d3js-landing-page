@@ -10,6 +10,11 @@ import * as Content from './Content';
 import * as Packages from './Packages';
 
 import './App.css';
+import './bootstrap/css/bootstrap.min.css';
+import './font-awesome/css/font-awesome.min.css';
+import './css/bootstrap-override.css';
+import './css/bootstrap-custom-utils.css';
+import './css/salesbury-lilac.css';
 
 const OfferMapping = new Map([
 //    ['yay-visa', .5]

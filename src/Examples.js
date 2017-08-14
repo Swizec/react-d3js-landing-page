@@ -129,7 +129,7 @@ const CenterExample = ({ which }) => {
             <MiddleColumn>
                 {description}
                 <a href="" onClick={openDripForm}>
-                    <LazyLoad verticalOffset={200} width={360}>
+                    <LazyLoad verticalOffset={200} width={560}>
                         <Thumbnail src={src} title={title} />
                     </LazyLoad>
                 </a>

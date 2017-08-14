@@ -39,7 +39,7 @@ const TestimonialData = {
         who: 'Patrick Davidson, Developer at Phytozome Group, JGI, Lawrence Berkeley Lab'
     },
     ulterior: {
-        img: require('./img/avatars/9WOxpg5t.png'),
+        img: require('./img/avatars/9WOxpg5t.jpg'),
         quote: '@Swizec going through the free chapter of your book, well written, approachable and a joy to read! Looking forward to the complete edition.',
         who: 'Ulterior, @boleroo'
     },

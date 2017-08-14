@@ -9,12 +9,13 @@ import Testimonial, { TestimonialsCarousel } from './Testimonials';
 import * as Content from './Content';
 import * as Packages from './Packages';
 
-import './App.css';
-import './bootstrap/css/bootstrap.min.css';
-import './font-awesome/css/font-awesome.min.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap-theme.css';
+import './font-awesome/css/font-awesome.css';
 import './css/bootstrap-override.css';
 import './css/bootstrap-custom-utils.css';
 import './css/salesbury-lilac.css';
+import './App.css';
 
 const OfferMapping = new Map([
 //    ['yay-visa', .5]

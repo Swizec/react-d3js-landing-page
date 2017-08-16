@@ -517,6 +517,14 @@ export const FAQ = () => (
         </Row>
         <Row>
             <Col md={5} mdOffset={1}>
+            <h2>I don't like React. Is React+D3v4 still useful?</h2>
+            <p>
+                Yes! You can apply the core ideas behind React+D3v4 to any modern framework. Angular, Vue, or anything else that aims to separate business and rendering logic with a declarative approach.
+            </p>
+        </Row>
+        </Row>
+        <Row>
+            <Col md={5} mdOffset={1}>
                 <h2>
 		    What if I hate React+D3v4?
 		</h2>

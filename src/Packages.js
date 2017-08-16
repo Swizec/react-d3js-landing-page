@@ -221,6 +221,7 @@ const FeatureList = {
     'book+course': ['React+D3v4 [PDF/epub/mobi]',
                     '3 recap videos',
                     '4 full HD screencasts',
+                    '7 full projects',
                     'Weekly livecoding sessions',
                     (<b>Interactive course</b>),
                     'Free updates',

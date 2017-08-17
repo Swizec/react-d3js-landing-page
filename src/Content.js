@@ -521,7 +521,7 @@ export const FAQ = () => (
             <p>
                 Yes! You can apply the core ideas behind React+D3v4 to any modern framework. Angular, Vue, or anything else that aims to separate business and rendering logic with a declarative approach.
             </p>
-        </Row>
+            </Col>
         </Row>
         <Row>
             <Col md={5} mdOffset={1}>

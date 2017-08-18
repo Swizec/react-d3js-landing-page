@@ -133,7 +133,7 @@ const Features = {
     projects: {
         img: require('./img/examples/global-migrations.gif'),
         title: '7 full projects',
-        description: 'Git repositories with working projects built with React and D3v4.'
+        description: 'Full working projects built with React and D3v4. I included my code history so you can learn from my mistakes.'
     },
     screencast: {
         img: require('./img/screencast.gif'),

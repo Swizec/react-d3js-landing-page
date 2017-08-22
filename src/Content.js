@@ -348,7 +348,7 @@ export const Talk = () => (
             <SectionTitle nomargin>Reusable data visualization with React and d3.js</SectionTitle>
             <SingleColumn className="lead">Watch my talks from HTML5DevConf and the Bay Area D3 Meetup</SingleColumn>
         </Row>
-        <Row className="text-center">
+        <Row className="text-center" id="space-invaders-talk">
             <YouTube videoId="UP1nCXG2t4M" opts={{width: 853, height: 480}} />
         </Row>
         <Row>

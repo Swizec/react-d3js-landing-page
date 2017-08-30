@@ -370,6 +370,12 @@ export const Talk = () => (
     </div>
 );
 
+export const VideoPitch = () => (
+    <Row className="text-center" id="packages">
+        <YouTube videoId="4vTvXThQuXA" opts={{width: 853, height: 480}} />
+    </Row>
+);
+
 export const SampleForm = () => (
     <DripForm id="5362865">
         <h3 data-drip-attribute="headline">
@@ -547,7 +553,7 @@ export const FAQ = () => (
 export const Subscription = () => (
     <Row>
         <SingleColumn className="text-center lead margin-medium-top margin-medium-bottom">
-            Too expensive? <a href="https://www.patreon.com/swizec">Try a subscription instead 👉</a>
+            Too expensive? <a href="https://www.patreon.com/swizec">Try for $5/month instead 👉</a>
         </SingleColumn>
     </Row>
 );

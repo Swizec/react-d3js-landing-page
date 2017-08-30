@@ -20,7 +20,7 @@ const BookID = 'qhuDc';
 export const Everything = () => (
     <div>
         <Row className="padding-medium-bottom">
-            <SectionTitle nomargin md={12} mdOffset={0} id="packages">
+            <SectionTitle nomargin md={12} mdOffset={0}>
                 Book + Course + Coaching
                 <BigBuyButton id={EverythingID} price={399} className="pull-right" />
             </SectionTitle>
@@ -118,7 +118,7 @@ const Features = {
     coaching: {
         img: 'img/me-special.png',
         title: '1 week of coaching',
-        description: 'I will help you get started and review your code. Includes up to 1 hour video chat.'
+        description: 'I will help you get started and review your code. Includes up to 1 hour video chat and pair programming.'
     },
     small_consulting: {
         img: 'img/me-special.png',

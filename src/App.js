@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { Row } from 'react-bootstrap';
 import Section, { LowSection, FluffySection, DarkSection, GreenSection } from './Section';
 import Testimonial, { TestimonialsCarousel } from './Testimonials';
+import YouTube from 'react-youtube';
 
 import * as Content from './Content';
 import * as Packages from './Packages';
@@ -18,7 +19,7 @@ import './css/salesbury-lilac.css';
 import './App.css';
 
 const OfferMapping = new Map([
-//    ['yay-visa', .5]
+    ['true-fans', .75]
 ]);
 
 class App extends Component {
@@ -90,6 +91,9 @@ class App extends Component {
                 <DarkSection>
                     <Content.Author />
                 </DarkSection>
+                <GreenSection>
+                    <Content.VideoPitch />
+                </GreenSection>
                 <FluffySection>
                     <Packages.Everything />
                 </FluffySection>

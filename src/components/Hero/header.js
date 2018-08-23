@@ -13,7 +13,7 @@ padding: 20px 0 20px 0;
 z-index: 100%;
 transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 display: grid;
-grid-template-columns: repeat(3, auto);
+grid-template-columns: repeat(2, auto);
 align-items: center;
 justify-items: center;
 a {
@@ -75,8 +75,8 @@ class Header extends Component {
   <Nav>
     <Wrapper className={this.state.hasScrolled ? 'Header HeaderScrolled' : 'Header'}> 
       
-      <Link to='/'><img src={logo} height='60' alt=''/></Link>
-      <Link to='/login'>Login</Link>
+      <Link to='/'><img src={logo} height='25' alt=''/></Link>
+      
       <Link to='/Buy'><button>BUY</button></Link>
       
     </Wrapper>

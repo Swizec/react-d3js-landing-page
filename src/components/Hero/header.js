@@ -8,17 +8,16 @@ import './Header.css'
 const Wrapper = styled.div`
 display: grid;
 margin: 0 auto;
-
+padding: 0 20px;
 grid-template-columns: 1fr 1fr;
 max-width: 1100px;
-
-
 img {
   background:rgba(255,255,255, 0.7);
   border-radius: 20px;
   padding: 10px;
   margin: 5rem 0 0;
 }
+
 `
 
 

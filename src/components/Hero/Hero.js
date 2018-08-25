@@ -1,65 +1,55 @@
 import React, { Component } from 'react'
 import styled from "styled-components";
 import Header from '../Hero/header'
-import Book from '../../images/Book.png'
+import wallpaper from '../../images/wallpaper.jpg'
+import Clay from '../../images/Clay.png'
+
 
 
 const Wrapper = styled.div`
-margin: 0;
+background-image: url(${wallpaper});
+height: 800px;
+background-size: cover;
+background-position: center;
+@media (max-width: 640px) {
+    height: 900px;
+}
 `
 const HeroGroup = styled.div`
-position: relative;
-background-color: #fff;
-margin: 100px auto;
-width: 65%;
-max-width: 1000px;
-padding: 80px 50px 100px;
-box-shadow: 0px 10px 25px rgba(0,0,0, .25);
-border-radius: 20px;
-`
-const HeroContent = styled.div`
+max-width: 1100px;
+padding: 0px 0px 0px;
+margin: 0 auto;
 display: grid;
+align-items: center;
+justify-items: center;
 grid-template-columns: 1fr 1fr;
-grid-template-areas: 
-"HC1 HC2"
-"HC1 HC3";
+grid-template-areas:
+"HC1 HC2";
 
-img {
-  grid-area: HC1;
-  height: 400px;
-  
-}
 h1 {
-  grid-area: HC2;
-  font-weight: 900;
-  margin: 0;
+  text-shadow: 0 10px 20px rgba(0,0,0,.25);
+  color: #fff;
+  font-weight: 800;
+  font-size: 54px;
+  drop-shadow: 10px 10px 10px;
 }
-h3 {
-  grid-area: HC3;
-  font-weight: 300;
-  margin: 0;
+h2 {
+  color: #fff;
+  font-weight: 200;
 }
-@media (max-width: 640px) {
-    img {
-      height: 200px;
-      margin: 0 auto;
-    }
-    h1 {
-        font-size: 26px;
-        margin: 30px 0;
-    }
-    h3 {
-        font-size: 24px;
-    }
-    text-align: center;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-    "HC1"
-    "HC2"
-    "HC3"
+img {
+
 }
+.HeroHeader1 {
+grid-area: HC1;
+vertical-align: top;
+}
+.HeroHeader2 {
+grid-area: HC2;
+}
+
 `
+
 
 export default class Hero extends Component {
   render() {
@@ -67,11 +57,13 @@ export default class Hero extends Component {
       <Wrapper>
         <Header />
         <HeroGroup>
-          <HeroContent>
-          <img src={Book} alt=''/>
-          <h1>STUCK <br></br>COPY PASTING <br></br>RANDOM <br></br>D3 EXAMPLES</h1>
-          <h3>Become a data visualization engineer with React + D3v4.</h3>
-          </HeroContent>
+        <div className='HeroHeader1'>
+          <h1>STUCK COPY PASTING RANDOM D3 EXAMPLES?</h1>
+          <h2>Become a data visualization engineer with React + D3v4.</h2>
+        </div>
+        <div className='HeroHeader2'>
+          <img src={Clay} height='600' alt=''/>
+        </div>
         </HeroGroup>
 
       </Wrapper>

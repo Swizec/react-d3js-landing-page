@@ -16,6 +16,12 @@ img {
   border-radius: 20px;
   padding: 10px;
   margin: 5rem 0 0;
+  transition: 1s;
+}
+img:hover {
+  background: #fff;
+  box-shadow: 0 10px 300px rgba(0,0,0, 0.25);
+  transform: translateY(-6px);
 }
 
 `

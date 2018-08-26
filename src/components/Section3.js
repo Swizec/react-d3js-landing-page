@@ -1,14 +1,36 @@
 import React, { Component } from 'react'
 import styled from "styled-components";
+import wallpaper from '../images/wallpaper.jpg'
+
 
 
 const Wrapper = styled.div`
+background-image: url(${wallpaper});
+height: 930px;
+background-size: cover;
+background-position: center;
 margin: 5rem auto;
+@media (max-width: 640px) {
+    height: 110rem;
+}
 `
 const WrapperGroup = styled.div`
 max-width: 1000px;
-padding: 0px 20px 0px;
+padding: 30px 20px;
 margin: 0 auto;
+h1 {
+  text-shadow: 0 10px 20px rgba(0,0,0,.25);
+  color: #fff;
+  font-weight: 800;
+  font-size: 45px;
+  drop-shadow: 10px 10px 10px;
+}
+p {
+  color: #000;
+  font-weight: 300;
+  text-shadow: 0 10px 20px rgba(0,0,0,.25);
+  drop-shadow: 10px 10px 10px;
+}
 
 @media (max-width: 840px) {
     h1 {
@@ -18,6 +40,13 @@ margin: 0 auto;
   margin: 2rem 0 0;
 }
 `
+const Card = styled.div`
+background-color: #fff;
+border-radius: 20px;
+padding: 30px;
+drop-shadow: 10px 10px 10px;
+
+`
 
 export default class Section3 extends Component {
   render() {
@@ -26,6 +55,7 @@ export default class Section3 extends Component {
 
         <WrapperGroup>
             <h1>LEARNING A NEW CODING PARADIGM IS HARD</h1>
+            <Card>
             <p>React is the biggest revolution in JavaScript programming since jQuery hit the scene 10 years ago, and D3 is unlike anything you've seen before.
             <br></br>
             "How the hell is it doing that?" is the most common phrase I hear when teaching people about React and D3. "What do I put in a component? Should it be a state or a prop? These D3 examples don't make any sense"
@@ -43,6 +73,7 @@ export default class Section3 extends Component {
             <br></br>
             That's why React+D3v4 takes you on a journey through 7 projects and 5 interactive examples. Learn the basics in about an hour then dive as deep as you want to solidify your knowledge. Get the confidence you need to excell at your job.
             </p>
+            </Card>
         </WrapperGroup>
         
       </Wrapper>

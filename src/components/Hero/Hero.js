@@ -66,8 +66,8 @@ grid-area: HC2;
     justify-items: center;
     grid-template-columns: 1fr;
     grid-template-areas:
-    "HC1"
-    "HC2";
+    "HC2"
+    "HC1";
 }
 `
 const Features = styled.div`

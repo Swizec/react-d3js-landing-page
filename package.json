@@ -25,6 +25,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "serve": "rm -rf ./public && gatsby build && gatsby serve",
     "format": "prettier --write '{,**/}*.{js,json,mdx}'",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 9001 -c .storybook"

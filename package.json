@@ -22,14 +22,14 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write '**/*.js'",
+    "format": "prettier --write '{,**/}*.{js,json,mdx}'",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^4.0.0-alpha.18",
     "@storybook/react": "^4.0.0-alpha.18",
-    "prettier": "^1.14.2"
+    "prettier": "git+https://github.com/prettier/prettier.git#master"
   },
   "repository": {
     "type": "git",

@@ -1,6 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
+import Hero from '../src/widgets/Hero';
 
 storiesOf('button', module)
   .add('with text', () => (
@@ -12,4 +13,9 @@ storiesOf('button', module)
         😀 😎 👍 💯
       </span>
     </button>
+  ))
+
+storiesOf('Hero', module)
+  .add('widget', () => (
+    <Hero/>
   ))

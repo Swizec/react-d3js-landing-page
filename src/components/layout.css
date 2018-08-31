@@ -1,7 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
 
-
 /******************  Table of Contents  *****************************/
 
 /*
@@ -18,55 +17,56 @@
 
 */
 
-
 /*========== 1. GLOBAL STYLES ==============*/
 body {
-	font-family: 'Open Sans', Arial, sans-serif;
-	background: #FFF;
-	font-weight: 300;
-	height: 100%;
-	margin: 0;
-	padding: 0;
-	color: #94a3a8;
+  font-family: 'Open Sans', Arial, sans-serif;
+  background: #fff;
+  font-weight: 300;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #94a3a8;
 }
-strong, b {
-	font-weight: 600;
+strong,
+b {
+  font-weight: 600;
 }
 h1 {
-	font-size: 50px;
-	line-height: 60px;
-	margin: 25px 0;
-	font-weight: 600;
+  font-size: 50px;
+  line-height: 60px;
+  margin: 25px 0;
+  font-weight: 600;
 }
 h2 {
-	font-size: 40px;
-	font-weight: 600;
-	margin: 15px 0;
+  font-size: 40px;
+  font-weight: 600;
+  margin: 15px 0;
 }
 h3 {
-	font-size: 30px;
-	margin: 10px 0;
-	font-weight: 600;
+  font-size: 30px;
+  margin: 10px 0;
+  font-weight: 600;
 }
 h4 {
-	font-size: 25px;
-	margin: 10px 0;
+  font-size: 25px;
+  margin: 10px 0;
 }
 h5 {
-	font-size: 20px;
-	font-weight: 600;
-	margin: 15px 0;
-	color: #384047;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 15px 0;
+  color: #384047;
 }
 h6 {
-	font-size: 16px;
-	font-weight: 600;
-	margin: 10px 0;
-	color: #384047;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 10px 0;
+  color: #384047;
 }
 a {
-	color: #5173bd;
+  color: #5173bd;
 }
-a:hover, a:focus {
-	color: #5173bd;
+a:hover,
+a:focus {
+  color: #5173bd;
 }

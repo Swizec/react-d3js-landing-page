@@ -4,8 +4,11 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@mdx-js/mdx": "^0.15.0",
+    "@mdx-js/tag": "^0.15.0",
     "babel-plugin-styled-components": "^1.5.1",
     "gatsby": "^2.0.0-rc.0",
+    "gatsby-mdx": "^0.1.1",
     "gatsby-plugin-manifest": "^2.0.2-rc.0",
     "gatsby-plugin-offline": "^2.0.0-rc.0",
     "gatsby-plugin-react-helmet": "^3.0.0-rc.0",
@@ -22,17 +25,26 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write '**/*.js'",
+    "serve": "rm -rf ./public && gatsby build && gatsby serve",
+    "format": "prettier --write '{,**/}*.{js,json,mdx,css}'",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "pretty-quick": "pretty-quick"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^4.0.0-alpha.18",
     "@storybook/react": "^4.0.0-alpha.18",
-    "prettier": "^1.14.2"
+    "husky": "^1.0.0-rc.13",
+    "prettier": "git+https://github.com/prettier/prettier.git#master",
+    "pretty-quick": "^1.6.0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }

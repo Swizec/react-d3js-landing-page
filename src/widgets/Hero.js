@@ -4,7 +4,6 @@ import webappbanner from '../images/web-app-banner.png'
 import logo from '../images/readymade_logo.png'
 import wallpaper from '../images/header_bg.jpg'
 import down_arrow from '../images/down_arrow.png'
-import Layout from '../components/layout'
 import './widget.css'
 
 const Wrapper = styled.div`
@@ -37,44 +36,42 @@ const Wrapper = styled.div`
 export default class Hero extends Component {
   render() {
     return (
-      <Layout>
-        <Wrapper>
-          <div class="preloader" />
+      <Wrapper>
+        <div class="preloader" />
 
-          <main id="top" class="masthead" role="main">
-            <div class="container">
-              <div class="logo">
-                {' '}
-                <a href="#">
-                  <img src={logo} alt="readymade-logo" />
-                </a>
-              </div>
-
-              <h1 class="main-title">Multipurpose Landing Page Template</h1>
-
-              <h4 class="sub-title">
-                Suits best for any kind of startups and local business.{' '}
-              </h4>
-
-              <div class="row">
-                <div class="col-md-12">
-                  <img
-                    src={webappbanner}
-                    alt="Web App Banner"
-                    className="image"
-                  />
-                </div>
-              </div>
+        <main id="top" class="masthead" role="main">
+          <div class="container">
+            <div class="logo">
+              {' '}
+              <a href="#">
+                <img src={logo} alt="readymade-logo" />
+              </a>
             </div>
 
-            <a href="#explore" class="scrollto">
-              <p class="scrollto--arrow">
-                <img src={down_arrow} alt="scroll down arrow" />
-              </p>
-            </a>
-          </main>
-        </Wrapper>
-      </Layout>
+            <h1 class="main-title">Multipurpose Landing Page Template</h1>
+
+            <h4 class="sub-title">
+              Suits best for any kind of startups and local business.{' '}
+            </h4>
+
+            <div class="row">
+              <div class="col-md-12">
+                <img
+                  src={webappbanner}
+                  alt="Web App Banner"
+                  className="image"
+                />
+              </div>
+            </div>
+          </div>
+
+          <a href="#explore" class="scrollto">
+            <p class="scrollto--arrow">
+              <img src={down_arrow} alt="scroll down arrow" />
+            </p>
+          </a>
+        </main>
+      </Wrapper>
     )
   }
 }

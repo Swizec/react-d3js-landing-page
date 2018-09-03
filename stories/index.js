@@ -19,5 +19,4 @@ storiesOf('button', module)
 
 storiesOf('Hero', module).add('widget', () => <Hero />)
 
-storiesOf('Hero', module).add('widget', () => <Hero />)
 storiesOf('CopyLight', module).add('widget', () => <CopyLight />)

@@ -3,8 +3,7 @@ import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
 import Hero from '../src/widgets/Hero'
-import CopyLight from '../src/widgets/CopyLight';
-
+import CopyLight from '../src/widgets/CopyLight'
 
 storiesOf('button', module)
   .add('with text', () => (
@@ -18,15 +17,7 @@ storiesOf('button', module)
     </button>
   ))
 
-
 storiesOf('Hero', module).add('widget', () => <Hero />)
 
-storiesOf('Hero', module)
-  .add('widget', () => (
-    <Hero/>
-  ))
-storiesOf('CopyLight', module)
-  .add('widget', () => (
-    <CopyLight/>
-  ))
-
+storiesOf('Hero', module).add('widget', () => <Hero />)
+storiesOf('CopyLight', module).add('widget', () => <CopyLight />)

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import webappbanner from '../images/web-app-banner.png'
-import logo from '../images/readymade_logo.png'
+import webappbanner from '../images/Real Space Gray.png'
+import logo from '../images/logo.png'
 import wallpaper from '../images/header_bg.jpg'
 import down_arrow from '../images/down_arrow.png'
 
@@ -23,6 +23,13 @@ const Wrapper = styled.div`
   h4 {
     font-weight: 100;
     line-height: 1.1;
+  }
+  .logo img {
+    height: 70px;
+  }
+  .banner img {
+    height: 600px;
+    padding: 40px;
   }
   .scrollto,
   .scrollto:hover {
@@ -53,7 +60,7 @@ const Wrapper = styled.div`
     }
   }
   @media (max-width: 940px) {
-    .image {
+    .banner img {
       height: 300px;
     }
   }
@@ -74,14 +81,14 @@ export default class Hero extends Component {
               </a>
             </div>
 
-            <h1 class="main-title">Multipurpose Landing Page Template</h1>
+            <h1 class="main-title">STUCK COPY PASTING RANDOM D3 EXAMPLES?</h1>
 
             <h4 class="sub-title">
-              Suits best for any kind of startups and local business.{' '}
+              Become a data visualization engineer with React + D3v4.
             </h4>
 
             <div class="row">
-              <div class="col-md-12">
+              <div class="banner">
                 <img
                   src={webappbanner}
                   alt="Web App Banner"

@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   background-attachment: fixed;
   text-align: center;
   position: relative;
-  padding: 30px 15px;
+  padding: 30px 15px 0;
   color: #fff;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
   background-color: #424ea4;
@@ -51,8 +51,10 @@ const Wrapper = styled.div`
     h4 {
       font-size: 18px;
     }
+  }
+  @media (max-width: 940px) {
     .image {
-      height: 200px;
+      height: 300px;
     }
   }
 `

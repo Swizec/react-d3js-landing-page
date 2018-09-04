@@ -4,21 +4,45 @@ import webappbanner from '../images/web-app-banner.png'
 import logo from '../images/readymade_logo.png'
 import wallpaper from '../images/header_bg.jpg'
 import down_arrow from '../images/down_arrow.png'
-import './widget.css'
 
 const Wrapper = styled.div`
   background-image: url(${wallpaper});
   background-size: cover;
-  background-position: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
   text-align: center;
+  position: relative;
+  padding: 30px 15px;
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  background-color: #424ea4;
 
   h1 {
-    color: #fff;
   }
   h4 {
-    color: #fff;
     font-weight: 100;
     line-height: 1.1;
+  }
+  .scrollto,
+  .scrollto:hover {
+    display: block;
+    text-decoration: none;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    height: 70px;
+    margin-left: -50px;
+  }
+  .scrollto--arrow {
+    padding: 10px;
+    position: relative;
+  }
+  .scrollto--arrow img {
+    animation: arrowbounce 1s alternate infinite;
+    -moz-animation: arrowbounce 1s alternate infinite;
+    -webkit-animation: arrowbounce 1s alternate infinite;
+    -o-animation: arrowbounce 1s alternate infinite;
   }
   @media (max-width: 640px) {
     h1 {
@@ -43,7 +67,7 @@ export default class Hero extends Component {
           <div class="container">
             <div class="logo">
               {' '}
-              <a href="#">
+              <a href="/">
                 <img src={logo} alt="readymade-logo" />
               </a>
             </div>

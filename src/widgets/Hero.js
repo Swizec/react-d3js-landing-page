@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import Testimonial from './Testimonial'
-import webappbanner from '../images/Real Space Gray.png'
+import product from '../images/Real Space Gray.png'
 import logo from '../images/logo.png'
 import wallpaper from '../images/header_bg.jpg'
 import down_arrow from '../images/down_arrow.png'
@@ -67,7 +67,7 @@ const Wrapper = styled.div`
 const Content = styled.div`
   margin: 5rem;
   align-items: center;
-  justify-items: right;
+  justify-items: center;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: 'Test ContentImage';
@@ -78,6 +78,14 @@ const Content = styled.div`
   }
   .Testimonial {
     grid-area: Test;
+  }
+  @media (max-width: 640px) {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      ' ContentImage'
+      'Test ';
   }
 `
 
@@ -111,11 +119,7 @@ export default class Hero extends Component {
                 />
               </div>
               <div class="banner">
-                <img
-                  src={webappbanner}
-                  alt="Web App Banner"
-                  className="image"
-                />
+                <img src={product} alt="Web App Banner" className="image" />
               </div>
             </Content>
           </div>

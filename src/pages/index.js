@@ -7,11 +7,8 @@ import CopyLight from '../widgets/CopyLight'
 const IndexPage = () => (
   <Layout>
     <Hero />
-    {`^^ <Hero /> ^^`}
-    <hr />
+
     <CopyLight />
-    {`^^ <CopyLight /> ^^`}
-    <hr />
   </Layout>
 )
 

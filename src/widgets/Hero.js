@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import Testimonial from './Testimonial'
 import webappbanner from '../images/Real Space Gray.png'
 import logo from '../images/logo.png'
 import wallpaper from '../images/header_bg.jpg'
 import down_arrow from '../images/down_arrow.png'
+import Test1 from '../images/Test1.jpg'
 
 const Wrapper = styled.div`
   background-image: url(${wallpaper});
@@ -27,10 +29,7 @@ const Wrapper = styled.div`
   .logo img {
     height: 70px;
   }
-  .banner img {
-    height: 600px;
-    padding: 40px;
-  }
+
   .scrollto,
   .scrollto:hover {
     display: block;
@@ -65,6 +64,22 @@ const Wrapper = styled.div`
     }
   }
 `
+const Content = styled.div`
+  margin: 5rem;
+  align-items: center;
+  justify-items: right;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'Test ContentImage';
+  .image {
+    height: 600px;
+    padding: 40px;
+    grid-area: ContentImage;
+  }
+  .Testimonial {
+    grid-area: Test;
+  }
+`
 
 export default class Hero extends Component {
   render() {
@@ -87,7 +102,14 @@ export default class Hero extends Component {
               Become a data visualization engineer with React + D3v4.
             </h4>
 
-            <div class="row">
+            <Content>
+              <div className="Testimonial">
+                <Testimonial
+                  image={Test1}
+                  quote="You just blew my mind! This is going to save me so much time."
+                  name="-- Patrick Davidson, Developer at Phytozome Group, JGI, Lawrence Berkeley Lab"
+                />
+              </div>
               <div class="banner">
                 <img
                   src={webappbanner}
@@ -95,7 +117,7 @@ export default class Hero extends Component {
                   className="image"
                 />
               </div>
-            </div>
+            </Content>
           </div>
 
           <a href="#explore" class="scrollto">

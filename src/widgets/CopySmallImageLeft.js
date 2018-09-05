@@ -54,7 +54,7 @@ export default class CopySmallImageLeft extends Component {
       <Wrapper>
         <WrapperGroup>
           <div className="content1">
-            <img src={Image1} alt="img" class="img-responsive center-block" />
+            <img src={Image1} alt="img" />
           </div>
 
           <div className="content2">

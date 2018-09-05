@@ -3,7 +3,23 @@ import styled from 'styled-components'
 
 const Wrapper = styled.div`
   max-width: 800px;
-  margin: 0 auto;
+  margin: 3rem auto;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 90px 1fr;
+  grid-template-areas:
+    'WI WQ'
+    '. WN';
+  @media (max-width: 940px) {
+    align-items: center;
+    justify-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'WI'
+      'WQ'
+      'WN';
+  }
 `
 const WrapperImage = styled.img`
   text-align: right;
@@ -11,6 +27,7 @@ const WrapperImage = styled.img`
   border-radius: 50%;
   display: inline-block;
   vertical-align: top;
+  grid-area: WI;
 `
 const WrapperQuote = styled.div`
   text-align: left;
@@ -18,9 +35,11 @@ const WrapperQuote = styled.div`
   font-weight: 800;
   display: inline-block;
   vertical-align: top;
+  grid-area: WQ;
 `
 const WrapperName = styled.div`
   text-align: left;
+  grid-area: WN;
 `
 
 const Testimonial = props => (

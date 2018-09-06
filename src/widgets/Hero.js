@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import Testimonial from './Testimonial'
-import product from '../images/Real Space Gray.png'
+import product from '../images/Real-Space-Gray.png'
 import logo from '../images/logo.png'
 import wallpaper from '../images/header_bg.jpg'
 import down_arrow from '../images/down_arrow.png'

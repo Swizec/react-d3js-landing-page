@@ -1,6 +1,6 @@
 # STUCK COPY PASTING RANDOM D3 EXAMPLES?
 
-####**Become a data visualization engineer with** _React + D3v4_
+###**Become a data visualization engineer with** _React + D3v4_
 
 Creating **dynamic** and **interactive data** visualizations on the web is a
 pain in the ass. It gets really hard when you add **animation**, inter-connected
@@ -129,7 +129,11 @@ use it to compare differences between React, **Preact**, and **Inferno**.
 
 ---
 
-####WHAT'S IN THE BOOK #####_Table of contents_ ###**INTRODUCTION**
+####WHAT'S IN THE BOOK
+
+#####_Table of contents_
+
+###**INTRODUCTION**
 
 Foreword Why you should read React + D3v4 What you need to know How to read this
 book Why React and D3.js Buzzword soup explained JSX
@@ -235,26 +239,33 @@ Animating with React, Redux, and d3
 - 1 Redux Reducer
 - What we learned
 
-###SPEED OPTIMIZATIONS ###CONCLUSION ###APPENDIXES Appendix A - roll your own
-environment Appendix B - Browserify-based environment
+###SPEED OPTIMIZATIONS
+
+###CONCLUSION
+
+###APPENDIXES Appendix A - roll your own environment Appendix B -
+Browserify-based environment
 
 **Ready to get started?** [Try the free chapter.👇](https://www.google.com) Or
 [jump to packages 👉](https://www.google.com)
 
 ---
 
-##START WITH A FREE CHAPTER AND EMAIL CRASH COURSE ####See what React+D3v4 is
-like and learn the basics. **REACT+D3V4 SAMPLE CHAPTER AND EMAIL COURSE** Leave
-your email and get a free sample of React+d3.js and a mini email course. They
-will teach you about the basic architecture of React apps and show you how JSX
-makes your code better.
+##START WITH A FREE CHAPTER AND EMAIL CRASH COURSE
+
+####See what React+D3v4 is like and learn the basics. **REACT+D3V4 SAMPLE
+CHAPTER AND EMAIL COURSE** Leave your email and get a free sample of React+d3.js
+and a mini email course. They will teach you about the basic architecture of
+React apps and show you how JSX makes your code better.
 
 ---
 
-##REUSABLE DATA VISUALIZATION WITH REACT AND D3.JS ####Watch my talks from
-HTML5DevConf and the Bay Area D3 Meetup The talk shows a proof of concept
-approach to making fancy animations with React and d3js - a Space Invaders game.
-I explain the basic approach, where I got the idea, and show off some code.
+##REUSABLE DATA VISUALIZATION WITH REACT AND D3.JS
+
+####Watch my talks from HTML5DevConf and the Bay Area D3 Meetup The talk shows a
+proof of concept approach to making fancy animations with React and d3js - a
+Space Invaders game. I explain the basic approach, where I got the idea, and
+show off some code.
 
 You don't have to watch the whole talk, it's all in React+D3v4.
 
@@ -267,10 +278,12 @@ building modern data visualization.
 
 ---
 
-###7 FULL HD SCREENCASTS ####Watching code appear before your eyes makes it
-easier to understand. Get 7 full HD screencasts from my live streaming sessions
-and recap videos. Watch me build some of the examples in React+D3v4 from scatch.
-Including mistakes and thought process behind every decision.
+###7 FULL HD SCREENCASTS
+
+####Watching code appear before your eyes makes it easier to understand. Get 7
+full HD screencasts from my live streaming sessions and recap videos. Watch me
+build some of the examples in React+D3v4 from scatch. Including mistakes and
+thought process behind every decision.
 
 Watch extra projects that don't feature in the book. Like a map of global
 migrations and a visualization of FreeCodeCamp developer survey data.
@@ -278,8 +291,9 @@ migrations and a visualization of FreeCodeCamp developer survey data.
 **Ready to get started?** [Try the free chapter.👇](https://www.google.com) Or
 [jump to packages 👉](https://www.google.com)
 
-###A COURSE WITH INTERACTIVE CODE SAMPLES _Learn React and D3v4 with executable
-code samples right in your browser_
+###A COURSE WITH INTERACTIVE CODE SAMPLES
+
+_Learn React and D3v4 with executable code samples right in your browser_
 
 Learn faster by doing, no installation needed. 33+ live playgrounds where you
 can read through my code, run to see what it does, and edit components to see
@@ -324,63 +338,96 @@ Some of my work has been featured in 👇
 
 ---
 
-###BOOK + COURSE + COACHING _The book, the interactive course, 1 week of
-personal coaching_
+###BOOK + COURSE + COACHING
 
-###REACT+D3V4 249 pages of code samples and explanation in PDF, ePUB, or MOBI. A
-solid guide to building your first data visualization with React and d3.js.
+_The book, the interactive course, 1 week of personal coaching_
 
-###1 WEEK OF COACHING I will help you get started and review your code. Includes
-up to 1 hour video chat and pair programming.
+###REACT+D3V4
 
-###INTERACTIVE COURSE Learn React and D3v4 with executable code samples right in
-your browser
+249 pages of code samples and explanation in PDF, ePUB, or MOBI. A solid guide
+to building your first data visualization with React and d3.js.
 
-###7 FULL HD SCREENCASTS Get 7 full HD screencasts from my live streaming
-sessions and recap videos. Watch code evolve before your eyes.
+###1 WEEK OF COACHING
 
-###7 FULL PROJECTS Full working projects built with React and D3v4. I included
-my code history so you can learn from my mistakes.
+I will help you get started and review your code. Includes up to 1 hour video
+chat and pair programming.
 
-###WEEKLY LIVECODING Weekly livecoding sessions with React, D3.js and others.
-Come watch me learn new technologies and solve coding problems live. Ask me
-anything, it's like office hours
+###INTERACTIVE COURSE
 
----
+Learn React and D3v4 with executable code samples right in your browser
 
-###BOOK + COURSE _The Book and the interactive course_
+###7 FULL HD SCREENCASTS
 
-###REACT+D3V4 249 pages of code samples and explanation in PDF, ePUB, or MOBI. A
-solid guide to building your first data visualization with React and d3.js.
+Get 7 full HD screencasts from my live streaming sessions and recap videos.
+Watch code evolve before your eyes.
 
-###INTERACTIVE COURSE Learn React and D3v4 with executable code samples right in
-your browser
+###7 FULL PROJECTS
 
-###7 FULL HD SCREENCASTS Get 7 full HD screencasts from my live streaming
-sessions and recap videos. Watch code evolve before your eyes.
+Full working projects built with React and D3v4. I included my code history so
+you can learn from my mistakes.
 
-###7 FULL PROJECTS Full working projects built with React and D3v4. I included
-my code history so you can learn from my mistakes.
+###WEEKLY LIVECODING
 
-###WEEKLY LIVECODING Weekly livecoding sessions with React, D3.js and others.
-Come watch me learn new technologies and solve coding problems live. Ask me
-anything, it's like office hours
+Weekly livecoding sessions with React, D3.js and others. Come watch me learn new
+technologies and solve coding problems live. Ask me anything, it's like office
+hours
 
 ---
 
-###JUST THE BOOK _The Book and some resources_
+###BOOK + COURSE
 
-###REACT+D3V4 249 pages of code samples and explanation in PDF, ePUB, or MOBI. A
-solid guide to building your first data visualization with React and d3.js.
+_The Book and the interactive course_
 
-###3 FULL HD SCREENCASTS Get 3 full HD screencasts from my explainer videos.
+###REACT+D3V4
 
-###7 FULL PROJECTS Full working projects built with React and D3v4. I included
-my code history so you can learn from my mistakes.
+249 pages of code samples and explanation in PDF, ePUB, or MOBI. A solid guide
+to building your first data visualization with React and d3.js.
 
-###WEEKLY LIVECODING Weekly livecoding sessions with React, D3.js and others.
-Come watch me learn new technologies and solve coding problems live. Ask me
-anything, it's like office hours
+###INTERACTIVE COURSE
+
+Learn React and D3v4 with executable code samples right in your browser
+
+###7 FULL HD SCREENCASTS
+
+Get 7 full HD screencasts from my live streaming sessions and recap videos.
+Watch code evolve before your eyes.
+
+###7 FULL PROJECTS
+
+Full working projects built with React and D3v4. I included my code history so
+you can learn from my mistakes.
+
+###WEEKLY LIVECODING
+
+Weekly livecoding sessions with React, D3.js and others. Come watch me learn new
+technologies and solve coding problems live. Ask me anything, it's like office
+hours
+
+---
+
+###JUST THE BOOK
+
+_The Book and some resources_
+
+###REACT+D3V4
+
+249 pages of code samples and explanation in PDF, ePUB, or MOBI. A solid guide
+to building your first data visualization with React and d3.js.
+
+###3 FULL HD SCREENCASTS
+
+Get 3 full HD screencasts from my explainer videos.
+
+###7 FULL PROJECTS
+
+Full working projects built with React and D3v4. I included my code history so
+you can learn from my mistakes.
+
+###WEEKLY LIVECODING
+
+Weekly livecoding sessions with React, D3.js and others. Come watch me learn new
+technologies and solve coding problems live. Ask me anything, it's like office
+hours
 
 ---
 
@@ -388,28 +435,36 @@ anything, it's like office hours
 
 ---
 
-###IS REACT+D3V4 FOR ME? Yes. If you already know JavaScript and perhaps some
-React and D3, this book is perfect. It's designed with React and D3 beginners in
-mind. If you're a veteran, you might want to skip some sections. But if you're
-new to web programming, I suggest finding something easier.
+###IS REACT+D3V4 FOR ME?
 
-###WHICH PACKAGE SHOULD I CHOOSE? That depends on your preferred style of
-learning. The book is great if you like to learn the basics in your browser,
-then switch to a real editor and local environment to go deep. The interactive
-course is great if you'd prefer to stay in your browser throughout. Coaching is
-perfect if you have specific questions or prefer explanations tailored to you
-personally. The videos are great, if you like to see how everything fits
-together visually.
+Yes. If you already know JavaScript and perhaps some React and D3, this book is
+perfect. It's designed with React and D3 beginners in mind. If you're a veteran,
+you might want to skip some sections. But if you're new to web programming, I
+suggest finding something easier.
 
-###I DON'T LIKE REACT. IS REACT+D3V4 STILL USEFUL? Yes! You can apply the core
-ideas behind React+D3v4 to any modern framework. Angular, Vue, or anything else
-that aims to separate business and rendering logic with a declarative approach.
+###WHICH PACKAGE SHOULD I CHOOSE?
 
-###WHAT IF I HATE REACT+D3V4? Send me an email and I'll click the magic refund
-button. You even get to keep the book.
+That depends on your preferred style of learning. The book is great if you like
+to learn the basics in your browser, then switch to a real editor and local
+environment to go deep. The interactive course is great if you'd prefer to stay
+in your browser throughout. Coaching is perfect if you have specific questions
+or prefer explanations tailored to you personally. The videos are great, if you
+like to see how everything fits together visually.
 
-###I HAVE ANOTHER QUESTION! Awesome! Just ping me on twitter or send me an
-email. I'm @swizec.
+###I DON'T LIKE REACT. IS REACT+D3V4 STILL USEFUL?
+
+Yes! You can apply the core ideas behind React+D3v4 to any modern framework.
+Angular, Vue, or anything else that aims to separate business and rendering
+logic with a declarative approach.
+
+###WHAT IF I HATE REACT+D3V4?
+
+Send me an email and I'll click the magic refund button. You even get to keep
+the book.
+
+###I HAVE ANOTHER QUESTION!
+
+Awesome! Just ping me on twitter or send me an email. I'm @swizec.
 
 ---
 

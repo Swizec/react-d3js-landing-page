@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Wrapper = styled.div`
   max-width: 1000px;
-  margin: 5rem auto;
+  margin: 0 auto;
 `
 const WrapperHeader = styled.div`
   font-size: 40px;
@@ -25,19 +25,19 @@ const WrapperCopy = styled.div`
 const Content = styled.div`
   margin: 0 3rem;
   display: grid;
+  grid-gap: 1rem;
   align-items: top;
   justify-items: center;
-  grid-gap: 1rem;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: 'Picture Copy';
+  grid-template-areas: 'Copy Picture';
   @media (max-width: 940px) {
     align-items: center;
     justify-items: center;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
-      'Copy'
-      'Picture';
+      'Picture'
+      'Copy';
   }
 `
 

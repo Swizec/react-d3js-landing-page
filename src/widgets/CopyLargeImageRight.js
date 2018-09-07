@@ -36,8 +36,8 @@ const Content = styled.div`
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
-      'Picture'
-      'Copy';
+      'Copy'
+      'Picture';
   }
 `
 

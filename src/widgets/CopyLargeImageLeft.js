@@ -2,13 +2,21 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
-  max-width: 1000px;
-  margin: 5rem auto;
+  background: #e5e8ec;
+  height: 75rem;
+  width: 100%;
 `
+const WrapperGroup = styled.div`
+  max-width: 1000px;
+  margin: 6rem auto;
+`
+
 const WrapperHeader = styled.div`
+  color: #384047;
+  font-weight: 800;
   font-size: 40px;
   text-align: center;
-  margin: 0 0 3rem;
+  padding: 5rem 0;
 `
 
 const WrapperImage = styled.img`
@@ -43,12 +51,14 @@ const Content = styled.div`
 
 const CopyLargeImageLeft = props => (
   <Wrapper>
-    <WrapperHeader>{props.header}</WrapperHeader>
+    <WrapperGroup>
+      <WrapperHeader>{props.header}</WrapperHeader>
 
-    <Content>
-      <WrapperImage src={props.image} alt="pic" />
-      <WrapperCopy>{props.copy}</WrapperCopy>
-    </Content>
+      <Content>
+        <WrapperImage src={props.image} alt="pic" />
+        <WrapperCopy>{props.copy}</WrapperCopy>
+      </Content>
+    </WrapperGroup>
   </Wrapper>
 )
 

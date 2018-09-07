@@ -1,33 +1,39 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import CopySmallImageLeft from './CopySmallImageLeft'
-import CopySmallImageRight from './CopySmallImageRight'
 
 const Wrapper = styled.div`
   background: #fff;
-  font-weight: 300;
   height: 100%;
   margin: 0 0rem;
   padding: 2rem;
-  color: #94a3a8;
-  font-size: 24px;
   line-height: 1.42857143;
-  color: #333;
 `
 const WrapperGroup = styled.div`
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 0;
 `
+const WrapperHeader = styled.div`
+  color: #384047;
+  font-weight: 800;
+  font-size: 40px;
+  text-align: center;
+  padding: 5rem 0;
+`
+const WrapperSub = styled.div``
+const WrapperCopy = styled.div`
+  font-size: 20px;
+  line-height: 1.7;
+`
 
-export default class CopyLight extends Component {
-  render() {
-    return (
-      <Wrapper>
-        <WrapperGroup />
-        <CopySmallImageLeft />
-        <CopySmallImageRight />
-      </Wrapper>
-    )
-  }
-}
+const CopyLight = props => (
+  <Wrapper>
+    <WrapperGroup>
+      <WrapperHeader>{props.header}</WrapperHeader>
+      <WrapperSub>{props.subtitle}</WrapperSub>
+      <WrapperCopy>{props.copy}</WrapperCopy>
+    </WrapperGroup>
+  </Wrapper>
+)
+
+export default CopyLight

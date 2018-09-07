@@ -28,7 +28,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "rm -rf .cache/ && gatsby develop",
     "serve": "rm -rf ./public && gatsby build && gatsby serve",
     "format": "prettier --write '{,**/}*.{js,json,mdx,css}'",
     "test": "echo \"Error: no test specified\" && exit 1",

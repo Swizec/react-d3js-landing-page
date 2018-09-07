@@ -1,0 +1,58 @@
+import Layout from '../components/layout'
+import Hero from '../widgets/Hero'
+import CopyLight from '../widgets/CopyLight'
+import CopyLargeImageLeft from '../widgets/CopyLargeImageLeft'
+import CopyLargeImageRight from '../widgets/CopyLargeImageRight'
+import Testimonial from '../widgets/Testimonial'
+import CopySmallImageLeft from '../widgets/CopySmallImageLeft'
+import CopySmallImageRight from '../widgets/CopySmallImageRight'
+import CopyLargeImageRightText from '../../content/CopyLargeImageRightText.mdx'
+import CopyLargeImageLeftText from '../../content/CopyLargeImageLeftText.mdx'
+
+import LeftImage from '../images/gatsby-icon.png'
+import Test1 from '../images/Test1.jpg'
+
+<Hero />
+<CopyLargeImageRight image={LeftImage} copy={<CopyLargeImageRightText />} />
+<CopyLargeImageLeft
+  header="LEARNING A NEW CODING PARADIGM IS HARD"
+  image={LeftImage}
+  copy={<CopyLargeImageLeftText />}
+/>
+<CopyLight
+  header="BECOME A DATA VISUALIZATION ENGINEER WITH REACT+D3V4"
+  copy={
+    <div>
+      <p>
+        React+D3v4 gives you a quick overview of the basics to get you
+        started, followed by a deep dive that solidifies your knowledge
+        through varied projects and examples. Build working code that you
+        can show off to your friends, boss, and coworkers.
+      </p>
+      <p>
+        Learn the basics with interactive examples right in your browser —
+        no need to install anything. Forget about Npm and Webpack and Babel
+        and Node. Just React and D3.
+      </p>
+      <p>
+        Dive into 7 projects that teach you how it all fits together. Build
+        interactive visualizations, create animations, and build fast
+        performance with canvas. Learn everything there is to know about
+        building beautiful apps with React and D3.
+      </p>
+      <p>
+        From the very basics of React and D3, to state handling with Redux
+        and MobX, React alternatives like Preact and Inferno.
+      </p>
+    </div>
+  }
+/>
+<Testimonial
+  image={Test1}
+  quote="You just blew my mind! This is going to save me so much time."
+  name="-- Patrick Davidson, Developer at Phytozome Group, JGI, Lawrence Berkeley Lab"
+/>
+<CopySmallImageLeft />
+<CopySmallImageRight />
+
+export default Layout

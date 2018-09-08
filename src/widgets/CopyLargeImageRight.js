@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
+  height: 100%;
   max-width: 1000px;
   margin: 0 auto;
 `
@@ -21,9 +22,10 @@ const WrapperCopy = styled.div`
   line-height: 1.7;
   grid-area: Copy;
 `
+const WrapperTestimonial = styled.div``
 
 const Content = styled.div`
-  margin: 0 3rem;
+  margin: 0 2rem;
   display: grid;
   grid-gap: 1rem;
   align-items: top;
@@ -49,6 +51,7 @@ const CopyLargeImageLeft = props => (
       <WrapperImage src={props.image} alt="pic" />
       <WrapperCopy>{props.copy}</WrapperCopy>
     </Content>
+    <WrapperTestimonial>{props.testimonial}</WrapperTestimonial>
   </Wrapper>
 )
 

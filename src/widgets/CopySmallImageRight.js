@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import Image1 from '../images/image_1.png'
 
 const Wrapper = styled.div`
-  margin: 5rem auto;
+  margin: 2rem auto;
+  padding: 2rem 2rem;
 `
 const WrapperGroup = styled.div`
   margin: 0 auto;
@@ -15,12 +15,6 @@ const WrapperGroup = styled.div`
   grid-template-areas: 'C2 C1';
   grid-gap: 1rem;
 
-  .content1 {
-    grid-area: C1;
-  }
-  .content2 {
-    grid-area: C2;
-  }
   h4 {
     color: #595c60;
     font-size: 22px;
@@ -43,32 +37,28 @@ const WrapperGroup = styled.div`
     align-items: center;
     justify-items: center;
     img {
-      height: 80px;
+      height: 250px;
     }
   }
 `
+const WrapperImage = styled.img`
+  grid-area: C1;
+  height: 400px;
+  width: 400px;
+  object-fit: contain;
+`
 
-export default class CopySmallImageRight extends Component {
-  render() {
-    return (
-      <Wrapper>
-        <WrapperGroup>
-          <div className="content1">
-            <img src={Image1} alt="img" />
-          </div>
+const WrapperCopy = styled.div`
+  grid-area: C2;
+`
 
-          <div className="content2">
-            <h4 class="zigzag-lead">Optimized for mobile devices</h4>
-            <p>
-              Suspendisse lobortis, odio in interdum vestibulum, nibh ex porta
-              diam, ac suscipit massa quam quis neque. Aliquam erat volutpat.
-              Etiam auctor luctus nisi vel volutpat. Curabitur sagittis magna eu
-              felis pellentesque, ut tempus orci scelerisque. Quisque feugiat
-              tellus at nibh tincidunt, ut rhoncus risus lobortis.
-            </p>
-          </div>
-        </WrapperGroup>
-      </Wrapper>
-    )
-  }
-}
+const CopySmallImageRight = props => (
+  <Wrapper>
+    <WrapperGroup>
+      <WrapperImage src={props.image} />
+      <WrapperCopy>{props.copy}</WrapperCopy>
+    </WrapperGroup>
+  </Wrapper>
+)
+
+export default CopySmallImageRight

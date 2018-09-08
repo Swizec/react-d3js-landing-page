@@ -30,6 +30,9 @@ const Wrapper = styled.div`
   .logo img {
     height: 70px;
   }
+  .Testimonial {
+    color: #94a3a8;
+  }
 
   .scrollto,
   .scrollto:hover {
@@ -78,8 +81,10 @@ const Content = styled.div`
     grid-area: ContentImage;
   }
   .Testimonial {
+    margin: 0 1rem;
     grid-area: Test;
   }
+
   @media (max-width: 640px) {
     margin: 0 auto;
     display: grid;
@@ -114,9 +119,18 @@ export default class Hero extends Component {
             <Content>
               <div className="Testimonial">
                 <Testimonial
-                  image={Test1}
                   quote="You just blew my mind! This is going to save me so much time."
-                  name="-- Patrick Davidson, Developer at Phytozome Group, JGI, Lawrence Berkeley Lab"
+                  image={Test1}
+                  name={
+                    <div>
+                      <p className="name">
+                        <strong>Johnathan Doe</strong>{' '}
+                      </p>
+                      <p className="company">
+                        Founder and CEO of <a href="/">Company Inc</a>
+                      </p>
+                    </div>
+                  }
                 />
               </div>
               <div class="banner">

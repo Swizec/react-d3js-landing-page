@@ -118,6 +118,7 @@ const IndexPage = () => (
         </div>
       }
     />
+
     <Testimonial
       image={Test1}
       quote="You just blew my mind! This is going to save me so much time."

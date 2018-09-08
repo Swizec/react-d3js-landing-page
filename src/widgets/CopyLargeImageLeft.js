@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Wrapper = styled.div`
   background: #e5e8ec;
-  height: 75rem;
+  height: 100%;
   width: 100%;
 `
 const WrapperGroup = styled.div`
@@ -29,9 +29,12 @@ const WrapperCopy = styled.div`
   line-height: 1.7;
   grid-area: Copy;
 `
+const WrapperTestimonial = styled.div`
+  margin: 0 3rem;
+`
 
 const Content = styled.div`
-  margin: 0 3rem;
+  margin: 0 2rem;
   display: grid;
   align-items: top;
   justify-items: center;
@@ -58,6 +61,7 @@ const CopyLargeImageLeft = props => (
         <WrapperImage src={props.image} alt="pic" />
         <WrapperCopy>{props.copy}</WrapperCopy>
       </Content>
+      <WrapperTestimonial>{props.testimonial}</WrapperTestimonial>
     </WrapperGroup>
   </Wrapper>
 )

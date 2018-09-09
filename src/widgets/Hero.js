@@ -21,7 +21,7 @@ const Wrapper = styled.div`
   background-color: #424ea4;
 
   h1 {
-    margin: 70px 0;
+    margin: 3rem 0;
   }
   h4 {
     font-weight: 100;

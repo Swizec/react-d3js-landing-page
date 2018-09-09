@@ -10,6 +10,8 @@ import CopyLargeImageRightText from '../../content/CopyLargeImageRightText.mdx'
 import CopyLargeImageLeftText from '../../content/CopyLargeImageLeftText.mdx'
 import CopyLightText from '../../content/CopyLightText'
 import ReadChapter from '../widgets/ReadChapter.js'
+import ChapterList from '../widgets/ChapterList.js'
+import ChaptersText from '../../content/ChaptersText'
 
 import LeftImage from '../images/gatsby-icon.png'
 import Test1 from '../images/Test1.jpg'
@@ -162,5 +164,26 @@ import examp8 from '../images/examp8.gif'
 />
 
 <ReadChapter />
+
+<Testimonial
+  image={Test1}
+  quote="You just blew my mind! This is going to save me so much time."
+  name={
+    <div>
+      <p className="name">
+        <strong>Johnathan Doe</strong>{' '}
+      </p>
+      <p className="company">
+        Founder and CEO of <a href="/">Company Inc</a>
+      </p>
+    </div>
+  }
+/>
+
+<ChapterList
+  title="WHAT'S IN THE BOOK"
+  subtitle="Table of contents"
+  chapters={<ChaptersText />}
+/>
 
 export default Layout

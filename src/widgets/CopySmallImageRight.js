@@ -46,6 +46,10 @@ const WrapperImage = styled.img`
   height: 400px;
   width: 400px;
   object-fit: contain;
+  @media (max-width: 940px) {
+    height: 300px;
+    width: 300px;
+  }
 `
 
 const WrapperCopy = styled.div`

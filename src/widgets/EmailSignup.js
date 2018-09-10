@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import Sample from '../images/sample.png'
 
 const Wrapper = styled.div`
   text-align: center;
 
   .form-control {
+    max-width: 500px;
     margin: 0 auto;
     display: block;
-    width: 60%;
+    width: 100%;
     height: 34px;
     padding: 6px 12px;
     font-size: 14px;
@@ -41,6 +43,7 @@ const Wrapper = styled.div`
     display: inline-block;
     margin-bottom: 0;
     font-weight: 400;
+    color: #fff;
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
@@ -56,12 +59,18 @@ const Wrapper = styled.div`
     -ms-user-select: none;
     user-select: none;
   }
+  @media (max-width: 940px) {
+    img {
+      height: 160px;
+    }
+  }
 `
 
 export default class EmailSignup extends Component {
   render() {
     return (
       <Wrapper>
+        <img src={Sample} alt="readymade-logo" />
         <form
           action="https://www.getdrip.com/forms/5362865/submissions"
           method="post"

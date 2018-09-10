@@ -18,12 +18,13 @@ const WrapperHeader = styled.div`
   font-weight: 800;
   font-size: 40px;
   text-align: center;
-  padding: 3rem 0;
+  padding: 2rem 0 0;
   @media (max-width: 940px) {
     font-size: 34px;
   }
 `
 const WrapperSub = styled.div`
+  margin: 2rem;
   text-align: center;
   font-weight: 200;
   font-size: 20px;

@@ -81,7 +81,7 @@ const Content = styled.div`
     grid-area: ContentImage;
   }
   .Testimonial {
-    margin: 0 1rem;
+    margin: 0 0rem;
     grid-area: Test;
   }
 

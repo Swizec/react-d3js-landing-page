@@ -13,7 +13,9 @@ import CopyLightText from '../../content/CopyLightText'
 import ReadChapter from '../widgets/ReadChapter.js'
 import ChapterList from '../widgets/ChapterList.js'
 import EmailSignup from '../widgets/EmailSignup.js'
+import VideoBlock from '../widgets/VideoBlock.js'
 import ChaptersText from '../../content/ChaptersText'
+import VideoBlockContent from '../../content/VideoBlockContent'
 
 import LeftImage from '../images/gatsby-icon.png'
 import Test1 from '../images/Test1.jpg'
@@ -194,6 +196,28 @@ import examp8 from '../images/examp8.gif'
   header="START WITH A FREE CHAPTER AND EMAIL CRASH COURSE"
   subtitle="See what React+D3v4 is like and learn the basics."
   copy={<EmailSignup />}
+  testimonial={
+    <Testimonial
+      image={Test1}
+      quote="You just blew my mind! This is going to save me so much time."
+      name={
+        <div>
+          <p className="name">
+            <strong>Johnathan Doe</strong>{' '}
+          </p>
+          <p className="company">
+            Founder and CEO of <a href="/">Company Inc</a>
+          </p>
+        </div>
+      }
+    />
+  }
+/>
+
+<CopyLight
+  header="REUSABLE DATA VISUALIZATION WITH REACT AND D3.JS"
+  subtitle="Watch my talks from HTML5DevConf and the Bay Area D3 Meetup"
+  copy={<VideoBlockContent />}
 />
 
 export default Layout

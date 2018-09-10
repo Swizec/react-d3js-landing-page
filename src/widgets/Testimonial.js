@@ -2,9 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
-  max-width: 500px;
+  max-width: 600px;
   margin: 3rem auto;
-
   display: grid;
   grid-gap: 10px;
   align-items: center;
@@ -20,6 +19,10 @@ const Wrapper = styled.div`
     display: grid;
   }
 `
+const WrapperGroup = styled.div`
+  margin: 0 auto;
+  text-align: center;
+`
 const WrapperImage = styled.img`
   margin: 1rem auto;
   height: 110px;
@@ -29,8 +32,9 @@ const WrapperImage = styled.img`
   grid-area: WI;
 `
 const WrapperQuote = styled.div`
-  width: 100%;
-  height: auto;
+  margin: 0 auto;
+  width: 80%;
+
   padding: 20px;
   text-align: center;
   background: #fff;
@@ -39,14 +43,14 @@ const WrapperQuote = styled.div`
   border-radius: 5px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-style: italic;
-  position: relative;
+
   line-height: 28px;
   font-size: 16px;
   -webkit-box-shadow: 0 3px 0px rgba(195, 197, 201, 1);
   -moz-box-shadow: 0 3px 0px rgba(195, 197, 201, 1);
   box-shadow: 0 3px 0px rgba(195, 197, 201, 1);
   transition: all 0.6s ease;
-  display: inline-block;
+
   vertical-align: top;
   grid-area: WQ;
 `
@@ -66,11 +70,13 @@ const WrapperName = styled.div`
 
 const Testimonial = props => (
   <Wrapper className="Testimonial">
-    <WrapperQuote>{props.quote}</WrapperQuote>
+    <WrapperGroup>
+      <WrapperQuote>{props.quote}</WrapperQuote>
 
-    <WrapperImage src={props.image} />
+      <WrapperImage src={props.image} />
 
-    <WrapperName>{props.name}</WrapperName>
+      <WrapperName>{props.name}</WrapperName>
+    </WrapperGroup>
   </Wrapper>
 )
 

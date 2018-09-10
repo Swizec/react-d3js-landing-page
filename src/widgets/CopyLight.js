@@ -5,7 +5,7 @@ const Wrapper = styled.div`
   background: #fff;
   height: 100%;
   margin: 0rem 0rem;
-  padding: 2rem;
+  padding: rem;
   line-height: 1.42857143;
 `
 const WrapperGroup = styled.div`
@@ -18,12 +18,18 @@ const WrapperHeader = styled.div`
   font-weight: 800;
   font-size: 40px;
   text-align: center;
-  padding: 3rem 0;
+  padding: 3rem 0 0;
   @media (max-width: 940px) {
     font-size: 34px;
   }
 `
-const WrapperSub = styled.div``
+const WrapperSub = styled.div`
+  margin: 1rem;
+  padding: 2rem 0;
+  text-align: center;
+  font-weight: 200;
+  font-size: 20px;
+`
 
 const WrapperCopy = styled.div`
   font-size: 20px;

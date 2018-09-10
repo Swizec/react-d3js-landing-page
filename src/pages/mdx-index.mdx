@@ -16,8 +16,11 @@ import EmailSignup from '../widgets/EmailSignup.js'
 import VideoBlock from '../widgets/VideoBlock.js'
 import ChaptersText from '../../content/ChaptersText'
 import VideoBlockContent from '../../content/VideoBlockContent'
+import Examples from '../../content/Examples'
+import AboutAuthorText from '../../content/AboutAuthorText.mdx'
 
 import LeftImage from '../images/gatsby-icon.png'
+import Swizec from '../images/swizec.png'
 import Test1 from '../images/Test1.jpg'
 import Image1 from '../images/image_1.png'
 import examp1 from '../images/examp1.gif'
@@ -218,6 +221,18 @@ import examp8 from '../images/examp8.gif'
   header="REUSABLE DATA VISUALIZATION WITH REACT AND D3.JS"
   subtitle="Watch my talks from HTML5DevConf and the Bay Area D3 Meetup"
   copy={<VideoBlockContent />}
+/>
+
+<CopyDark
+  header="7 FULL HD SCREENCASTS"
+  subtitle="Watching code appear before your eyes makes it easier to understand."
+  copy={<Examples />}
+/>
+
+<CopyLargeImageLeft
+  header="ABOUT THE AUTHOR"
+  image={Swizec}
+  copy={<AboutAuthorText />}
 />
 
 export default Layout

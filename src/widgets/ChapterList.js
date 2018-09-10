@@ -14,13 +14,23 @@ const WrapperGroup = styled.div`
 `
 const WrapperTitle = styled.div`
   text-align: center;
+  font-size: 40px;
+  color: #595c60;
 `
 const WrapperSubTitle = styled.div`
   text-align: center;
+  font-size: 30px;
 `
 const WrapperChapList = styled.div`
-  text-align: center;
   list-style: none;
+  h1 {
+    font-size: 24px;
+    color: #595c60;
+  }
+  p {
+    font-size: 18px;
+    font-weight: bold;
+  }
 `
 
 const ChapterList = props => (

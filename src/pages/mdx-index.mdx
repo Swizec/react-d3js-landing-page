@@ -1,6 +1,7 @@
 import Layout from '../components/layout'
 import Hero from '../widgets/Hero'
 import CopyLight from '../widgets/CopyLight'
+import CopyDark from '../widgets/CopyDark'
 import CopyLargeImageLeft from '../widgets/CopyLargeImageLeft'
 import CopyLargeImageRight from '../widgets/CopyLargeImageRight'
 import Testimonial from '../widgets/Testimonial'
@@ -11,6 +12,7 @@ import CopyLargeImageLeftText from '../../content/CopyLargeImageLeftText.mdx'
 import CopyLightText from '../../content/CopyLightText'
 import ReadChapter from '../widgets/ReadChapter.js'
 import ChapterList from '../widgets/ChapterList.js'
+import EmailSignup from '../widgets/EmailSignup.js'
 import ChaptersText from '../../content/ChaptersText'
 
 import LeftImage from '../images/gatsby-icon.png'
@@ -179,11 +181,19 @@ import examp8 from '../images/examp8.gif'
     </div>
   }
 />
-
+<hr></hr>
 <ChapterList
   title="WHAT'S IN THE BOOK"
   subtitle="Table of contents"
   chapters={<ChaptersText />}
+/>
+
+<ReadChapter />
+
+<CopyDark
+  header="START WITH A FREE CHAPTER AND EMAIL CRASH COURSE"
+  subtitle="See what React+D3v4 is like and learn the basics."
+  copy={<EmailSignup />}
 />
 
 export default Layout

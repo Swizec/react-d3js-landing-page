@@ -14,9 +14,11 @@ import ReadChapter from '../widgets/ReadChapter.js'
 import ChapterList from '../widgets/ChapterList.js'
 import EmailSignup from '../widgets/EmailSignup.js'
 import VideoBlock from '../widgets/VideoBlock.js'
+import AboutAuthor from '../widgets/AboutAuthor.js'
 import ChaptersText from '../../content/ChaptersText'
 import VideoBlockContent from '../../content/VideoBlockContent'
 import Examples from '../../content/Examples'
+import Examples2 from '../../content/Examples2'
 import AboutAuthorText from '../../content/AboutAuthorText.mdx'
 
 import LeftImage from '../images/gatsby-icon.png'
@@ -228,11 +230,35 @@ import examp8 from '../images/examp8.gif'
   subtitle="Watching code appear before your eyes makes it easier to understand."
   copy={<Examples />}
 />
+<CopyDark
+  header="A COURSE WITH INTERACTIVE CODE SAMPLES"
+  subtitle="Learn React and D3v4 with executable code samples right in your browser"
+  copy={<Examples2 />}
+/>
 
-<CopyLargeImageLeft
+<AboutAuthor
   header="ABOUT THE AUTHOR"
   image={Swizec}
   copy={<AboutAuthorText />}
+/>
+
+<CopyDark
+  copy={
+    <VideoBlock
+      video={
+        <iframe
+          frameborder="0"
+          allowfullscreen="1"
+          allow="autoplay; encrypted-media"
+          title="YouTube video player"
+          width="853"
+          height="480"
+          src="https://www.youtube.com/embed/4vTvXThQuXA?enablejsapi=1&amp;origin=https%3A%2F%2Fswizec.com&amp;widgetid=5"
+          id="widget6"
+        />
+      }
+    />
+  }
 />
 
 export default Layout

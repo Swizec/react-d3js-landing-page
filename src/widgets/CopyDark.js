@@ -5,7 +5,7 @@ const Wrapper = styled.div`
   background: #e5e8ec;
   height: 100%;
   margin: 0rem 0rem;
-  padding: 2rem;
+  padding: 1rem;
   line-height: 1.42857143;
 `
 const WrapperGroup = styled.div`
@@ -31,6 +31,7 @@ const WrapperSub = styled.div`
 `
 
 const WrapperCopy = styled.div`
+  text-align: center;
   font-size: 20px;
   line-height: 1.7;
 `

@@ -87,7 +87,7 @@ export default class EmailSignup extends Component {
             React apps and show you how JSX makes your code better.
           </p>
 
-          <div class="col-md-6 col-md-offset-3">
+          <div className="col-md-6 col-md-offset-3">
             <input
               type="text"
               placeholder="Email"

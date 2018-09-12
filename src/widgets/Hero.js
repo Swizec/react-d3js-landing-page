@@ -99,20 +99,22 @@ export default class Hero extends Component {
   render() {
     return (
       <Wrapper>
-        <div class="preloader" />
+        <div className="preloader" />
 
-        <main id="top" class="masthead" role="main">
-          <div class="container">
-            <div class="logo">
+        <main id="top" className="masthead" role="main">
+          <div className="container">
+            <div className="logo">
               {' '}
               <a href="/">
                 <img src={logo} alt="readymade-logo" />
               </a>
             </div>
 
-            <h1 class="main-title">STUCK COPY PASTING RANDOM D3 EXAMPLES?</h1>
+            <h1 className="main-title">
+              STUCK COPY PASTING RANDOM D3 EXAMPLES?
+            </h1>
 
-            <h4 class="sub-title">
+            <h4 className="sub-title">
               Become a data visualization engineer with React + D3v4.
             </h4>
 
@@ -133,14 +135,14 @@ export default class Hero extends Component {
                   }
                 />
               </div>
-              <div class="banner">
+              <div className="banner">
                 <img src={product} alt="Web App Banner" className="image" />
               </div>
             </Content>
           </div>
 
-          <a href="#explore" class="scrollto">
-            <p class="scrollto--arrow">
+          <a href="#explore" className="scrollto">
+            <p className="scrollto--arrow">
               <img src={down_arrow} alt="scroll down arrow" />
             </p>
           </a>

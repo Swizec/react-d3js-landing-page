@@ -16,6 +16,8 @@ import EmailSignup from '../widgets/EmailSignup.js'
 import VideoBlock from '../widgets/VideoBlock.js'
 import AboutAuthor from '../widgets/AboutAuthor.js'
 import PackageLight from '../widgets/PackageLight.js'
+import PackageFeatures from '../widgets/PackageFeatures.js'
+import CTAButton from '../widgets/CTAButton.js'
 import ChaptersText from '../../content/ChaptersText'
 import VideoBlockContent from '../../content/VideoBlockContent'
 import Examples1 from '../../content/Examples1'
@@ -261,10 +263,13 @@ import examp8 from '../images/examp8.gif'
     />
   }
 />
-
 <PackageLight
   header="BOOK + COURSE + COACHING"
   subtitle="The book, the interactive course, 1 week of personal coaching"
+  copy={<PackageFeatures/>}
+  button={<CTAButton 
+  link={<a href="/">Buy Now For $399</a>}
+  />}
 />
 
 export default Layout

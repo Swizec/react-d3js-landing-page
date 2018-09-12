@@ -34,7 +34,6 @@ const WrapperImage = styled.img`
 const WrapperQuote = styled.div`
   margin: 0 auto;
   width: 80%;
-
   padding: 20px;
   text-align: center;
   background: #fff;

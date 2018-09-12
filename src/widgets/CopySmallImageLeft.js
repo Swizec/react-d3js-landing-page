@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
-  margin: 2rem auto;
+  margin: 00rem auto;
   padding: 2rem 2rem;
 `
 const WrapperGroup = styled.div`

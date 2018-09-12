@@ -24,12 +24,15 @@ const WrapperSubTitle = styled.div`
 const WrapperChapList = styled.div`
   list-style: none;
   h1 {
-    font-size: 24px;
+    font-size: 34px;
     color: #595c60;
   }
   p {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: bold;
+  }
+  li {
+    font-size: 20px;
   }
 `
 

@@ -15,9 +15,10 @@ import ChapterList from '../widgets/ChapterList.js'
 import EmailSignup from '../widgets/EmailSignup.js'
 import VideoBlock from '../widgets/VideoBlock.js'
 import AboutAuthor from '../widgets/AboutAuthor.js'
+import PackageLight from '../widgets/PackageLight.js'
 import ChaptersText from '../../content/ChaptersText'
 import VideoBlockContent from '../../content/VideoBlockContent'
-import Examples from '../../content/Examples'
+import Examples1 from '../../content/Examples1'
 import Examples2 from '../../content/Examples2'
 import AboutAuthorText from '../../content/AboutAuthorText.mdx'
 
@@ -188,7 +189,7 @@ import examp8 from '../images/examp8.gif'
     </div>
   }
 />
-<hr></hr>
+
 <ChapterList
   title="WHAT'S IN THE BOOK"
   subtitle="Table of contents"
@@ -228,7 +229,7 @@ import examp8 from '../images/examp8.gif'
 <CopyDark
   header="7 FULL HD SCREENCASTS"
   subtitle="Watching code appear before your eyes makes it easier to understand."
-  copy={<Examples />}
+  copy={<Examples1 />}
 />
 <CopyDark
   header="A COURSE WITH INTERACTIVE CODE SAMPLES"
@@ -259,6 +260,11 @@ import examp8 from '../images/examp8.gif'
       }
     />
   }
+/>
+
+<PackageLight
+  header="BOOK + COURSE + COACHING"
+  subtitle="The book, the interactive course, 1 week of personal coaching"
 />
 
 export default Layout

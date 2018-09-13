@@ -16,7 +16,7 @@ const WrapperHeader = styled.div`
   font-weight: 800;
   font-size: 40px;
   text-align: center;
-  padding: 5rem 0;
+  padding: 3rem 0;
 `
 
 const WrapperImage = styled.img`

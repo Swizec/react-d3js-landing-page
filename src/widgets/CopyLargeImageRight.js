@@ -9,7 +9,10 @@ const Wrapper = styled.div`
 const WrapperHeader = styled.div`
   font-size: 40px;
   text-align: center;
-  margin: 0 0 3rem;
+  margin: 0 0 2rem;
+  @media (max-width: 940px) {
+    font-size: 30px;
+  }
 `
 
 const WrapperImage = styled.img`

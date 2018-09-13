@@ -15,7 +15,11 @@ const WrapperGroup = styled.div`
 const WrapperTitle = styled.div`
   text-align: center;
   font-size: 40px;
+  font-weight: 800;
   color: #595c60;
+  @media (max-width: 940px) {
+    font-size: 30px;
+  }
 `
 const WrapperSubTitle = styled.div`
   text-align: center;
@@ -24,15 +28,26 @@ const WrapperSubTitle = styled.div`
 const WrapperChapList = styled.div`
   list-style: none;
   h1 {
-    font-size: 34px;
+    font-size: 30px;
     color: #595c60;
   }
   p {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
   }
   li {
     font-size: 20px;
+  }
+  @media (max-width: 940px) {
+    h1 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 18px;
+    }
+    li {
+      font-size: 16px;
+    }
   }
 `
 

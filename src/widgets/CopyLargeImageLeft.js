@@ -16,7 +16,10 @@ const WrapperHeader = styled.div`
   font-weight: 800;
   font-size: 40px;
   text-align: center;
-  padding: 5rem 0;
+  padding: 5rem 0 2rem;
+  @media (max-width: 940px) {
+    font-size: 30px;
+  }
 `
 
 const WrapperImage = styled.img`

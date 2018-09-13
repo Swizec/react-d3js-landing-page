@@ -25,6 +25,7 @@ const WrapperHeader = styled.div`
 `
 
 const WrapperSubtitle = styled.div`
+  margin: 0 0 3rem;
   text-align: center;
   font-size: 30px;
   @media (max-width: 940px) {

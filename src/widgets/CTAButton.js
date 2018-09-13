@@ -8,7 +8,7 @@ const Wrapper = styled.div`
     -webkit-box-shadow: 0 3px 0 rgb(214, 106, 18);
     box-shadow: 0 3px 0 rgb(214, 106, 18);
     text-transform: uppercase;
-    padding: 2rem;
+    padding: 1rem;
     margin: 1rem 0;
     display: inline-block;
     margin-bottom: 0;

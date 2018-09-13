@@ -21,7 +21,9 @@ import PackageFeatures from '../widgets/PackageFeatures.js'
 import PackageFeatures2 from '../widgets/PackageFeatures2.js'
 import PackageFeatures3 from '../widgets/PackageFeatures3.js'
 import CTAButton from '../widgets/CTAButton.js'
+import ContactBar from '../widgets/ContactBar.js'
 import ChaptersText from '../../content/ChaptersText'
+import ContactBarText from '../../content/ContactBarText'
 import VideoBlockContent from '../../content/VideoBlockContent'
 import Examples1 from '../../content/Examples1'
 import Examples2 from '../../content/Examples2'
@@ -259,6 +261,7 @@ import examp8 from '../images/examp8.gif'
           title="YouTube video player"
           width="853"
           height="480"
+          className='youtubevid'
           src="https://www.youtube.com/embed/4vTvXThQuXA?enablejsapi=1&amp;origin=https%3A%2F%2Fswizec.com&amp;widgetid=5"
           id="widget6"
         />
@@ -289,6 +292,9 @@ import examp8 from '../images/examp8.gif'
   button={<CTAButton 
   link={<button>Buy Now For $49</button>}
   />}
+/>
+<ContactBar 
+header={<ContactBarText/>}
 />
 
 export default Layout

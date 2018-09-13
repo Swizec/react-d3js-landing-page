@@ -22,6 +22,9 @@ const WrapperHeader = styled.div`
 const WrapperImage = styled.img`
   height: 300px;
   grid-area: Picture;
+  @media (max-width: 940px) {
+    height: 200px;
+  }
 `
 
 const WrapperCopy = styled.div`
@@ -47,8 +50,8 @@ const Content = styled.div`
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
-      'Copy'
-      'Picture';
+      'Picture'
+      'Copy';
   }
 `
 

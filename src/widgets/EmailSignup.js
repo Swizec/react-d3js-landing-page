@@ -6,12 +6,12 @@ const Wrapper = styled.div`
   text-align: center;
 
   .form-control {
-    max-width: 500px;
+    max-width: 400px;
     margin: 0 auto;
     display: block;
     width: 100%;
     height: 34px;
-    padding: 6px 12px;
+    padding: 6px;
     font-size: 14px;
     line-height: 1.428571429;
     color: #555;
@@ -61,7 +61,7 @@ const Wrapper = styled.div`
   }
   @media (max-width: 940px) {
     img {
-      height: 160px;
+      height: 140px;
     }
   }
 `

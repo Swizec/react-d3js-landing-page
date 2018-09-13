@@ -14,24 +14,26 @@ const WrapperGroup = styled.div`
   padding: 0 0;
 `
 const WrapperHeader = styled.div`
+  margin: 0 2rem;
   color: #384047;
   font-weight: 800;
   font-size: 40px;
   text-align: center;
   padding: 3rem 0 0;
   @media (max-width: 940px) {
-    font-size: 34px;
+    font-size: 24px;
   }
 `
 const WrapperSub = styled.div`
   margin: 1rem;
-  padding: 2rem 0;
+  padding: 1rem 0;
   text-align: center;
   font-weight: 200;
   font-size: 20px;
 `
 
 const WrapperCopy = styled.div`
+  margin: 0 2rem;
   font-size: 20px;
   line-height: 1.7;
 `

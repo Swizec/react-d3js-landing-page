@@ -18,13 +18,13 @@ const WrapperHeader = styled.div`
   font-weight: 800;
   font-size: 40px;
   text-align: center;
-  padding: 2rem 0 0;
+  padding: 1rem 0 0;
   @media (max-width: 940px) {
     font-size: 34px;
   }
 `
 const WrapperSub = styled.div`
-  margin: 2rem;
+  margin: 1rem;
   text-align: center;
   font-weight: 200;
   font-size: 20px;
@@ -34,6 +34,11 @@ const WrapperCopy = styled.div`
   text-align: center;
   font-size: 20px;
   line-height: 1.7;
+  @media (max-width: 940px) {
+    img {
+      height: 200px;
+    }
+  }
 `
 const WrapperTestimonial = styled.div`
   margin: 0 1rem;

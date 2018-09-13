@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
+  background: #e5e8ec;
   height: 100%;
   margin: 0rem 0rem;
   padding: 2rem;
@@ -37,7 +38,7 @@ const WrapperButton = styled.div`
   text-align: center;
 `
 
-const PackageLight = props => (
+const PackageDark = props => (
   <Wrapper>
     <WrapperGroup>
       <WrapperHeader>{props.header}</WrapperHeader>
@@ -48,4 +49,4 @@ const PackageLight = props => (
   </Wrapper>
 )
 
-export default PackageLight
+export default PackageDark

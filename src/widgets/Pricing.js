@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 
 const WrapperGroup = styled.div`
   max-width: 1100px;
-  margin: 2rem auto 3rem;
+  margin: 2rem auto 2rem;
   padding: 0 0;
 `
 
@@ -25,6 +25,8 @@ const WrapperHeader = styled.div`
 `
 
 const WrapperBlock = styled.div`
+  max-width: 100%;
+  margin: 00 auto;
   text-align: center;
   font-size: 30px;
   @media (max-width: 940px) {

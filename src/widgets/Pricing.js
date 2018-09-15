@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 
 const WrapperGroup = styled.div`
   max-width: 1100px;
-  margin: 2rem auto;
+  margin: 4rem auto;
   padding: 0 0;
 `
 
@@ -34,7 +34,16 @@ const WrapperBlock = styled.div`
   }
 `
 
-const WrapperCopy = styled.div``
+const WrapperCopy = styled.div`
+  margin: 5rem 0;
+  font-size: 25px;
+  text-align: center;
+`
+const WrapperTestimonial = styled.div`
+  margin: 5rem 0;
+  font-size: 25px;
+  text-align: center;
+`
 
 const Pricing = props => (
   <Wrapper>
@@ -42,6 +51,7 @@ const Pricing = props => (
       <WrapperHeader>{props.header}</WrapperHeader>
       <WrapperBlock>{props.block}</WrapperBlock>
       <WrapperCopy>{props.copy}</WrapperCopy>
+      <WrapperTestimonial>{props.testimonial}</WrapperTestimonial>
     </WrapperGroup>
   </Wrapper>
 )

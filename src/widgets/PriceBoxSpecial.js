@@ -17,11 +17,25 @@ const WrapperGroup = styled.div`
   display: block;
 
   .price {
+    background: #3d57a3;
+    background: -moz-linear-gradient(top, #4d3d9e 50%, #2a75a8 100%);
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(50%, #4d3d9e),
+      color-stop(100%, #2a75a8)
+    );
+    background: -webkit-linear-gradient(top, #4d3d9e 50%, #2a75a8 100%);
+    background: -o-linear-gradient(top, #4d3d9e 50%, #2a75a8 100%);
+    background: -ms-linear-gradient(top, #4d3d9e 50%, #2a75a8 100%);
+    background: linear-gradient(to bottom, #4d3d9e 50%, #2a75a8 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d3d9e', endColorstr='#2a75a8', GradientType=0 );
+    color: #fff;
     margin: 1rem 1rem;
     font-size: 52px;
     font-weight: 300;
     margin: 0px auto;
-    background: #e5e8ec;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     border-radius: 100%;
@@ -56,11 +70,11 @@ const WrapperGroup = styled.div`
     vertical-align: super;
   }
   .btn-grey {
-    background-color: #868c96;
+    background-color: #ff871c;
     line-height: 1.8;
+    -webkit-box-shadow: 0 3px 0 rgb(214, 106, 18);
+    box-shadow: 0 3px 0 rgb(214, 106, 18);
     color: #fff;
-    -webkit-box-shadow: 0 3px 0 rgb(108, 115, 107);
-    box-shadow: 0 3px 0 rgb(108, 115, 107);
     text-decoration: none;
   }
   .btn {
@@ -84,7 +98,7 @@ const WrapperGroup = styled.div`
   }
 `
 
-const PriceBox = props => (
+const PriceBoxSpecial = props => (
   <Wrapper>
     <WrapperGroup>
       <div className="pricing">
@@ -97,4 +111,4 @@ const PriceBox = props => (
   </Wrapper>
 )
 
-export default PriceBox
+export default PriceBoxSpecial

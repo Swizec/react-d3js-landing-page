@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 
 const WrapperGroup = styled.div`
   max-width: 1100px;
-  margin: 2rem auto 2rem;
+  margin: 2rem auto;
   padding: 0 0;
 `
 
@@ -26,9 +26,9 @@ const WrapperHeader = styled.div`
 
 const WrapperBlock = styled.div`
   max-width: 100%;
-  margin: 00 auto;
+  margin: 0 auto;
   text-align: center;
-  font-size: 30px;
+
   @media (max-width: 940px) {
     font-size: 20px;
   }
@@ -36,17 +36,12 @@ const WrapperBlock = styled.div`
 
 const WrapperCopy = styled.div``
 
-const WrapperButton = styled.div`
-  text-align: center;
-`
-
 const Pricing = props => (
   <Wrapper>
     <WrapperGroup>
       <WrapperHeader>{props.header}</WrapperHeader>
       <WrapperBlock>{props.block}</WrapperBlock>
       <WrapperCopy>{props.copy}</WrapperCopy>
-      <WrapperButton>{props.testimonial}</WrapperButton>
     </WrapperGroup>
   </Wrapper>
 )

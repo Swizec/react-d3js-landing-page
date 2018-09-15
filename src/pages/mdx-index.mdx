@@ -24,7 +24,10 @@ import CTAButton from '../widgets/CTAButton.js'
 import ContactBar from '../widgets/ContactBar.js'
 import Pricing from '../widgets/Pricing.js'
 import PriceBox from '../widgets/PriceBox.js'
+import FAQ from '../widgets/FAQ.js'
+import FAQText from '../../content/FAQText'
 import ChaptersText from '../../content/ChaptersText'
+import PriceBlock from '../../content/PriceBlock'
 import ContactBarText from '../../content/ContactBarText'
 import VideoBlockContent from '../../content/VideoBlockContent'
 import Examples1 from '../../content/Examples1'
@@ -298,66 +301,14 @@ import examp8 from '../images/examp8.gif'
 <ContactBar 
 header={<ContactBarText/>}
 />
+<CopyLight 
+header='FAQ?'
+subtitle='Do you have any questions? We’ve got answers'
+copy={<FAQText />}
+/>
 <Pricing 
 header='CHOOSE A PACKAGE'
-block={<div>
-  <PriceBox
-  price={<div class="price"> <span class="curr">$</span>49</div>}
-  plan='BOOK'
-  features={<div>
-    React+D3v4 [PDF/epub/mobi]
-    <br></br>
-    3 recap videos
-    <br></br>
-    7 full projects
-    <br></br>
-    Weekly livecoding sessions
-    <br></br>
-    Free updates
-    <br></br>
-    Money-back guarantee
-    </div>
-  }
-  />
-  <PriceBox
-  price={<div class="price"> <span class="curr">$</span>149</div>}
-  plan='BOOK+COURSE'
-  features={<div>
-    React+D3v4 [PDF/epub/mobi]
-    <br></br>
-    3 recap videos
-    <br></br>
-    7 full projects
-    <br></br>
-    Weekly livecoding sessions
-    <br></br>
-    Free updates
-    <br></br>
-    Money-back guarantee
-    </div>
-  }
-  />
-  <PriceBox
-  price={<div class="price"> <span class="curr">$</span>399</div>}
-  plan={<div><p>BOOK+COURSE</p>
-  <p>+coaching</p></div>}
-  features={<div>
-    React+D3v4 [PDF/epub/mobi]
-    <br></br>
-    3 recap videos
-    <br></br>
-    7 full projects
-    <br></br>
-    Weekly livecoding sessions
-    <br></br>
-    Free updates
-    <br></br>
-    Money-back guarantee
-    </div>
-  }
-  />
-  </div>
-  }
+block={<PriceBlock />}
 />
 
 export default Layout

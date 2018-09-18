@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 
 const WrapperGroup = styled.div`
   max-width: 1100px;
-  margin: 2rem auto 3rem;
+  margin: 4rem auto;
   padding: 0 0;
 `
 

@@ -54,15 +54,17 @@ const WrapperQuote = styled.div`
   grid-area: WQ;
 `
 const WrapperName = styled.div`
-  .name {
-    color: #384047;
-    font-size: 16px;
-  }
-  .company {
-    color: ##94a3a8;
-    font-size: 14px;
-    font-weight: 300;
-  }
+  color: #384047;
+  font-size: 16px;
+  font-weight: bold;
+
+  text-align: center;
+  grid-area: WN;
+`
+const WrapperCompany = styled.div`
+  color: ##94a3a8;
+  font-size: 14px;
+  font-weight: 200;
   text-align: center;
   grid-area: WN;
 `
@@ -75,6 +77,7 @@ const Testimonial = props => (
       <WrapperImage src={props.image} />
 
       <WrapperName>{props.name}</WrapperName>
+      <WrapperCompany>{props.company}</WrapperCompany>
     </WrapperGroup>
   </Wrapper>
 )

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import AboutMeFeatures from '../widgets/AboutMeFeatures'
 
 const Wrapper = styled.div`
   background: #fff;
@@ -35,6 +36,9 @@ const WrapperCopy = styled.div`
 const WrapperTestimonial = styled.div`
   margin: 0 3rem;
 `
+const Features = styled.div`
+  grid-area: Feat;
+`
 
 const Content = styled.div`
   margin: 0 2rem;
@@ -43,7 +47,10 @@ const Content = styled.div`
   justify-items: center;
   grid-gap: 1rem;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: 'Picture Copy';
+  grid-template-areas:
+    'Picture Copy'
+    '. Feat';
+
   @media (max-width: 940px) {
     align-items: center;
     justify-items: center;
@@ -51,7 +58,8 @@ const Content = styled.div`
     grid-template-columns: 1fr;
     grid-template-areas:
       'Picture'
-      'Copy';
+      'Copy'
+      'Feat';
   }
 `
 
@@ -63,6 +71,7 @@ const CopyLargeImageLeft = props => (
       <Content>
         <WrapperImage src={props.image} alt="pic" />
         <WrapperCopy>{props.copy}</WrapperCopy>
+        <Features>{<AboutMeFeatures />}</Features>
       </Content>
       <WrapperTestimonial>{props.testimonial}</WrapperTestimonial>
     </WrapperGroup>

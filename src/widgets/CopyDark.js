@@ -10,7 +10,7 @@ const Wrapper = styled.div`
 `
 const WrapperGroup = styled.div`
   max-width: 1000px;
-  margin: 4rem auto;
+  margin: 2rem auto;
   padding: 0 0;
 `
 const WrapperHeader = styled.div`
@@ -41,7 +41,7 @@ const WrapperCopy = styled.div`
   }
 `
 const WrapperTestimonial = styled.div`
-  margin: 0 1rem;
+  margin: 0 0rem;
 `
 
 const CopyDark = props => (

@@ -5,6 +5,7 @@ import CopyDark from '../widgets/CopyDark'
 import CopyLargeImageLeft from '../widgets/CopyLargeImageLeft'
 import CopyLargeImageRight from '../widgets/CopyLargeImageRight'
 import Testimonial from '../widgets/Testimonial'
+import TestimonialDark from '../widgets/TestimonialDark'
 import CopySmallImageLeft from '../widgets/CopySmallImageLeft'
 import CopySmallImageRight from '../widgets/CopySmallImageRight'
 import CopyLargeImageRightText from '../../content/CopyLargeImageRightText.mdx'
@@ -27,6 +28,9 @@ import PriceBox from '../widgets/PriceBox.js'
 import FAQ from '../widgets/FAQ.js'
 import FAQText from '../../content/FAQText'
 import ChaptersText from '../../content/ChaptersText'
+import EmailForm from '../../content/EmailForm'
+import EmailSubmit from '../../content/EmailSubmit'
+import EmailHeaderText from '../../content/EmailHeaderText'
 import PriceBlock from '../../content/PriceBlock'
 import ContactBarText from '../../content/ContactBarText'
 import VideoBlockContent from '../../content/VideoBlockContent'
@@ -69,7 +73,7 @@ import examp8 from '../images/examp8.gif'
   header="BECOME A DATA VISUALIZATION ENGINEER WITH REACT+D3V4"
   copy={<CopyLightText />}
   testimonial={
-    <Testimonial
+    <TestimonialDark
       image={Test1}
       quote="You just blew my mind! This is going to save me so much time."
       name="Johnathan Doe"
@@ -171,7 +175,7 @@ import examp8 from '../images/examp8.gif'
 
 <ReadChapter />
 
-<Testimonial
+<TestimonialDark
   image={Test1}
   quote="You just blew my mind! This is going to save me so much time."
   name="Johnathan Doe"
@@ -189,7 +193,13 @@ import examp8 from '../images/examp8.gif'
 <CopyDark
   header="START WITH A FREE CHAPTER AND EMAIL CRASH COURSE"
   subtitle="See what React+D3v4 is like and learn the basics."
-  copy={<EmailSignup />}
+  copy={
+    <EmailSignup
+      header={<EmailHeaderText />}
+      input={<EmailForm />}
+      submit={<EmailSubmit />}
+    />
+  }
   testimonial={
     <Testimonial
       image={Test1}
@@ -215,6 +225,14 @@ import examp8 from '../images/examp8.gif'
   header="A COURSE WITH INTERACTIVE CODE SAMPLES"
   subtitle="Learn React and D3v4 with executable code samples right in your browser"
   copy={<Examples2 />}
+  testimonial={
+    <Testimonial
+      image={Test1}
+      quote="You just blew my mind! This is going to save me so much time."
+      name="Johnathan Doe"
+      company={'Founder and CEO of ' + 'Company Inc'}
+    />
+  }
 />
 
 <AboutAuthor

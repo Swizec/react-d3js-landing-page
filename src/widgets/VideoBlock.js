@@ -6,7 +6,7 @@ const Wrapper = styled.div``
 const WrapperVideo = styled.div`
   max-width: 1000px;
   margin: 0 auto;
-  padding: 2rem 0 3rem;
+  padding: 1rem 0 2rem;
   text-align: center;
   @media (max-width: 940px) {
     .youtubevid {

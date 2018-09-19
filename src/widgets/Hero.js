@@ -121,18 +121,10 @@ export default class Hero extends Component {
             <Content>
               <div className="Testimonial">
                 <Testimonial
-                  quote="You just blew my mind! This is going to save me so much time."
                   image={Test1}
-                  name={
-                    <div>
-                      <p className="name">
-                        <strong>Johnathan Doe</strong>{' '}
-                      </p>
-                      <p className="company">
-                        Founder and CEO of <a href="/">Company Inc</a>
-                      </p>
-                    </div>
-                  }
+                  quote="You just blew my mind! This is going to save me so much time."
+                  name="Johnathan Doe"
+                  company={'Founder and CEO of Company Inc'}
                 />
               </div>
               <div className="banner">

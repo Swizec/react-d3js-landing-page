@@ -42,14 +42,12 @@ const WrapperQuote = styled.div`
   border-radius: 5px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-style: italic;
-
   line-height: 28px;
   font-size: 16px;
   -webkit-box-shadow: 0 3px 0px rgba(195, 197, 201, 1);
   -moz-box-shadow: 0 3px 0px rgba(195, 197, 201, 1);
   box-shadow: 0 3px 0px rgba(195, 197, 201, 1);
   transition: all 0.6s ease;
-
   vertical-align: top;
   grid-area: WQ;
 `

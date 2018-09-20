@@ -9,6 +9,7 @@ const Wrapper = styled.div`
   line-height: 1.42857143;
 `
 const WrapperHeader = styled.div`
+  margin: 0 2rem;
   color: #384047;
   font-weight: 800;
   font-size: 30px;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Carousel from 'nuka-carousel'
 import styled from 'styled-components'
 import Testimonial from '../widgets/Testimonial'
@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   margin: 4rem auto;
 `
 
-export default class extends React.Component {
+export default class extends Component {
   render() {
     return (
       <Wrapper>

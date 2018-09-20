@@ -40,6 +40,16 @@ const WrapperCopy = styled.div`
     }
   }
 `
+const WrapperIMG = styled.div`
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.7;
+  @media (max-width: 940px) {
+    img {
+      height: 200px;
+    }
+  }
+`
 const WrapperTestimonial = styled.div`
   margin: 0 0rem;
 `
@@ -49,6 +59,7 @@ const CopyDark = props => (
     <WrapperGroup>
       <WrapperHeader>{props.header}</WrapperHeader>
       <WrapperSub>{props.subtitle}</WrapperSub>
+      <WrapperIMG>{props.image}</WrapperIMG>
       <WrapperCopy>{props.copy}</WrapperCopy>
       <WrapperTestimonial>{props.testimonial}</WrapperTestimonial>
     </WrapperGroup>

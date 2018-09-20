@@ -1,6 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'React+D3v5 by Swizec Teller',
+    description:
+      'Learn how to build gorgeous re-usable visualization components using modern JavaScript in about an hour.',
+    url: 'https://swizec.com/reactd3js/',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

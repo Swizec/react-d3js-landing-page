@@ -40,7 +40,6 @@ import AboutAuthorText from '../../content/AboutAuthorText.mdx'
 
 import LeftImage from '../images/gatsby-icon.png'
 import Swizec from '../images/swizec.png'
-import Test1 from '../images/Test1.jpg'
 import Test2 from '../images/Test2.jpg'
 import Test3 from '../images/Test3.jpg'
 import Test4 from '../images/Test4.jpg'

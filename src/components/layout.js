@@ -34,7 +34,7 @@ const Layout = ({ children, data }) => (
               { name: 'keywords', content: 'sample, something' },
             ]}
           >
-            <html lang="en" />
+            <html lang="en" prefix="og: http://ogp.me/ns#" />
 
             <meta name="author" content="Swizec Teller" />
             <meta

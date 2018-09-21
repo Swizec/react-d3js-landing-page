@@ -56,6 +56,10 @@ const Layout = ({ children, data }) => (
             <meta property="og:image:width" content={1154} />
             <meta property="og:image:height" content={1600} />
             <meta
+              property="og:image:alt"
+              content={data.site.siteMetadata.title}
+            />
+            <meta
               property="og:description"
               content={data.site.siteMetadata.description}
             />

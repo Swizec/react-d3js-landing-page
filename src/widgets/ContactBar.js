@@ -15,6 +15,11 @@ const WrapperHeader = styled.div`
   font-size: 30px;
   text-align: center;
   padding: 1rem 0 0;
+  a:active,
+  a:focus,
+  a:hover {
+    text-decoration: none;
+  }
   @media (max-width: 940px) {
     font-size: 20px;
   }

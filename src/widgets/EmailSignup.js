@@ -70,7 +70,7 @@ const WrapperSubmit = styled.div`
   }
 `
 const EmailSignup = props => (
-  <Wrapper>
+  <Wrapper id="Signup">
     <img src={Sample} alt="readymade-logo" />
     <WrapperHeader>{props.header}</WrapperHeader>
     <WrapperForm>{props.input}</WrapperForm>

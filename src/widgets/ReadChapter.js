@@ -1,27 +1,21 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
-const Chapter = styled.div`
+const Wrapper = styled.div`
+  text-align: center;
+`
+const WrapperHeader = styled.div`
+  font-weight: bold;
+`
+const WrapperLink = styled.div`
   text-align: center;
 `
 
-export default class ReadChapter extends Component {
-  render() {
-    return (
-      <Chapter>
-        <p>
-          <strong>
-            Ready to get started?
-            <br />
-            <a href="/">
-              Try the free chapter.
-              <span role="img" aria-label="so cool">
-                👇
-              </span>
-            </a>
-          </strong>
-        </p>
-      </Chapter>
-    )
-  }
-}
+const ReadChapter = props => (
+  <Wrapper>
+    <WrapperHeader>{props.header}</WrapperHeader>
+    <WrapperLink>{props.link}</WrapperLink>
+  </Wrapper>
+)
+
+export default ReadChapter

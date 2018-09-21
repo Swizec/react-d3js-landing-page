@@ -59,7 +59,9 @@ import Sample3 from '../images/sample3.gif'
 export default () => (
   <Layout>
     <Hero />
+
     <CopyLargeImageRight image={LeftImage} copy={<CopyLargeImageRightText />} />
+
     <CopyLargeImageLeft
       header="LEARNING A NEW CODING PARADIGM IS HARD"
       image={LeftImage}
@@ -188,7 +190,17 @@ export default () => (
         </div>
       }
     />
-    <ReadChapter />
+    <ReadChapter
+      header="Ready to get started?"
+      link={
+        <a href="#Signup">
+          Try the free chapter.
+          <span role="img" aria-label="so cool">
+            👇
+          </span>
+        </a>
+      }
+    />
     <TestimonialDark
       image={Test6}
       quote="I love having practical examples to help me learn new things faster. D3's docs alone are okay but marrying them with React (as a react newbie) is not as straightforward as someone handholding you through the process. And, since I don't have hours after work or on weekends to hack on things like I used to before I was married (or had kids), I need to optimize my learning."
@@ -200,7 +212,17 @@ export default () => (
       subtitle="Table of contents"
       chapters={<ChaptersText />}
     />
-    <ReadChapter />
+    <ReadChapter
+      header="Ready to get started?"
+      link={
+        <a href="#Signup">
+          Try the free chapter.
+          <span role="img" aria-label="so cool">
+            👇
+          </span>
+        </a>
+      }
+    />
     <TestimonialCarousel />
     <CopyDark
       header="START WITH A FREE CHAPTER AND EMAIL CRASH COURSE"

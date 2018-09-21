@@ -24,18 +24,10 @@ const Layout = ({ children, data }) => (
         data.site.siteMetadata.url + productImagePath
       return (
         <>
-          <Helmet
-            title={data.site.siteMetadata.title}
-            meta={[
-              {
-                name: 'description',
-                content: data.site.siteMetadata.description,
-              },
-              { name: 'keywords', content: 'sample, something' },
-            ]}
-          >
+          <Helmet>
             <html lang="en" prefix="og: http://ogp.me/ns#" />
 
+            <title>{data.site.siteMetadata.title}</title>
             <meta name="author" content="Swizec Teller" />
             <meta
               name="description"

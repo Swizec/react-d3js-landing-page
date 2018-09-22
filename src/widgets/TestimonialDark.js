@@ -32,7 +32,7 @@ const WrapperImage = styled.img`
   grid-area: WI;
 `
 const WrapperQuote = styled.div`
-  margin: 0 auto;
+  margin: 1rem auto;
   width: 80%;
   padding: 20px;
   text-align: center;
@@ -71,7 +71,7 @@ const WrapperCompany = styled.div`
 const TestimonialDark = props => (
   <Wrapper className="Testimonial">
     <WrapperGroup>
-      <WrapperQuote>{props.quote}</WrapperQuote>
+      <WrapperQuote className="testblockdark">{props.quote}</WrapperQuote>
 
       <WrapperImage src={props.image} />
 

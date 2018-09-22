@@ -45,6 +45,7 @@ import Test3 from '../images/Test3.jpg'
 import Test4 from '../images/Test4.jpg'
 import Test5 from '../images/Test5.png'
 import Test6 from '../images/Test6.jpg'
+import Test8 from '../images/Test8.png'
 import examp1 from '../images/examp1.gif'
 import examp2 from '../images/examp2.gif'
 import examp3 from '../images/examp3.gif'
@@ -223,7 +224,12 @@ export default () => (
         </a>
       }
     />
-    <TestimonialCarousel />
+    <TestimonialDark
+      image={Test8}
+      quote="A sharply written work that delivers technical information in a conversational and easy to digest manner."
+      name="Malcolm Maclean"
+      company={'Author of D3 Tips & Tricks'}
+    />
     <CopyDark
       header="START WITH A FREE CHAPTER AND EMAIL CRASH COURSE"
       subtitle="See what React+D3v4 is like and learn the basics."

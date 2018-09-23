@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import Testimonial from './Testimonial'
-import product from '../images/Real-Space-Gray.png'
+import Mock1 from '../images/Mock1.png'
 import logo from '../images/logo.png'
 import wallpaper from '../images/header_bg.jpg'
 import down_arrow from '../images/down_arrow.png'
@@ -128,7 +128,7 @@ export default class Hero extends Component {
                 />
               </div>
               <div className="banner">
-                <img src={product} alt="Web App Banner" className="image" />
+                <img src={Mock1} alt="Web App Banner" className="image" />
               </div>
             </Content>
           </div>

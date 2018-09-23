@@ -38,7 +38,8 @@ import Examples1 from '../../content/Examples1'
 import Examples2 from '../../content/Examples2'
 import AboutAuthorText from '../../content/AboutAuthorText.mdx'
 
-import LeftImage from '../images/gatsby-icon.png'
+import Mock2 from '../images/Mock2.png'
+import Mock3 from '../images/Mock3.png'
 import Swizec from '../images/swizec.png'
 import Test2 from '../images/Test2.jpg'
 import Test3 from '../images/Test3.jpg'
@@ -61,11 +62,11 @@ export default () => (
   <Layout>
     <Hero />
 
-    <CopyLargeImageRight image={LeftImage} copy={<CopyLargeImageRightText />} />
+    <CopyLargeImageRight image={Mock2} copy={<CopyLargeImageRightText />} />
 
     <CopyLargeImageLeft
       header="LEARNING A NEW CODING PARADIGM IS HARD"
-      image={LeftImage}
+      image={Mock3}
       copy={<CopyLargeImageLeftText />}
       testimonial={
         <Testimonial

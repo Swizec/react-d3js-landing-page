@@ -25,6 +25,7 @@ const WrapperHeader = styled.div`
 const WrapperImage = styled.img`
   height: 300px;
   grid-area: Picture;
+  border-radius: 300px;
 `
 
 const WrapperCopy = styled.div`

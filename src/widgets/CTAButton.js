@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 const Wrapper = styled.div`
   button {
+    font-family: 'Open Sans', Arial, sans-serif;
     background-color: #ff871c;
     line-height: 1.8;
     -webkit-box-shadow: 0 3px 0 rgb(214, 106, 18);

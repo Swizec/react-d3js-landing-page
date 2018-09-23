@@ -19,6 +19,9 @@ const WrapperImage = styled.img`
   height: 300px;
   grid-area: Picture;
   border-radius: 400px;
+  @media (max-width: 940px) {
+    height: 200px;
+  }
 `
 
 const WrapperCopy = styled.div`

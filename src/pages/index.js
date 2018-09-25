@@ -63,10 +63,11 @@ export default () => (
   <Layout>
     <Hero
       topsub="A NEW BOOK COMING FALL 2018"
-      header="Make your ideas look awesome,
-      without relying on a designer."
-      subtitle="Learn how to design beautiful user interfaces by yourself using specific tactics explained from a developer's point-of-view."
-      email={<EmailForm />}
+      header="STUCK COPY PASTING RANDOM D3 EXAMPLES?"
+      subtitle="Become a data visualization engineer with React + D3v4."
+      emailtext="Leave your email and get a free sample of React+d3.js and a mini email course. They will teach you about the basic architecture of React apps and show you how JSX makes your code better."
+      input={<EmailForm />}
+      submit={<EmailSubmit />}
       pic={<img src={Mock1} alt="pic" />}
     />
 

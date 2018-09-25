@@ -38,6 +38,7 @@ import Examples1 from '../../content/Examples1'
 import Examples2 from '../../content/Examples2'
 import AboutAuthorText from '../../content/AboutAuthorText.mdx'
 
+import Mock1 from '../images/Mock1.png'
 import Mock2 from '../images/Mock2.png'
 import Mock3 from '../images/Mock3.png'
 import Swizec from '../images/swizec.png'
@@ -60,7 +61,14 @@ import Sample3 from '../images/sample3.gif'
 
 export default () => (
   <Layout>
-    <Hero />
+    <Hero
+      topsub="A NEW BOOK COMING FALL 2018"
+      header="Make your ideas look awesome,
+      without relying on a designer."
+      subtitle="Learn how to design beautiful user interfaces by yourself using specific tactics explained from a developer's point-of-view."
+      email={<EmailForm />}
+      pic={<img src={Mock1} alt="pic" />}
+    />
 
     <CopyLargeImageRight image={Mock2} copy={<CopyLargeImageRightText />} />
 

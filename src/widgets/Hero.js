@@ -1,145 +1,52 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import Testimonial from './Testimonial'
-import Mock1 from '../images/Mock1.png'
-import logo from '../images/logo.png'
-import wallpaper from '../images/header_bg.jpg'
-import down_arrow from '../images/down_arrow.png'
-import Test1 from '../images/Test1.jpg'
 
 const Wrapper = styled.div`
-  background-image: url(${wallpaper});
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
   text-align: center;
   position: relative;
-  padding: 30px 15px 0;
+
   color: #fff;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
   background-color: #424ea4;
-
-  h1 {
-    margin: 3rem 0;
-  }
-  h4 {
-    font-weight: 100;
-    line-height: 1.1;
-  }
-  .logo img {
-    height: 70px;
-  }
-  .Testimonial {
-    color: #94a3a8;
-  }
-
-  .scrollto,
-  .scrollto:hover {
-    display: block;
-    text-decoration: none;
-    position: absolute;
-    bottom: -30px;
-    left: 50%;
-    height: 70px;
-    margin-left: -50px;
-  }
-  .scrollto--arrow {
-    padding: 10px;
-    position: relative;
-  }
-  .scrollto--arrow img {
-    animation: arrowbounce 1s alternate infinite;
-    -moz-animation: arrowbounce 1s alternate infinite;
-    -webkit-animation: arrowbounce 1s alternate infinite;
-    -o-animation: arrowbounce 1s alternate infinite;
-  }
-  @media (max-width: 640px) {
-    h1 {
-      font-size: 30px;
-    }
-    h4 {
-      font-size: 18px;
-    }
-  }
-  @media (max-width: 940px) {
-    .banner img {
-      height: 300px;
-    }
-  }
 `
-const Content = styled.div`
-  margin: 5rem;
-  align-items: center;
-  justify-items: center;
+
+const WrapperGroup = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: 'Test ContentImage';
-  .image {
-    height: 600px;
-    padding: 40px;
-    grid-area: ContentImage;
-  }
-  .Testimonial {
-    margin: 0 0rem;
-    grid-area: Test;
-  }
-
-  @media (max-width: 640px) {
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      ' ContentImage'
-      'Test ';
+  grid-template-areas: 'ContentA ContentB';
+`
+const WrapperTopSub = styled.div``
+const WrapperHeader = styled.div``
+const WrapperSubtitle = styled.div``
+const WrapperEmail = styled.div``
+const WrapperImage = styled.image`
+  img {
+    height: 400px;
   }
 `
+const Content2 = styled.div`
+  grid-area: ContentB;
+`
+const Content1 = styled.div`
+  grid-area: ContentA;
+  text-align: left;
+`
 
-export default class Hero extends Component {
-  render() {
-    return (
-      <Wrapper>
-        <div className="preloader" />
+const Hero = props => (
+  <Wrapper>
+    <WrapperGroup>
+      <Content1>
+        <WrapperTopSub>{props.topsub}</WrapperTopSub>
+        <WrapperHeader>{props.header}</WrapperHeader>
+        <WrapperSubtitle>{props.subtitle}</WrapperSubtitle>
+        <WrapperEmail>{props.email}</WrapperEmail>
+      </Content1>
 
-        <main id="top" className="masthead" role="main">
-          <div className="container">
-            <div className="logo">
-              {' '}
-              <a href="/">
-                <img src={logo} alt="readymade-logo" />
-              </a>
-            </div>
+      <Content2>
+        <WrapperImage>{props.pic}</WrapperImage>
+      </Content2>
+    </WrapperGroup>
+  </Wrapper>
+)
 
-            <h1 className="main-title">
-              STUCK COPY PASTING RANDOM D3 EXAMPLES?
-            </h1>
-
-            <h4 className="sub-title">
-              Become a data visualization engineer with React + D3v4.
-            </h4>
-
-            <Content>
-              <div className="Testimonial">
-                <Testimonial
-                  image={Test1}
-                  quote="You just blew my mind! This is going to save me so much time."
-                  name="Johnathan Doe"
-                  company={'Founder and CEO of Company Inc'}
-                />
-              </div>
-              <div className="banner">
-                <img src={Mock1} alt="Web App Banner" className="image" />
-              </div>
-            </Content>
-          </div>
-
-          <a href="#explore" className="scrollto">
-            <p className="scrollto--arrow">
-              <img src={down_arrow} alt="scroll down arrow" />
-            </p>
-          </a>
-        </main>
-      </Wrapper>
-    )
-  }
-}
+export default Hero

@@ -9,6 +9,10 @@ import F4 from '../images/F4.gif'
 import F5 from '../images/F5.gif'
 
 const Features = styled.div`
+  p {
+    color: #384047;
+  }
+  font-family: 'Open Sans', Arial, sans-serif;
   display: grid;
   align-items: center;
   justify-items: center;

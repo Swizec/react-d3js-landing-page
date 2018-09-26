@@ -37,7 +37,7 @@ const WrapperQuote = styled.div`
   padding: 20px;
   text-align: center;
   background: #e5e8ec;
-  color: #94a3a8;
+  color: #384047;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;

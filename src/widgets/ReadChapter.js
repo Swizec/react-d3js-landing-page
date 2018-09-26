@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 const Wrapper = styled.div`
   text-align: center;
+  font-family: 'Open Sans', Arial, sans-serif;
 `
 const WrapperHeader = styled.div`
   font-weight: bold;

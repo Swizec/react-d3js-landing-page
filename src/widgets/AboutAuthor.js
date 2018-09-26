@@ -6,6 +6,7 @@ const Wrapper = styled.div`
   background: #fff;
   height: 100%;
   width: 100%;
+  font-family: 'Open Sans', Arial, sans-serif;
 `
 const WrapperGroup = styled.div`
   max-width: 1000px;

@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 const Wrapper = styled.div`
   margin: 3rem 1rem;
+  font-family: 'Open Sans', Arial, sans-serif;
 `
 const WrapperQuestion = styled.div`
   font-size: 16px;

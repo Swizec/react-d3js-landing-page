@@ -9,6 +9,7 @@ const Wrapper = styled.div`
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
   background-color: #424ea4;
   border-top: 0.4rem solid #ff871c;
+  font-family: 'Open Sans', Arial, sans-serif;
 `
 
 const WrapperGroup = styled.div`

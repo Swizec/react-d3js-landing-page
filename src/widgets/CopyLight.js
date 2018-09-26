@@ -7,6 +7,7 @@ const Wrapper = styled.div`
   margin: 0rem 0rem;
   padding: rem;
   line-height: 1.42857143;
+  font-family: 'Open Sans', Arial, sans-serif;
 `
 const WrapperGroup = styled.div`
   max-width: 1000px;

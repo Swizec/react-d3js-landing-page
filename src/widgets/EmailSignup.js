@@ -4,6 +4,8 @@ import Sample from '../images/sample.png'
 
 const Wrapper = styled.div`
   text-align: center;
+  color: #384047;
+  font-family: 'Open Sans', Arial, sans-serif;
   @media (max-width: 940px) {
     img {
       height: 140px;

@@ -4,6 +4,7 @@ import styled from 'styled-components'
 const Wrapper = styled.div`
   margin: 0rem auto;
   padding: 2rem 2rem;
+  font-family: 'Open Sans', Arial, sans-serif;
 `
 const WrapperGroup = styled.div`
   margin: 0 auto;

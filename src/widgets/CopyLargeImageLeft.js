@@ -15,6 +15,7 @@ const WrapperHeader = styled.div`
   color: #384047;
   font-weight: 800;
   font-size: 40px;
+  font-family: 'Open Sans', Arial, sans-serif;
   text-align: center;
   padding: 5rem 0 2rem;
   @media (max-width: 940px) {
@@ -33,6 +34,7 @@ const WrapperImage = styled.img`
 
 const WrapperCopy = styled.div`
   font-size: 20px;
+  color: #384047;
   line-height: 1.7;
   grid-area: Copy;
 `

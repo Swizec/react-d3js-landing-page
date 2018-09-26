@@ -8,6 +8,7 @@ import F3 from '../images/F3.gif'
 import F4 from '../images/F4.gif'
 
 const Features = styled.div`
+  font-family: 'Open Sans', Arial, sans-serif;
   display: grid;
   align-items: center;
   justify-items: center;

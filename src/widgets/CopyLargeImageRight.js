@@ -5,6 +5,7 @@ const Wrapper = styled.div`
   height: 100%;
   max-width: 1000px;
   margin: 0 auto;
+  font-family: 'Open Sans', Arial, sans-serif;
 `
 const WrapperHeader = styled.div`
   font-size: 40px;

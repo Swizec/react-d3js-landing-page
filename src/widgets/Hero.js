@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   height: 100%;
   text-align: center;
   color: #fff;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+
   background-color: #424ea4;
   border-top: 0.4rem solid #ff871c;
   font-family: 'Open Sans', Arial, sans-serif;
@@ -37,6 +37,7 @@ const WrapperTopSub = styled.div`
 const WrapperHeader = styled.div`
   font-size: 3rem;
   font-weight: 600;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
   @media (max-width: 940px) {
     font-size: 2.5rem;
   }
@@ -46,13 +47,14 @@ const WrapperSubtitle = styled.div`
   font-size: 1.5rem;
   line-height: 1.5;
   font-weight: 200;
+  color: #ff871c;
 `
 const WrapperEmailText = styled.div`
-  padding: 1rem 0;
+  padding: 0rem 0 1rem;
   font-size: 1rem;
-  color: #e5e8ec;
+  color: #fff;
   line-height: 1.5;
-  font-weight: 600;
+  font-weight: 200;
 `
 const WrapperEmailInput = styled.div`
   input {

@@ -133,3 +133,7 @@ a:focus {
   border-width: 15px;
   margin-left: -15px;
 }
+
+.heroinput {
+  overflow: hidden;
+}

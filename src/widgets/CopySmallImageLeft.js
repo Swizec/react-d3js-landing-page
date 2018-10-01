@@ -25,7 +25,7 @@ const WrapperGroup = styled.div`
   p {
     line-height: 1.5;
     font-size: 16px;
-    color: #94a3a8;
+    color: #4e616c;
     font-weight: 300;
   }
   @media (max-width: 940px) {

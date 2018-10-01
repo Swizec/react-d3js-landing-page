@@ -15,7 +15,7 @@ const WrapperQuestion = styled.div`
 const WrapperAnswer = styled.div`
   font-weight: 100;
   font-size: 14px;
-  color: #94a3a8;
+  color: #4e616c;
 `
 
 const FAQ = props => (

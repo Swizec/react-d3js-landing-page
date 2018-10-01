@@ -24,9 +24,9 @@ const WrapperHeader = styled.div`
 `
 
 const WrapperImage = styled.img`
-  height: 300px;
+  height: 600px;
   grid-area: Picture;
-  border-radius: 300px;
+
   @media (max-width: 940px) {
     height: 200px;
   }

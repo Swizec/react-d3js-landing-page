@@ -71,11 +71,11 @@ export default () => (
       pic={<img src={Mock1} alt="pic" />}
     />
 
-    <CopyLargeImageRight image={Mock2} copy={<CopyLargeImageRightText />} />
+    <CopyLargeImageRight image={Mock3} copy={<CopyLargeImageRightText />} />
 
     <CopyLargeImageLeft
       header="LEARNING A NEW CODING PARADIGM IS HARD"
-      image={Mock3}
+      image={Mock2}
       copy={<CopyLargeImageLeftText />}
       testimonial={
         <Testimonial

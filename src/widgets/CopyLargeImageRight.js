@@ -32,11 +32,12 @@ const WrapperCopy = styled.div`
 const WrapperTestimonial = styled.div``
 
 const Content = styled.div`
-  margin: 0 2rem;
+  margin: 5rem 2rem;
   display: grid;
   grid-gap: 1rem;
   align-items: top;
   justify-items: center;
+  grid-gap: 6rem;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: 'Copy Picture';
   @media (max-width: 940px) {

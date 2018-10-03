@@ -1,12 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
+import Pattern5 from '../images/pattern5.png'
 
 const Wrapper = styled.div`
+  background-image: url(${Pattern5});
+  background-size: cover;
+  background-position: left;
   margin: 0 auto;
   height: 100%;
   text-align: center;
   color: #fff;
-
   background-color: #424ea4;
   border-top: 0.4rem solid #ff871c;
   font-family: 'Open Sans', Arial, sans-serif;

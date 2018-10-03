@@ -9,8 +9,8 @@ import Test5 from '../images/Test5.png'
 import Test6 from '../images/Test6.jpg'
 
 const Wrapper = styled.div`
-  max-width: 800px;
-  margin: 4rem auto;
+  max-width: 50rem;
+  margin: 0rem auto;
 `
 
 export default class extends Component {

@@ -45,11 +45,13 @@ const WrapperTestimonial = styled.div`
 const Content = styled.div`
   margin: 0 2rem;
   display: grid;
-  align-items: top;
+  align-items: center;
   justify-items: center;
   grid-gap: 1rem;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: 'Picture Copy';
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'Picture '
+    ' Copy';
   @media (max-width: 940px) {
     align-items: center;
     justify-items: center;

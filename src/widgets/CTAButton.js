@@ -29,6 +29,9 @@ const Wrapper = styled.div`
     -ms-user-select: none;
     user-select: none;
   }
+  button:hover {
+    background: orange;
+  }
   @media (max-width: 940px) {
     button {
       font-size: 20px;

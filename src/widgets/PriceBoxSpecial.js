@@ -65,6 +65,9 @@ const WrapperGroup = styled.div`
     left: 50%;
     margin-left: -60px;
   }
+  .action-btn a:hover {
+    background: orange;
+  }
   .curr {
     display: inline-block;
     font-size: 20px;
@@ -78,6 +81,7 @@ const WrapperGroup = styled.div`
     color: #fff;
     text-decoration: none;
   }
+
   .btn {
     display: inline-block;
     margin-bottom: 0;

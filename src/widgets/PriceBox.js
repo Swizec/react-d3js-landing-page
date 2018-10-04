@@ -51,6 +51,9 @@ const WrapperGroup = styled.div`
     left: 50%;
     margin-left: -60px;
   }
+  .action-btn a:hover {
+    background: #384047;
+  }
   .curr {
     display: inline-block;
     font-size: 20px;

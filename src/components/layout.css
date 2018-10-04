@@ -135,5 +135,6 @@ a:focus {
 }
 
 .heroinput {
+  display: flex;
   overflow: hidden;
 }

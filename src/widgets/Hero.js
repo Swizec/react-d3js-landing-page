@@ -61,35 +61,35 @@ const WrapperEmailText = styled.div`
 `
 const WrapperEmailInput = styled.div`
   input {
-    display: block;
+    display: inline-block;
     width: 100%;
-    height: 36px;
-    padding: 6px 14px;
+    margin: 0 11rem 0 0;
+    padding: 14px 14px;
+    font-family: 'Open Sans', Arial, sans-serif;
     font-size: 14px;
     line-height: 1.57142857;
     color: #555;
     background-color: #fff;
     background-image: none;
-    border: 1px solid #cfd3cc;
-    border-radius: 0.5rem;
-    -webkit-box-shadow: 0 15px 35px 0 rgba(42, 51, 83, 0.12),
-      0 5px 15px rgba(0, 0, 0, 0.06);
+    border: 0px solid #cfd3cc;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
     box-shadow: 0 15px 35px 0 rgba(42, 51, 83, 0.12),
       0 5px 15px rgba(0, 0, 0, 0.06);
-    margin: 0;
   }
 `
 const WrapperEmailSubmit = styled.div`
   input {
-    margin-left: 10px;
-    float: right;
-    display: block;
-    padding: 6px 14px;
-    margin-bottom: 0;
+    display: inline-block;
+    padding: 13px 14px;
+    margin: 0 1.7rem;
+    font-family: 'Open Sans', Arial, sans-serif;
     font-size: 14px;
+    font-weight: 600;
     font-weight: normal;
     line-height: 1.57142857;
     text-align: center;
+    text-transform: uppercase;
     white-space: nowrap;
     vertical-align: middle;
     cursor: pointer;
@@ -100,10 +100,16 @@ const WrapperEmailSubmit = styled.div`
     background-image: none;
     background-clip: padding-box;
     border: 1px solid transparent;
-    border-radius: 2px;
-    text-transform: uppercase;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
     background: #ff871c;
     color: #fff;
+    float: right;
+    box-shadow: 0 15px 35px 0 rgba(42, 51, 83, 0.12),
+      0 5px 15px rgba(0, 0, 0, 0.06);
+  }
+  input:hover {
+    background: orange;
   }
 `
 
@@ -134,10 +140,13 @@ const Hero = props => (
         <WrapperHeader>{props.header}</WrapperHeader>
         <WrapperSubtitle>{props.subtitle}</WrapperSubtitle>
         <WrapperEmailText>{props.emailtext}</WrapperEmailText>
-        <WrapperEmailInput className="heroinput">
-          {props.input}
-        </WrapperEmailInput>
-        <WrapperEmailSubmit>{props.submit}</WrapperEmailSubmit>
+        <div className="heroinput">
+          <WrapperEmailInput>{props.input}</WrapperEmailInput>
+
+          <WrapperEmailSubmit className="herobtn">
+            {props.submit}
+          </WrapperEmailSubmit>
+        </div>
       </Content1>
 
       <Content2>

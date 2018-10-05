@@ -37,13 +37,17 @@ const WrapperTopSub = styled.div`
   text-transform: uppercase;
   letter-spacing: 0.025em;
   font-size: 1.25rem;
+  @media (max-width: 940px) {
+    text-align: center;
+  }
 `
 const WrapperHeader = styled.div`
   font-size: 3rem;
   font-weight: 600;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
   @media (max-width: 940px) {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
+    text-align: center;
   }
 `
 const WrapperSubtitle = styled.div`
@@ -52,6 +56,9 @@ const WrapperSubtitle = styled.div`
   line-height: 1.5;
   font-weight: 200;
   color: #ff871c;
+  @media (max-width: 940px) {
+    text-align: center;
+  }
 `
 const WrapperEmailText = styled.div`
   padding: 0rem 0 1rem;
@@ -59,6 +66,9 @@ const WrapperEmailText = styled.div`
   color: #fff;
   line-height: 1.5;
   font-weight: 200;
+  @media (max-width: 940px) {
+    text-align: center;
+  }
 `
 const WrapperEmailInput = styled.div`
   input {
@@ -135,7 +145,7 @@ const Content1 = styled.div`
 const particlesOptions = {
   particles: {
     number: {
-      value: 50,
+      value: 40,
       Density: {
         enable: true,
         value_area: 800,

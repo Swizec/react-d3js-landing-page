@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Pattern5 from '../images/pattern5.png'
+import Particles from 'react-particles-js'
 
 const Wrapper = styled.div`
   background-image: url(${Pattern5});
@@ -131,28 +132,52 @@ const Content1 = styled.div`
   grid-area: ContentA;
   text-align: left;
 `
+const particlesOptions = {
+  particles: {
+    number: {
+      value: 50,
+      Density: {
+        enable: true,
+        value_area: 800,
+      },
+    },
+  },
+  color: {
+    value: '#84d6b7',
+  },
+  interactivity: {
+    detect_on: 'window',
+    events: {
+      onhover: {
+        enable: true,
+        mode: 'repulse',
+      },
+    },
+  },
+}
 
 const Hero = props => (
   <Wrapper>
-    <WrapperGroup>
-      <Content1>
-        <WrapperTopSub>{props.topsub}</WrapperTopSub>
-        <WrapperHeader>{props.header}</WrapperHeader>
-        <WrapperSubtitle>{props.subtitle}</WrapperSubtitle>
-        <WrapperEmailText>{props.emailtext}</WrapperEmailText>
-        <div className="heroinput">
-          <WrapperEmailInput>{props.input}</WrapperEmailInput>
-
-          <WrapperEmailSubmit className="herobtn">
-            {props.submit}
-          </WrapperEmailSubmit>
-        </div>
-      </Content1>
-
-      <Content2>
-        <WrapperImage>{props.pic}</WrapperImage>
-      </Content2>
-    </WrapperGroup>
+    <div className="toplayer">
+      <WrapperGroup>
+        <Content1>
+          <WrapperTopSub>{props.topsub}</WrapperTopSub>
+          <WrapperHeader>{props.header}</WrapperHeader>
+          <WrapperSubtitle>{props.subtitle}</WrapperSubtitle>
+          <WrapperEmailText>{props.emailtext}</WrapperEmailText>
+          <div className="heroinput">
+            <WrapperEmailInput>{props.input}</WrapperEmailInput>
+            <WrapperEmailSubmit className="herobtn">
+              {props.submit}
+            </WrapperEmailSubmit>
+          </div>
+        </Content1>
+        <Content2>
+          <WrapperImage>{props.pic}</WrapperImage>
+        </Content2>
+      </WrapperGroup>
+    </div>
+    <Particles className="particles" params={particlesOptions} />
   </Wrapper>
 )
 

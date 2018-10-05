@@ -70,7 +70,6 @@ export default () => (
       submit={<EmailSubmit />}
       pic={<img src={Mock1} alt="pic" />}
     />
-
     <CopyLargeImageRight image={Mock3} copy={<CopyLargeImageRightText />} />
 
     <CopyLargeImageLeft

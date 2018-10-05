@@ -138,3 +138,18 @@ a:focus {
   display: flex;
   overflow: hidden;
 }
+
+.particles {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.toplayer {
+  position: relative;
+  z-index: 1;
+}

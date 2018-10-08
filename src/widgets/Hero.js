@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import Pattern5 from '../images/pattern5.png'
+import Pattern2 from '../images/pattern2.png'
 import Particles from 'react-particles-js'
 
 const Wrapper = styled.div`
-  background-image: url(${Pattern5});
+  background-image: url(${Pattern2});
   background-size: cover;
   background-position: left;
   margin: 0 auto;

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import CountdownView from '../widgets/CountdownView'
 
 const Wrapper = styled.div`
   background: #e5e8ec;
@@ -52,6 +53,7 @@ const Pricing = props => (
     <WrapperGroup>
       <WrapperHeader>{props.header}</WrapperHeader>
       <WrapperBlock>{props.block}</WrapperBlock>
+      <CountdownView />
       <WrapperCopy>{props.copy}</WrapperCopy>
       <WrapperTestimonial>{props.testimonial}</WrapperTestimonial>
     </WrapperGroup>

@@ -24,6 +24,7 @@ import PackageFeatures from '../widgets/PackageFeatures.js'
 import PackageFeatures2 from '../widgets/PackageFeatures2.js'
 import PackageFeatures3 from '../widgets/PackageFeatures3.js'
 import CTAButton from '../widgets/CTAButton.js'
+import Banner from '../widgets/Banner'
 import ContactBar from '../widgets/ContactBar.js'
 import Pricing from '../widgets/Pricing.js'
 import FAQText from '../../content/FAQText'
@@ -61,6 +62,7 @@ import Sample3 from '../images/sample3.gif'
 
 export default () => (
   <Layout>
+    <Banner />
     <Hero
       topsub="A NEW BOOK COMING FALL 2018"
       header="STUCK COPY PASTING RANDOM D3 EXAMPLES?"

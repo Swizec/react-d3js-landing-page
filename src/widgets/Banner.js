@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const Wrapper = styled.div`
   width: 100%;
   margin: 0 auto;
-  padding: 0 0rem;
+  padding: 0.5rem 0rem;
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(20px);
   z-index: 2;
@@ -14,6 +14,7 @@ const Wrapper = styled.div`
 const WrapperContent = styled.div`
   text-align: center;
   color: #fff;
+  padding: 0rem 1rem;
   display: grid;
   align-items: center;
   justify-items: center;

@@ -1,10 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import Pattern2 from '../images/pattern2.png'
 import Particles from 'react-particles-js'
 
 const Wrapper = styled.div`
-  background-image: url(${Pattern2});
   background-size: cover;
   background-position: left;
   margin: 0 auto;
@@ -12,6 +10,8 @@ const Wrapper = styled.div`
   text-align: center;
   color: #fff;
   background-color: #424ea4;
+  background-image: linear-gradient(45deg, #424ea4 35%, #7883c4 90%);
+
   border-top: 0.4rem solid #ff871c;
   font-family: 'Open Sans', Arial, sans-serif;
 `
@@ -25,6 +25,7 @@ const WrapperGroup = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-template-areas: 'ContentA ContentB';
   @media (max-width: 940px) {
+    margin: 1.5rem auto 0;
     padding: 5rem 2rem;
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -54,7 +55,7 @@ const WrapperSubtitle = styled.div`
   margin: 1rem 0;
   font-size: 1.5rem;
   line-height: 1.5;
-  font-weight: 200;
+  font-weight: 900;
   color: #ff871c;
   @media (max-width: 940px) {
     text-align: center;

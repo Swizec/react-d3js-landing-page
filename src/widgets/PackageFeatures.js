@@ -61,7 +61,7 @@ const Feature6 = styled.div`
 `
 
 const PackageFeatures = props => (
-  <Features>
+  <Features id="Packages">
     <Feature1>
       <CopySmallImageLeft
         image={F1}

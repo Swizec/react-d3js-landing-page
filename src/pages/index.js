@@ -24,6 +24,7 @@ import PackageFeatures from '../widgets/PackageFeatures.js'
 import PackageFeatures2 from '../widgets/PackageFeatures2.js'
 import PackageFeatures3 from '../widgets/PackageFeatures3.js'
 import CTAButton from '../widgets/CTAButton.js'
+import CTABlock from '../widgets/CTABlock'
 import Banner from '../widgets/Banner'
 import ContactBar from '../widgets/ContactBar.js'
 import Pricing from '../widgets/Pricing.js'
@@ -87,6 +88,7 @@ export default () => (
         />
       }
     />
+    <CTABlock />
     <CopyLight
       header="BECOME A DATA VISUALIZATION ENGINEER WITH REACT+D3V4"
       copy={<CopyLightText />}

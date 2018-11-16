@@ -243,25 +243,27 @@ export default () => (
       name="Malcolm Maclean"
       company={'Author of D3 Tips & Tricks'}
     />
-    <CopyDark
-      header="START WITH A FREE CHAPTER AND EMAIL CRASH COURSE"
-      subtitle="See what React+D3v4 is like and learn the basics."
-      copy={
-        <EmailSignup
-          header={<EmailHeaderText />}
-          input={<EmailForm />}
-          submit={<EmailSubmit />}
-        />
-      }
-      testimonial={
-        <Testimonial
-          image={Test2}
-          quote="Great read with solid foundations to get you started crawling with react and up to a sprint!"
-          name="MΛHDI"
-          company={'Creator of Gyroscope'}
-        />
-      }
-    />
+    <div id="Signup">
+      <CopyDark
+        header="START WITH A FREE CHAPTER AND EMAIL CRASH COURSE"
+        subtitle="See what React+D3v4 is like and learn the basics."
+        copy={
+          <EmailSignup
+            header={<EmailHeaderText />}
+            input={<EmailForm />}
+            submit={<EmailSubmit />}
+          />
+        }
+        testimonial={
+          <Testimonial
+            image={Test2}
+            quote="Great read with solid foundations to get you started crawling with react and up to a sprint!"
+            name="MΛHDI"
+            company={'Creator of Gyroscope'}
+          />
+        }
+      />
+    </div>
     <CopyLight
       header="REUSABLE DATA VISUALIZATION WITH REACT AND D3.JS"
       subtitle="Watch my talks from HTML5DevConf and the Bay Area D3 Meetup"
@@ -311,12 +313,14 @@ export default () => (
         />
       }
     />
-    <PackageLight
-      header="BOOK + COURSE + COACHING"
-      subtitle="The book, the interactive course, 1 week of personal coaching"
-      copy={<PackageFeatures />}
-      button={<CTAButton link={<button>Buy Now For $399</button>} />}
-    />
+    <div id="Packages">
+      <PackageLight
+        header="BOOK + COURSE + COACHING"
+        subtitle="The book, the interactive course, 1 week of personal coaching"
+        copy={<PackageFeatures />}
+        button={<CTAButton link={<button>Buy Now For $399</button>} />}
+      />
+    </div>
     <PackageDark
       header="BOOK + COURSE"
       subtitle="The book and the interactive course"

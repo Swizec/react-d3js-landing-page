@@ -88,7 +88,7 @@ export default () => (
         />
       }
     />
-    <CTABlock />
+
     <CopyLight
       header="BECOME A DATA VISUALIZATION ENGINEER WITH REACT+D3V4"
       copy={<CopyLightText />}
@@ -101,6 +101,7 @@ export default () => (
         />
       }
     />
+    <CTABlock />
     <CopyLight header="REACT+D3V4 GIVES YOU PRACTICAL EXAMPLES 👇" />
     <CopySmallImageLeft
       image={examp1}

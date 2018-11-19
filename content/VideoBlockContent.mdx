@@ -1,0 +1,32 @@
+import VideoBlock from '../src/widgets/VideoBlock.js'
+import ReadChapter from '../src/widgets/ReadChapter.js'
+import Testimonial from '../src/widgets/Testimonial.js'
+import TestimonialDark from '../src/widgets/TestimonialDark.js'
+import Test7 from '../src/images/Test7.jpg'
+
+<VideoBlock
+  video={<iframe frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media" title="YouTube video player" width="853" height="480" className='youtubevid' src="https://www.youtube.com/embed/UP1nCXG2t4M?enablejsapi=1&amp;origin=https%3A%2F%2Fswizec.com&amp;widgetid=1" id="widget2"></iframe>}
+/>
+<p>The talk shows a proof of concept approach to making fancy animations with React and d3js - a Space Invaders game. I explain the basic approach, where I got the idea, and show off some code.
+<br></br>
+You don't have to watch the whole talk, it's all in React+D3v4.</p>
+<VideoBlock
+  video={<iframe frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media" title="YouTube video player" width="853" height="480" className='youtubevid' src="https://www.youtube.com/embed/47uMw-2mb4U?enablejsapi=1&amp;origin=https%3A%2F%2Fswizec.com&amp;widgetid=3" id="widget4"></iframe>}
+/>
+<p>This talk is more hands on. I show how the animated alphabet, particle generator, and talk about the benefits of componentization when it comes to building modern data visualization.
+</p>
+<ReadChapter 
+header='Ready to get started?'
+link={<a href="#Signup">
+        Try the free chapter.
+        <span role="img" aria-label="so cool">
+        👇
+        </span>
+    </a>}
+/>
+<TestimonialDark
+      image={Test7}
+      quote="I was not expecting a detailed setup description using npm -g, grunt, and bower. I was very pleased with that. :)"
+      name="Thomas Fee"
+      company={'Senior Software Engineer at Interactive Data'}
+    />

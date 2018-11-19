@@ -1,0 +1,57 @@
+{
+  "name": "gatsby-starter-default",
+  "description": "Gatsby default starter",
+  "version": "1.0.0",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "dependencies": {
+    "@mdx-js/mdx": "^0.15.2",
+    "@mdx-js/tag": "^0.15.0",
+    "babel-plugin-styled-components": "^1.7.1",
+    "gatsby": "^2.0.2",
+    "gatsby-mdx": "^0.1.4",
+    "gatsby-plugin-manifest": "^2.0.2",
+    "gatsby-plugin-offline": "^2.0.5",
+    "gatsby-plugin-react-helmet": "^3.0.0",
+    "gatsby-plugin-styled-components": "^3.0.0",
+    "nuka-carousel": "^4.3.11",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-helmet": "^5.2.0",
+    "react-particles-js": "^2.3.0",
+    "styled-components": "^3.4.9"
+  },
+  "engines": {
+    "node": "^10.6.0",
+    "npm": "^6.4.1"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "rm -rf .cache/ && gatsby develop",
+    "serve": "rm -rf ./public && gatsby build && gatsby serve",
+    "format": "prettier --write '{,**/}*.{js,json,mdx,css}'",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "pretty-quick": "pretty-quick"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^4.0.0-alpha.20",
+    "@storybook/react": "^4.0.0-alpha.20",
+    "core-js": "^2.5.7",
+    "husky": "^1.0.0-rc.14",
+    "prettier": "git+https://github.com/prettier/prettier.git#master",
+    "pretty-quick": "^1.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}

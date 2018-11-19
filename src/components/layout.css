@@ -1,0 +1,155 @@
+@charset "utf-8";
+/* CSS Document */
+
+/******************  Table of Contents  *****************************/
+
+/*
+
+1. GLOBAL STYLES
+2. HEADER
+3. HERO IMAGE
+4. FEATURES
+5. TESTIMONIALS
+6. PLANS AND PRICING
+7. FAQ
+8. FOOTER
+9. CUSTOM MEDIA QUERIES
+
+*/
+
+/*========== 1. GLOBAL STYLES ==============*/
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  background: #fff;
+  font-weight: 300;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #4e616c;
+}
+strong,
+b {
+  font-weight: 600;
+}
+h1 {
+  font-size: 50px;
+  line-height: 60px;
+  margin: 25px 0;
+  font-weight: 600;
+}
+h2 {
+  font-size: 40px;
+  font-weight: 600;
+  margin: 15px 0;
+}
+h3 {
+  font-size: 30px;
+  margin: 10px 0;
+  font-weight: 600;
+}
+h4 {
+  font-size: 25px;
+  margin: 10px 0;
+}
+h5 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 15px 0;
+  color: #384047;
+}
+h6 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 10px 0;
+  color: #384047;
+}
+a {
+  color: #5173bd;
+}
+a:hover,
+a:focus {
+  color: #ff871c;
+}
+
+.testblock {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  background: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  position: relative;
+  line-height: 28px;
+  font-size: 16px;
+  -webkit-box-shadow: 0 3px 0px rgba(195, 197, 201, 1);
+  -moz-box-shadow: 0 3px 0px rgba(195, 197, 201, 1);
+  box-shadow: 0 3px 0px rgba(195, 197, 201, 1);
+}
+.testblock:after {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: ' ';
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-top-color: #ffffff;
+  border-width: 15px;
+  margin-left: -15px;
+}
+.testblockdark {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  background: #e5e8ec;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  position: relative;
+  line-height: 28px;
+  font-size: 16px;
+  -webkit-box-shadow: 0 3px 0px rgba(195, 197, 201, 1);
+  -moz-box-shadow: 0 3px 0px rgba(195, 197, 201, 1);
+  box-shadow: 0 3px 0px rgba(195, 197, 201, 1);
+}
+.testblockdark:after {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: ' ';
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-top-color: #e5e8ec;
+  border-width: 15px;
+  margin-left: -15px;
+}
+
+.heroinput {
+  display: flex;
+  overflow: hidden;
+}
+
+.particles {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.toplayer {
+  position: relative;
+  z-index: 1;
+}
